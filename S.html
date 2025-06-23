@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Поиск</title>
+  <!-- Шрифты: Comfortaa и Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comfortaa', sans-serif;
+      font-weight: 700;
+      background-color: transparent;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px 20px;
+      margin-top: -40px;
+    }
+
+    .header-svg-container {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 10px;
+      overflow: hidden;
+      opacity: 0;
+      transform: scale(0.7);
+      animation: pulseIn 0.6s ease forwards;
+    }
+
+    .header-svg-container svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .header-svg-container .text {
+      font-size: 63px;
+      stroke-width: 0px;
+      fill: #b7b7b7;
+      stroke: #2c2c2c;
+      paint-order: stroke fill;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      user-select: none;
+    }
+
+    .search-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background: #999999;
+      padding: 12px 20px;
+      border-radius: 30px;
+      max-width: 1000px;
+      width: 100%;
+      margin-top: 20px;
+      opacity: 0;
+      transform: scale(0.7);
+      animation: pulseIn 0.6s ease forwards;
+      gap: 10px;
+    }
+
+    .search-container img {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      user-select: none;
+      -webkit-user-drag: none;
+      user-drag: none;
+    }
+
+    .search-container img:hover {
+      transform: scale(1.1);
+    }
+
+    .icon-left {
+      margin-left: -5px;
+      width: 22px;
+      height: 22px;
+    }
+
+    .icon-right {
+      margin-right: -4px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-container input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 18px;
+      color: #2c2c2c;
+      min-width: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      height: 22px;
+      line-height: 22px;
+      padding: 0px 0;
+    }
+
+    @keyframes pulseIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .main-container {
+        margin-top: -10px;
+        padding: 20px 10px;
+      }
+
+      .header-svg-container .text {
+        font-size: 36px;
+      }
+
+      .search-container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 10px 15px;
+        border-radius: 24px;
+        gap: 6px;
+      }
+
+      .icon-left,
+      .icon-right {
+        width: 18px;
+        height: 18px;
+        margin: 0;
+      }
+
+      .search-container input {
+        font-size: 16px;
+        height: 20px;
+        line-height: 20px;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="main-container">
+    <div class="header-svg-container">
+      <svg viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="50%" class="text">QuaSeek</text>
+      </svg>
+    </div>
+
+    <div class="search-container">
+      <img src="https://i.postimg.cc/4yZdybRW/image.png" alt="Искать"
+           class="icon-left" id="searchIcon" role="button"
+           aria-label="Искать" tabindex="0" title="Search" draggable="false" />
+           
+      <input type="text" id="searchQuery" />
+
+      <img src="https://i.postimg.cc/Y03SWGpM/image.png" alt="Очистить"
+           class="icon-right" id="optionIcon" role="button"
+           aria-label="Очистить поле" tabindex="0" title="Clear" draggable="false" />
+    </div>
+  </main>
+
+  <script>
+    const input = document.getElementById("searchQuery");
+    const searchIcon = document.getElementById("searchIcon");
+    const optionIcon = document.getElementById("optionIcon");
+
+    const commands = {
+      '/ютуб': 'https://www.youtube.com',
+      '/презентации': 'https://docs.google.com/presentation',
+      '/гпт': 'https://chat.openai.com',
+      '/скрипт': 'https://codepen.io',
+      '/класрум': 'https://classroom.google.com',
+      '/сайт': 'https://sites.google.com/',
+      '/есайт': 'https://sites.google.com/d/1uVzSotqTVpfS4d6MFlFbDSkPNIAqmaAu/p/15GCzbOQf2Yic7zLKYG0bzGWBJrjfCMkz/edit',
+      '/тривога': 'https://map.ukrainealarm.com',
+      '/гог': 'https://www.gog.com/ru/',
+      '/стим': 'https://store.steampowered.com/?l=russian',
+      '/нз': 'https://nz.ua',
+      '/иконки': 'https://www.flaticon.com/ru',
+      '/почта': 'https://mail.google.com',
+      '/дошка': 'https://miro.com/app/board/uXjVLiqQrI8=',
+      '/диск': 'https://drive.google.com/drive/my-drive?hl=ru',
+      '/розетка': 'https://rozetka.com.ua',
+      '/инста': 'https://www.instagram.com',
+    };
+
+    const performSearch = () => {
+      const queryRaw = input.value.trim().toLowerCase();
+
+      for (const cmd in commands) {
+        if (queryRaw.startsWith(cmd)) {
+          window.open(commands[cmd], "_blank");
+          return;
+        }
+      }
+
+      if (queryRaw.length > 0) {
+        window.open("https://www.google.com/search?q=" + encodeURIComponent(input.value.trim()), "_blank");
+      }
+    };
+
+    input.addEventListener("keydown", e => {
+      if (e.key === "Enter") performSearch();
+    });
+
+    input.addEventListener('input', () => {
+      let val = input.value;
+      if (val.length > 0) {
+        const start = input.selectionStart;
+        const end = input.selectionEnd;
+        const newVal = val[0].toUpperCase() + val.slice(1);
+
+        if (newVal !== val) {
+          input.value = newVal;
+          const newPos = start === 0 ? 1 : start;
+          input.setSelectionRange(newPos, newPos);
+        }
+      }
+    });
+
+    searchIcon.addEventListener("click", performSearch);
+
+    optionIcon.addEventListener("click", () => {
+      input.value = "";
+      input.focus();
+    });
+  </script>
+</body>
+</html>
