@@ -184,72 +184,72 @@
     </div>
   </main>
 
-  <script>
-    const input = document.getElementById("searchQuery");
-    const searchIcon = document.getElementById("searchIcon");
-    const optionIcon = document.getElementById("optionIcon");
+<script>
+  const input = document.getElementById("searchQuery");
+  const searchIcon = document.getElementById("searchIcon");
+  const optionIcon = document.getElementById("optionIcon");
 
-    const commands = {
-      '/ютуб': 'https://www.youtube.com',
-      '/презентации': 'https://docs.google.com/presentation',
-      '/гпт': 'https://chat.openai.com',
-      '/скрипт': 'https://codepen.io',
-      '/класрум': 'https://classroom.google.com',
-      '/сайт': 'https://sites.google.com/',
-      '/есайт': 'https://sites.google.com/d/1uVzSotqTVpfS4d6MFlFbDSkPNIAqmaAu/p/15GCzbOQf2Yic7zLKYG0bzGWBJrjfCMkz/edit',
-      '/егсайт': 'https://github.com/Otomje/QuaSeek',
-      '/тривога': 'https://map.ukrainealarm.com',
-      '/гог': 'https://www.gog.com/ru/',
-      '/стим': 'https://store.steampowered.com/?l=russian',
-      '/нз': 'https://nz.ua',
-      '/иконки': 'https://www.flaticon.com/ru',
-      '/почта': 'https://mail.google.com',
-      '/дошка': 'https://miro.com/app/board/uXjVLiqQrI8=',
-      '/диск': 'https://drive.google.com/drive/my-drive?hl=ru',
-      '/розетка': 'https://rozetka.com.ua',
-      '/инста': 'https://www.instagram.com',
-    };
+  const commands = {
+    '/ютуб': 'https://www.youtube.com',
+    '/презентации': 'https://docs.google.com/presentation',
+    '/гпт': 'https://chat.openai.com',
+    '/скрипт': 'https://codepen.io',
+    '/класрум': 'https://classroom.google.com',
+    '/сайт': 'https://sites.google.com/',
+    '/есайт': 'https://sites.google.com/d/1uVzSotqTVpfS4d6MFlFbDSkPNIAqmaAu/p/15GCzbOQf2Yic7zLKYG0bzGWBJrjfCMkz/edit',
+    '/егсайт': 'https://github.com/Otomje/QuaSeek',
+    '/тривога': 'https://map.ukrainealarm.com',
+    '/гог': 'https://www.gog.com/ru/',
+    '/стим': 'https://store.steampowered.com/?l=russian',
+    '/нз': 'https://nz.ua',
+    '/иконки': 'https://www.flaticon.com/ru',
+    '/почта': 'https://mail.google.com',
+    '/дошка': 'https://miro.com/app/board/uXjVLiqQrI8=',
+    '/диск': 'https://drive.google.com/drive/my-drive?hl=ru',
+    '/розетка': 'https://rozetka.com.ua',
+    '/инста': 'https://www.instagram.com',
+  };
 
-    const performSearch = () => {
-      const queryRaw = input.value.trim().toLowerCase();
+  const performSearch = () => {
+    const queryRaw = input.value.trim().toLowerCase();
 
-      for (const cmd in commands) {
-        if (queryRaw.startsWith(cmd)) {
-          window.open(commands[cmd], "_blank");
-          return;
-        }
+    for (const cmd in commands) {
+      if (queryRaw.startsWith(cmd)) {
+        window.location.href = commands[cmd]; // відкриваємо в тій же вкладці
+        return;
       }
+    }
 
-      if (queryRaw.length > 0) {
-        window.open("https://www.google.com/search?q=" + encodeURIComponent(input.value.trim()), "_blank");
+    if (queryRaw.length > 0) {
+      window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(input.value.trim());
+    }
+  };
+
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter") performSearch();
+  });
+
+  input.addEventListener('input', () => {
+    let val = input.value;
+    if (val.length > 0) {
+      const start = input.selectionStart;
+      const end = input.selectionEnd;
+      const newVal = val[0].toUpperCase() + val.slice(1);
+
+      if (newVal !== val) {
+        input.value = newVal;
+        const newPos = start === 0 ? 1 : start;
+        input.setSelectionRange(newPos, newPos);
       }
-    };
+    }
+  });
 
-    input.addEventListener("keydown", e => {
-      if (e.key === "Enter") performSearch();
-    });
+  searchIcon.addEventListener("click", performSearch);
 
-    input.addEventListener('input', () => {
-      let val = input.value;
-      if (val.length > 0) {
-        const start = input.selectionStart;
-        const end = input.selectionEnd;
-        const newVal = val[0].toUpperCase() + val.slice(1);
-
-        if (newVal !== val) {
-          input.value = newVal;
-          const newPos = start === 0 ? 1 : start;
-          input.setSelectionRange(newPos, newPos);
-        }
-      }
-    });
-
-    searchIcon.addEventListener("click", performSearch);
-
-    optionIcon.addEventListener("click", () => {
-      input.value = "";
-      input.focus();
-    });
-  </script>
+  optionIcon.addEventListener("click", () => {
+    input.value = "";
+    input.focus();
+  });
+</script>
 </body>
 </html>
