@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Поиск</title>
-  <link rel="icon" type="image/png" href="Qic.png">
+  <link rel="icon" type="image/png" href="QIco.png">
   <!-- Оптимизация шрифтов: добавлены preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,7 +65,7 @@
       background: #999999;
       padding: 12px 20px;
       border-radius: 30px;
-      max-width: 950px;
+      max-width: 900px;
       width: 100%;
       margin-top: 20px;
       opacity: 0;
@@ -221,30 +221,29 @@
     const optionIcon = document.getElementById("optionIcon");
 
     const commands = {
-      '/ютуб': 'https://www.youtube.com',
-      '/презентації': 'https://docs.google.com/presentation',
-      '/гпт': 'https://chat.openai.com',
-      '/скрипт': 'https://codepen.io',
-      '/клас': 'https://classroom.google.com',
-      '/сайт': 'https://sites.google.com/',
-      '/есайт': 'https://sites.google.com/u/2/new/?authuser=2',
-      '/егсайт': 'https://github.com/Otomje/QuaSeek',
-      '/тривога': 'https://map.ukrainealarm.com',
-      '/гог': 'https://www.gog.com/ru/',
-      '/стім': 'https://store.steampowered.com/?l=ukrainian',
-      '/нз': 'https://nz.ua',
-      '/іконки': 'https://www.flaticon.com',
-      '/почта': 'https://mail.google.com',
-      '/дошка': 'https://miro.com/app/board/uXjVLiqQrI8=',
-      '/грок': 'https://grok.com',
-      '/диск': 'https://drive.google.com/drive/my-drive?hl=ru',
-      '/розетка': 'https://rozetka.com.ua',
-      '/інста': 'https://www.instagram.com',
-      '/документи': 'https://docs.google.com/document',
-      '/інста': 'https://www.instagram.com',
-      '/переводчик': 'https://translate.google.com',
-      '/х': 'https://x.com'
-
+      '!ютуб': 'https://www.youtube.com',
+      '!презентації': 'https://docs.google.com/presentation',
+      '!гпт': 'https://chat.openai.com',
+      '!скрипт': 'https://codepen.io',
+      '!клас': 'https://classroom.google.com',
+      '!сайт': 'https://sites.google.com/',
+      '!есайт': 'https://sites.google.com/u/2/new/?authuser=2',
+      '!егсайт': 'https://github.com/Otomje/QuaSeek',
+      '!тривога': 'https://map.ukrainealarm.com',
+      '!гог': 'https://www.gog.com/ru/',
+      '!стім': 'https://store.steampowered.com/?l=ukrainian',
+      '!нз': 'https://nz.ua',
+      '!іконки': 'https://www.flaticon.com',
+      '!почта': 'https://mail.google.com',
+      '!дошка': 'https://miro.com/app/board/uXjVLiqQrI8=',
+      '!грок': 'https://grok.com',
+      '!диск': 'https://drive.google.com/drive/my-drive?hl=ru',
+      '!розетка': 'https://rozetka.com.ua',
+      '!інста': 'https://www.instagram.com',
+      '!документи': 'https://docs.google.com/document',
+      '!інста': 'https://www.instagram.com',
+      '!переводчик': 'https://translate.google.com',
+      '!х': 'https://x.com'
     };
 
     const performSearch = () => {
