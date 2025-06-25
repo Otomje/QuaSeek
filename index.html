@@ -13,7 +13,12 @@
     *, *::before, *::after {
       box-sizing: border-box;
     }
-
+  /* Кастомне виділення */
+    ::selection {
+      background-color: #2c2c2c;
+      color: #999999;
+    }
+  /* основа, задний фон */
     body {
       margin: 0;
       padding: 0;
@@ -21,7 +26,7 @@
       font-weight: 700;
       background-color: #2c2c2c;
     }
-
+  /* весь контейнер. можно здвигать в верх и низ*/
     .main-container {
       display: flex;
       flex-direction: column;
@@ -42,7 +47,7 @@
       user-select: none;
       text-align: center;
     }
-
+  /* текст а именно QuaSeek*/
     .header-text-container .header-text {
       font-size: 73px;
       color: #b7b7b7;
@@ -51,7 +56,7 @@
       line-height: 1.35;
       white-space: nowrap;
     }
-
+  /* контейнер для поиска */
     .search-container {
       display: flex;
       flex-wrap: wrap;
@@ -81,19 +86,19 @@
     .search-container img:hover {
       transform: scale(1.1);
     }
-
+  /* пк версия иконок */
     .icon-left {
-      width: 22px; /* Пк */
-      height: 22px;
+      width: 20px;
+      height: 20px;
       margin-left: -5px;
     }
 
     .icon-right {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       margin-right: -5px;
     }
-
+  /* пошукова строка тот что текст */
     .search-container input {
       flex: 1;
       border: none;
@@ -108,7 +113,7 @@
       line-height: normal;
       vertical-align: middle;
     }
-
+  /* строка с рандомними фразами */
     #randomPhrase {
       margin-top: 20px;
       text-align: center;
@@ -121,7 +126,7 @@
       opacity: 1;
       transform: translateY(0);
     }
-
+  /* сам бокс с рандомними фразами тобиш фон */
     #randomPhrase .phrase-box {
       display: inline-block;
       background-color: #888888;
@@ -131,15 +136,12 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 650;
       font-size: 16px;
+      user-select: none
     }
-
+  /* анимка для появления всего */
     @keyframes pulseIn {
       0% {
         opacity: 0;
-        transform: scale(1.1);
-      }
-      50% {
-        opacity: 1;
         transform: scale(0.9);
       }
       100% {
@@ -147,26 +149,26 @@
         transform: scale(1);
       }
     }
-
+  /* кароче ета размери для телефонов тоесть висота и розтягнення поисковика или на подобе */
     @media (max-width: 600px) {
       .main-container {
-        margin-top: -10px;
-        padding: 20px 10px;
+        margin-top: 0px;
+        padding: 20px 15px;
       }
-
+  /* а ето розмер лого а именно QuaSeek на телефонах */
       .header-text-container .header-text {
-        font-size: 36px;
+        font-size: 55px;
       }
-
+  /* тоже чтото там размер поискового контейнера на мобайл */
       .search-container {
         flex-direction: row;
         padding: 10px 15px;
         border-radius: 24px;
         gap: 6px;
       }
-
+  /* размери кнопок на телефоне */
       .icon-left {
-        width: 18px; /* Мобилка */
+        width: 18px;
         height: 18px;
         margin: 0;
       }
@@ -176,14 +178,14 @@
         height: 16px;
         margin: 0;
       }
-
+  /* размер текста поиска на телефоне */
       .search-container input {
         font-size: 16px;
         padding: 0;
         line-height: normal;
         vertical-align: middle;
       }
-
+  /* размер цитат на телефоне */
       #randomPhrase .phrase-box {
         font-size: 14px;
       }
@@ -197,15 +199,15 @@
     </div>
 
     <div class="search-container">
-      <img src="https://i.postimg.cc/4yZdybRW/image.png" alt="Искать"
+      <img src="https://raw.githubusercontent.com/Otomje/QuaSeek/main/Img/Search.png" alt="Искать"
            class="icon-left" id="searchIcon" role="button"
-           aria-label="Искать" tabindex="0" title="Search" draggable="false" loading="lazy" />
+           aria-label="Искать" tabindex="0" title="Пошук" draggable="false" loading="lazy" />
            
-      <input type="text" id="searchQuery" />
+      <input type="text" id="searchQuery" autocomplete="off" />
 
-      <img src="https://i.postimg.cc/Y03SWGpM/image.png" alt="Очистить"
+      <img src="https://raw.githubusercontent.com/Otomje/QuaSeek/main/Img/Hrestik.png" alt="Очистить"
            class="icon-right" id="optionIcon" role="button"
-           aria-label="Очистить поле" tabindex="0" title="Clear" draggable="false" loading="lazy" />
+           aria-label="Очистить поле" tabindex="0" title="Очистити" draggable="false" loading="lazy" />
     </div>
 
     <div id="randomPhrase"><span class="phrase-box"></span></div>
@@ -213,29 +215,36 @@
 
   <script>
     const input = document.getElementById("searchQuery");
+    input.focus();
+    input.value = "";
     const searchIcon = document.getElementById("searchIcon");
     const optionIcon = document.getElementById("optionIcon");
 
     const commands = {
       '/ютуб': 'https://www.youtube.com',
-      '/презентации': 'https://docs.google.com/presentation',
+      '/презентації': 'https://docs.google.com/presentation',
       '/гпт': 'https://chat.openai.com',
       '/скрипт': 'https://codepen.io',
-      '/класрум': 'https://classroom.google.com',
+      '/клас': 'https://classroom.google.com',
       '/сайт': 'https://sites.google.com/',
-      '/есайт': 'https://sites.google.com/d/1uVzSotqTVpfS4d6MFlFbDSkPNIAqmaAu/p/15GCzbOQf2Yic7zLKYG0bzGWBJrjfCMkz/edit',
+      '/есайт': 'https://sites.google.com/u/2/new/?authuser=2',
       '/егсайт': 'https://github.com/Otomje/QuaSeek',
       '/тривога': 'https://map.ukrainealarm.com',
       '/гог': 'https://www.gog.com/ru/',
-      '/стим': 'https://store.steampowered.com/?l=russian',
+      '/стім': 'https://store.steampowered.com/?l=ukrainian',
       '/нз': 'https://nz.ua',
-      '/иконки': 'https://www.flaticon.com/ru',
+      '/іконки': 'https://www.flaticon.com',
       '/почта': 'https://mail.google.com',
       '/дошка': 'https://miro.com/app/board/uXjVLiqQrI8=',
       '/грок': 'https://grok.com',
       '/диск': 'https://drive.google.com/drive/my-drive?hl=ru',
       '/розетка': 'https://rozetka.com.ua',
-      '/инста': 'https://www.instagram.com',
+      '/інста': 'https://www.instagram.com',
+      '/документи': 'https://docs.google.com/document',
+      '/інста': 'https://www.instagram.com',
+      '/переводчик': 'https://translate.google.com',
+      '/х': 'https://x.com'
+
     };
 
     const performSearch = () => {
@@ -254,8 +263,13 @@
     };
 
     input.addEventListener("keydown", e => {
-      if (e.key === "Enter") performSearch();
-    });
+  if (e.key === "Enter") {
+    performSearch();
+  } else if (e.shiftKey && e.key === "Backspace") {
+    input.value = "";
+    e.preventDefault();
+  }
+});
 
     input.addEventListener('input', () => {
       let val = input.value;
@@ -275,20 +289,21 @@
 
     optionIcon.addEventListener("click", () => {
       input.value = "";
-      input.focus();
     });
 
     const phrases = [
-      "Hi, how are you?",
-      "What are we searching?",
-      "Maybe grab a coffee first?",
-      "You look great today!",
-      "This site is cat-approved!",
-      "Looking for the meaning of life?",
-      "Legends say you can find everything here!",
-      "Your search terms surprise us!",
-      "Search is active!",
-      "Shh... there's a secret hidden here!"
+      "Привіт, що шукаємо?",
+      "Кава є?",
+      "Що ховається за твоїм запитом?",
+      "Розумний пошук починається тут.",
+      "Твій запит — наш алгоритм.",
+      "Ти знаєш, що шукати.",
+      "Твій шлях починається із запиту.",
+      "Світ інформації відкривається не всім.",
+      "Пошук без зайвого.",
+      "Знайди те, що важливо.",
+      "Доступ до бази відкрито.",
+      "У запитах більше, ніж здається."
     ];
 
     const phraseElement = document.getElementById("randomPhrase");
