@@ -75,6 +75,7 @@
       user-select: none;
       -webkit-user-drag: none;
       user-drag: none;
+      vertical-align: middle;
     }
 
     .search-container img:hover {
@@ -82,15 +83,15 @@
     }
 
     .icon-left {
-      margin-left: -5px;
-      width: 22px;
+      width: 22px; /* Пк */
       height: 22px;
+      margin-left: -5px;
     }
 
     .icon-right {
-      margin-right: -5px;
       width: 20px;
       height: 20px;
+      margin-right: -5px;
     }
 
     .search-container input {
@@ -104,13 +105,15 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 650;
       padding: 0px;
+      line-height: normal;
+      vertical-align: middle;
     }
 
     #randomPhrase {
       margin-top: 20px;
       text-align: center;
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(-10px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
@@ -162,18 +165,23 @@
         gap: 6px;
       }
 
-      .icon-left,
-      .icon-right {
-        width: 18px;
+      .icon-left {
+        width: 18px; /* Мобилка */
         height: 18px;
+        margin: 0;
+      }
+
+      .icon-right {
+        width: 16px;
+        height: 16px;
         margin: 0;
       }
 
       .search-container input {
         font-size: 16px;
-        height: 20px;
-        line-height: 20px;
         padding: 0;
+        line-height: normal;
+        vertical-align: middle;
       }
 
       #randomPhrase .phrase-box {
