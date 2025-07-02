@@ -15,8 +15,8 @@
     }
   /* Кастомне виділення */
     ::selection {
-      background-color: #2c2c2c;
-      color: #999999;
+      background-color: #262628;
+      color: #a0a0a5;
     }
   /* основа, задний фон */
     body {
@@ -24,7 +24,7 @@
       padding: 0;
       font-family: 'Comfortaa', sans-serif;
       font-weight: 700;
-      background-color: #2c2c2c;
+      background-color: #262628;
     }
   /* весь контейнер. можно здвигать в верх и низ*/
     .main-container {
@@ -50,10 +50,10 @@
   /* текст а именно QuaSeek*/
     .header-text-container .header-text {
       font-size: 75px;
-      color: #b7b7b7;
+      color: #c3c3c8;
       font-family: 'Comfortaa', sans-serif;
       font-weight: 700;
-      line-height: 1.3;
+      line-height: 1.2;
       white-space: nowrap;
     }
   /* контейнер для поиска */
@@ -62,10 +62,10 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      background: #999999;
+      background: #a0a0a5;
       padding: 12px 20px;
       border-radius: 30px;
-      max-width: 940px;
+      max-width: 830px;
       width: 100%;
       margin-top: 20px;
       opacity: 0;
@@ -84,18 +84,18 @@
     }
 
     .search-container img:hover {
-      transform: scale(1.1);
+      transform: scale(0.9);
     }
   /* пк версия иконок */
     .icon-left {
-      width: 20px;
-      height: 20px;
+      width: 21px;
+      height: 21px;
       margin-left: -5px;
     }
 
     .icon-right {
-      width: 18px;
-      height: 18px;
+      width: 19px;
+      height: 19px;
       margin-right: -5px;
     }
   /* пошукова строка тот что текст */
@@ -105,7 +105,7 @@
       outline: none;
       background: none;
       font-size: 18px;
-      color: #2c2c2c;
+      color: #262628;
       min-width: 50px;
       font-family: 'Montserrat', sans-serif;
       font-weight: 650;
@@ -129,10 +129,10 @@
   /* сам бокс с рандомними фразами тобиш фон */
     #randomPhrase .phrase-box {
       display: inline-block;
-      background-color: #999999;
+      background-color: #a0a0a5;
       padding: 6px 14px;
       border-radius: 15px;
-      color: #2c2c2c;
+      color: #262628;
       font-family: 'Montserrat', sans-serif;
       font-weight: 650;
       font-size: 16px;
@@ -149,6 +149,14 @@
         transform: scale(1);
       }
     }
+    @media (max-width: 280px) {
+    .main-container {
+      display: none;
+    }
+     body {
+      background-color: #262628;
+    }
+  }
   /* кароче ета размери для телефонов тоесть висота и розтягнення поисковика или на подобе */
     @media (max-width: 600px) {
       .main-container {
@@ -157,7 +165,7 @@
       }
   /* а ето розмер лого а именно QuaSeek на телефонах */
       .header-text-container .header-text {
-        font-size: 55px;
+        font-size: 45px;
       }
   /* тоже чтото там размер поискового контейнера на мобайл */
       .search-container {
@@ -168,15 +176,15 @@
       }
   /* размери кнопок на телефоне */
       .icon-left {
-        width: 18px;
-        height: 18px;
-        margin: 0;
+        width: 19px;
+        height: 19px;
+        margin-left: -3px;
       }
 
       .icon-right {
-        width: 16px;
-        height: 16px;
-        margin: 0;
+        width: 17px;
+        height: 17px;
+         margin-right: -3px;
       }
   /* размер текста поиска на телефоне */
       .search-container input {
@@ -199,15 +207,15 @@
     </div>
 
     <div class="search-container">
-      <img src="https://raw.githubusercontent.com/Otomje/QuaSeek/main/Img/Search.png" alt=""
+      <img src="Seico.png" alt=""
            class="icon-left" id="searchIcon" role="button"
-           aria-label="Искать" tabindex="0" title="Пошук" draggable="false" loading="lazy" />
+           aria-label="Пошук" tabindex="0" title="Пошук" draggable="false" />
            
       <input type="text" id="searchQuery" autocomplete="off" />
 
-      <img src="https://raw.githubusercontent.com/Otomje/QuaSeek/main/Img/Hrestik.png" alt=""
+      <img src="Deico.png" alt=""
            class="icon-right" id="optionIcon" role="button"
-           aria-label="Очистить поле" tabindex="0" title="Очистити" draggable="false" loading="lazy" />
+           aria-label="Очистить поле" tabindex="0" title="Очистити" draggable="false" />
     </div>
 
     <div id="randomPhrase"><span class="phrase-box"></span></div>
@@ -222,7 +230,7 @@
 
     const commands = {
       '!ютуб': 'https://www.youtube.com',
-      '!презентації': 'https://docs.google.com/presentation',
+      '!презен': 'https://docs.google.com/presentation',
       '!гпт': 'https://chat.openai.com',
       '!скрипт': 'https://codepen.io',
       '!клас': 'https://classroom.google.com',
@@ -241,8 +249,7 @@
       '!розетка': 'https://rozetka.com.ua',
       '!інста': 'https://www.instagram.com',
       '!документи': 'https://docs.google.com/document',
-      '!інста': 'https://www.instagram.com',
-      '!переводчик': 'https://translate.google.com',
+      '!перекладач': 'https://translate.google.com',
       '!х': 'https://x.com'
     };
 
@@ -257,7 +264,7 @@
       }
 
       if (queryRaw.length > 0) {
-        window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(input.value.trim());
+        window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(input.value.trim()); 
       }
     };
 
@@ -292,15 +299,11 @@
 
     const phrases = [
       "Привіт, що шукаємо?",
-      "Кава є?",
       "Що ховається за твоїм запитом?",
-      "Розумний пошук починається тут.",
       "Ти знаєш, що шукати.",
-      "Твій шлях починається із запиту.",
-      "Світ інформації відкривається не всім.",
       "Пошук без зайвого.",
       "Знайди те, що важливо.",
-      "Доступ до бази відкрито.",
+      "Відповіді ближче, ніж здається.",
       "У запитах більше, ніж здається."
     ];
 
