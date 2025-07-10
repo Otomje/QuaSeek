@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="Qua.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@650&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -71,6 +71,15 @@
       transform: scale(0.7);
       animation: pulseIn 0.6s ease forwards;
       gap: 10px;
+      transition: background 0.2s ease;
+    }
+
+    .search-container:hover:not(.focused) {
+      background: #8c8c91;
+    }
+
+    .search-container.focused {
+      background: #a0a0a5;
     }
 
     .search-container img {
@@ -192,10 +201,28 @@
 
   <script>
     const input = document.getElementById("searchQuery");
+    const searchContainer = document.querySelector(".search-container");
+    
     input.focus();
     input.value = "";
     const searchIcon = document.getElementById("searchIcon");
     const optionIcon = document.getElementById("optionIcon");
+
+    // Заборонити контекстне меню для іконок
+    [searchIcon, optionIcon].forEach(icon => {
+      icon.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
+    });
+
+    // Додати/видалити клас focused при фокусі/втраті фокусу
+    input.addEventListener("focus", () => {
+      searchContainer.classList.add("focused");
+    });
+
+    input.addEventListener("blur", () => {
+      searchContainer.classList.remove("focused");
+    });
 
     const commands = {
       '!ютуб': 'https://www.youtube.com',
@@ -240,7 +267,7 @@
     input.addEventListener("keydown", e => {
       if (e.key === "Enter") {
         performSearch();
-      } else if (e.shiftKey && e.key === "Backspace") {
+      } else if (e.key === "Backspace" && e.shiftKey) {
         input.value = "";
         e.preventDefault();
       }
