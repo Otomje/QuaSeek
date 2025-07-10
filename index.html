@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QuaSeek</title>
   <link rel="icon" type="image/png" href="Qua.png">
-  <!-- Оптимизация шрифтов: добавлены preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@650&display=swap" rel="stylesheet" />
@@ -13,12 +12,12 @@
     *, *::before, *::after {
       box-sizing: border-box;
     }
-  /* Кастомне виділення */
+
     ::selection {
       background-color: #262628;
       color: #a0a0a5;
     }
-  /* основа, задний фон */
+
     body {
       margin: 0;
       padding: 0;
@@ -26,7 +25,7 @@
       font-weight: 700;
       background-color: #262628;
     }
-  /* весь контейнер. можно здвигать в верх и низ*/
+
     .main-container {
       display: flex;
       flex-direction: column;
@@ -47,7 +46,7 @@
       user-select: none;
       text-align: center;
     }
-  /* текст а именно QuaSeek*/
+
     .header-text-container .header-text {
       font-size: 75px;
       color: #c3c3c8;
@@ -56,7 +55,7 @@
       line-height: 1.2;
       white-space: nowrap;
     }
-  /* контейнер для поиска */
+
     .search-container {
       display: flex;
       flex-wrap: wrap;
@@ -86,7 +85,7 @@
     .search-container img:hover {
       transform: scale(0.9);
     }
-  /* пк версия иконок */
+
     .icon-left {
       width: 22px;
       height: 22px;
@@ -98,7 +97,7 @@
       height: 19px;
       margin-right: -5px;
     }
-  /* пошукова строка тот что текст */
+
     .search-container input {
       flex: 1;
       border: none;
@@ -113,32 +112,7 @@
       line-height: normal;
       vertical-align: middle;
     }
-  /* строка с рандомними фразами */
-    #randomPhrase {
-      margin-top: 20px;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(-10px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
 
-    #randomPhrase.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  /* сам бокс с рандомними фразами тобиш фон */
-    #randomPhrase .phrase-box {
-      display: inline-block;
-      background-color: #a0a0a5;
-      padding: 6px 14px;
-      border-radius: 15px;
-      color: #262628;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 650;
-      font-size: 16px;
-      user-select: none
-    }
-  /* анимка для появления всего */
     @keyframes pulseIn {
       0% {
         opacity: 0;
@@ -149,32 +123,33 @@
         transform: scale(1);
       }
     }
+
     @media (max-width: 280px) {
-    .main-container {
-      display: none;
+      .main-container {
+        display: none;
+      }
+      body {
+        background-color: #262628;
+      }
     }
-     body {
-      background-color: #262628;
-    }
-  }
-  /* кароче ета размери для телефонов тоесть висота и розтягнення поисковика или на подобе */
+
     @media (max-width: 600px) {
       .main-container {
         margin-top: 0px;
         padding: 20px 15px;
       }
-  /* а ето розмер лого а именно QuaSeek на телефонах */
+
       .header-text-container .header-text {
         font-size: 45px;
       }
-  /* тоже чтото там размер поискового контейнера на мобайл */
+
       .search-container {
         flex-direction: row;
         padding: 10px 15px;
         border-radius: 24px;
         gap: 6px;
       }
-  /* размери кнопок на телефоне */
+
       .icon-left {
         width: 19px;
         height: 19px;
@@ -184,18 +159,14 @@
       .icon-right {
         width: 17px;
         height: 17px;
-         margin-right: -3px;
+        margin-right: -3px;
       }
-  /* размер текста поиска на телефоне */
+
       .search-container input {
         font-size: 16px;
         padding: 0;
         line-height: normal;
         vertical-align: middle;
-      }
-  /* размер цитат на телефоне */
-      #randomPhrase .phrase-box {
-        font-size: 14px;
       }
     }
   </style>
@@ -217,8 +188,6 @@
            class="icon-right" id="optionIcon" role="button"
            aria-label="Очистить поле" tabindex="0" title="Очистити" draggable="false" />
     </div>
-
-    <div id="randomPhrase"><span class="phrase-box"></span></div>
   </main>
 
   <script>
@@ -269,13 +238,13 @@
     };
 
     input.addEventListener("keydown", e => {
-  if (e.key === "Enter") {
-    performSearch();
-  } else if (e.shiftKey && e.key === "Backspace") {
-    input.value = "";
-    e.preventDefault();
-  }
-});
+      if (e.key === "Enter") {
+        performSearch();
+      } else if (e.shiftKey && e.key === "Backspace") {
+        input.value = "";
+        e.preventDefault();
+      }
+    });
 
     input.addEventListener('input', () => {
       let val = input.value;
@@ -292,30 +261,8 @@
     });
 
     searchIcon.addEventListener("click", performSearch);
-
     optionIcon.addEventListener("click", () => {
       input.value = "";
-    });
-
-    const phrases = [
-      "Привіт, що шукаємо?",
-      "Що ховається за твоїм запитом?",
-      "Ти знаєш, що шукати.",
-      "Пошук без зайвого.",
-      "Знайди те, що важливо.",
-      "Відповіді ближче, ніж здається.",
-      "У запитах більше, ніж здається."
-    ];
-
-    const phraseElement = document.getElementById("randomPhrase");
-    const phraseBox = phraseElement.querySelector('.phrase-box');
-    const randomText = phrases[Math.floor(Math.random() * phrases.length)];
-    phraseBox.textContent = randomText;
-
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        phraseElement.classList.add('show');
-      }, 1000);
     });
   </script>
 </body>
