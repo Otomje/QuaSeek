@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QuaSeek</title>
+  <title>QuaSeek-Beta</title>
   <link rel="icon" type="image/png" href="Qua.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,7 +62,7 @@
       justify-content: center;
       align-items: center;
       background: #a0a0a5;
-      padding: 12px 20px;
+      padding: 12px 15px;
       border-radius: 30px;
       max-width: 700px;
       width: 100%;
@@ -98,13 +98,11 @@
     .icon-left {
       width: 22px;
       height: 22px;
-      margin-left: -5px;
     }
 
     .icon-right {
       width: 20px;
       height: 20px;
-      margin-right: -5px;
     }
 
     .search-container input {
@@ -145,7 +143,7 @@
     @media (max-width: 600px) {
       .main-container {
         margin-top: 0px;
-        padding: 20px 15px;
+        padding: 20px 12px;
       }
 
       .header-text-container .header-text {
@@ -162,13 +160,11 @@
       .icon-left {
         width: 19px;
         height: 19px;
-        margin-left: -3px;
       }
 
       .icon-right {
         width: 17px;
         height: 17px;
-        margin-right: -3px;
       }
 
       .search-container input {
@@ -208,14 +204,12 @@
     const searchIcon = document.getElementById("searchIcon");
     const optionIcon = document.getElementById("optionIcon");
 
-    // Заборонити контекстне меню для іконок
     [searchIcon, optionIcon].forEach(icon => {
       icon.addEventListener("contextmenu", (e) => {
         e.preventDefault();
       });
     });
 
-    // Додати/видалити клас focused при фокусі/втраті фокусу
     input.addEventListener("focus", () => {
       searchContainer.classList.add("focused");
     });
