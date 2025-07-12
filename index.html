@@ -217,18 +217,18 @@
     input.addEventListener("blur", () => {
       searchContainer.classList.remove("focused");
     });
-
     const commands = {
+   /* Швидкі посилання */
       '!ютуб': 'https://www.youtube.com',
       '!презен': 'https://docs.google.com/presentation',
       '!гпт': 'https://chat.openai.com',
       '!скрипт': 'https://codepen.io',
       '!клас': 'https://classroom.google.com',
-      '!сайт': 'https://sites.google.com/',
+      '!сайт': 'https://sites.google.com',
       '!есайт': 'https://sites.google.com/u/2/new/?authuser=2',
       '!егсайт': 'https://github.com/Otomje/QuaSeek',
       '!тривога': 'https://map.ukrainealarm.com',
-      '!гог': 'https://www.gog.com/ru/',
+      '!гог': 'https://www.gog.com',
       '!стім': 'https://store.steampowered.com/?l=ukrainian',
       '!нз': 'https://nz.ua',
       '!іконки': 'https://www.flaticon.com',
@@ -240,7 +240,29 @@
       '!інста': 'https://www.instagram.com',
       '!документи': 'https://docs.google.com/document',
       '!перекладач': 'https://translate.google.com',
-      '!х': 'https://x.com'
+      '!х': 'https://x.com',
+      '!телеграм веб': 'https://web.telegram.org',
+      '!дискорд': 'https://discord.com',
+      '!xbox': 'https://www.xbox.com',
+      '!спотифай': 'https://open.spotify.com',
+      '!гугл': 'https://www.google.com',
+      '!дак': 'https://duckduckgo.com',
+      '!текстури': 'https://polyhaven.com/textures',
+      '!фотошоп': 'https://online-photoshop.org/edit',
+      '!ондрайв': 'https://onedrive.live.com',
+   /* Посилання на завантаження приложения */
+      ';хром': 'https://www.google.com/intl/uk/chrome',
+      ';фирефокс': 'https://www.mozilla.org/uk/firefox/new/?utm_campaign=SET_DEFAULT_BROWSER',
+      ';телеграм': 'https://desktop.telegram.org/?setln=uk',
+      ';дискорд': 'https://discord.com',
+      ';виндовс 10': 'https://www.microsoft.com/ru-ru/software-download/windows10',
+      ';виндовс 11': 'https://www.microsoft.com/ru-ru/software-download/windows11',
+      ';джефорс': 'https://www.nvidia.com/uk-ua/geforce-now',
+      ';стим': 'https://store.steampowered.com/about/Steam?l=uk',
+      ';вайбер': 'https://www.viber.com/ua/download',
+      ';ван драйв': 'https://www.microsoft.com/uk-ua/microsoft-365/onedrive/download',
+      ';роблокс': 'https://www.roblox.com/download',
+      ';винрар': 'https://www.win-rar.com',
     };
 
     const performSearch = () => {
