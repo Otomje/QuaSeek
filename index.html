@@ -1,1 +1,382 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuaSeek</title>
+  <link rel="icon" type="image/png" href="Img/Qua_Ico.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
 
+    ::selection {
+      background-color: #282832;
+      color: #d2d2e6;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comfortaa', sans-serif;
+      font-weight: 700;
+      background-color: #282832;
+      overflow: hidden;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100dvh;
+      padding: 10px 20px;
+      overflow: hidden;
+    }
+
+    .header-text-container {
+      width: 100%;
+      max-width: 600px;
+      opacity: 0;
+      transform: scale(0.7);
+      animation: pulseIn 0.6s ease forwards;
+      user-select: none;
+      text-align: center;
+    }
+
+    .header-text-container .header-text {
+      font-size: 78px;
+      color: #e1e1f0;
+      font-family: 'Comfortaa', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .search-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background: #d2d2e6;
+      padding: 14px 15px;
+      border-radius: 30px;
+      max-width: 650px;
+      width: 100%;
+      margin-top: 20px;
+      opacity: 0;
+      transform: scale(0.7);
+      animation: pulseIn 0.6s ease forwards;
+      gap: 10px;
+      transition: background 0.2s ease;
+    }
+
+    .search-container:hover:not(.focused) {
+      background: #b4b4c8;
+    }
+
+    .search-container.focused {
+      background: #d2d2e6;
+    }
+
+    .search-container img {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      user-select: none;
+      -webkit-user-drag: none;
+      user-drag: none;
+      vertical-align: middle;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .search-container img:hover {
+      transform: scale(0.96);
+    }
+
+    .icon-left {
+      width: 21px;
+      height: 21px;
+    }
+
+    .icon-right {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-container input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 18px;
+      color: #282832;
+      min-width: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 650;
+      padding: 0px;
+      line-height: normal;
+      vertical-align: middle;
+      -webkit-appearance: none;
+    }
+
+    .search-container input.invalid-command {
+      text-decoration: underline;
+      text-decoration-color: red;
+      text-decoration-thickness: 1.5px;
+    }
+
+    @keyframes pulseIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 300px) {
+      .main-container {
+        display: none;
+      }
+      body {
+        background-color: #282832;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .main-container {
+        margin-top: 7px;
+        padding: 10px 15px;
+      }
+
+      .header-text-container .header-text {
+        font-size: 65px;
+      }
+
+      .search-container {
+        padding: 14px 15px;
+        border-radius: 24px;
+        gap: 9px;
+      }
+
+      .icon-left {
+        width: 20px;
+        height: 20px;
+      }
+
+      .icon-right {
+        width: 19px;
+        height: 19px;
+      }
+
+      .search-container input {
+        font-size: 17px;
+        padding: 0;
+        line-height: normal;
+        vertical-align: middle;
+      }
+
+      .search-container input.invalid-command {
+        text-decoration: underline;
+        text-decoration-color: red;
+        text-decoration-thickness: 1.5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-container {
+        margin-top: 11px;
+      }
+      
+      .header-text-container .header-text {
+        font-size: 58px;
+      }
+
+      .search-container input.invalid-command {
+        text-decoration: underline;
+        text-decoration-color: red;
+        text-decoration-thickness: 1.5px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .main-container {
+        margin-top: 15px;
+      }
+      
+      .header-text-container .header-text {
+        font-size: 48px;
+      }
+
+      .search-container input.invalid-command {
+        text-decoration: underline;
+        text-decoration-color: red;
+        text-decoration-thickness: 1.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="main-container">
+    <div class="header-text-container">
+      <span class="header-text">QuaSeek</span>
+    </div>
+
+    <div class="search-container">
+      <img src="Img/A/S-ICO.webp" alt=""
+           class="icon-left" id="searchIcon" role="button"
+           aria-label="Пошук" tabindex="0" title="Пошук" draggable="false" />
+           
+      <input type="text" id="searchQuery" autocomplete="off" spellcheck="true" />
+
+      <img src="Img/A/D-ICO.webp" alt=""
+           class="icon-right" id="optionIcon" role="button"
+           aria-label="Очистить поле" tabindex="0" title="Очистити" draggable="false" />
+    </div>
+  </main>
+
+  <script>
+    const input = document.getElementById("searchQuery");
+    const searchContainer = document.querySelector(".search-container");
+    const searchIcon = document.getElementById("searchIcon");
+    const optionIcon = document.getElementById("optionIcon");
+    
+    input.focus();
+    input.value = "";
+
+    [searchIcon, optionIcon].forEach(icon => {
+      icon.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
+      icon.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+    });
+
+    searchContainer.addEventListener("click", () => {
+      input.focus();
+    });
+
+    input.addEventListener("focus", () => {
+      searchContainer.classList.add("focused");
+    });
+
+    input.addEventListener("blur", () => {
+      searchContainer.classList.remove("focused");
+    });
+
+    const commands = {
+     /* Швидкі посилання */
+      '!ютуб': 'https://www.youtube.com',
+      '!презен': 'https://docs.google.com/presentation',
+      '!гпт': 'https://chat.fly.dev',
+      '!скрипт': 'https://codepen.io',
+      '!клас': 'https://classroom.google.com',
+      '!сайт': 'https://sites.google.com',
+      '!есайт': 'https://sites.google.com/u/2/new/?authuser=2',
+      '!егсайт': 'https://github.com/Otomje/QuaSeek',
+      '!тривога': 'https://map.ukrainealarm.com',
+      '!гог': 'https://www.gog.com',
+      '!стім': 'https://store.steampowered.com/?l=ukrainian',
+      '!нз': 'https://nz.ua',
+      '!іконки': 'https://www.flaticon.com',
+      '!почта': 'https://mail.google.com',
+      '!дошка': 'https://miro.com/app/board',
+      '!грок': 'https://grok.com',
+      '!диск': 'https://drive.google.com/drive/my-drive?hl=ru',
+      '!розетка': 'https://rozetka.com.ua',
+      '!інста': 'https://www.instagram.com',
+      '!документи': 'https://docs.google.com/document',
+      '!перекладач': 'https://translate.google.com',
+      '!х': 'https://x.com',
+      '!телеграм веб': 'https://web.telegram.org',
+      '!дискорд': 'https://discord.com',
+      '!xbox': 'https://www.xbox.com',
+      '!спотифай': 'https://open.spotify.com',
+      '!гугл': 'https://www.google.com',
+      '!дак': 'https://duckduckgo.com',
+      '!текстури': 'https://polyhaven.com/textures',
+      '!фотошоп': 'https://online-photoshop.org/edit',
+      '!ондрайв': 'https://onedrive.live.com',
+      '!конвертер': 'https://convertio.co',
+     /* Завантаження */
+      ';хром': 'https://www.google.com/intl/uk/chrome',
+      ';фирефокс': 'https://www.mozilla.org/uk',
+      ';телеграм': 'https://desktop.telegram.org/?setln=uk',
+      ';дискорд': 'https://discord.com',
+      ';виндовс 10': 'https://www.microsoft.com/ru-ru/software-download/windows10',
+      ';виндовс 11': 'https://www.microsoft.com/ru-ru/software-download/windows11',
+      ';джефорс': 'https://www.nvidia.com/uk-ua/geforce-now',
+      ';стим': 'https://store.steampowered.com/about/Steam?l=uk',
+      ';вайбер': 'https://www.viber.com/ua/download',
+      ';ван драйв': 'https://www.microsoft.com/uk-ua/microsoft-365/onedrive/download',
+      ';роблокс': 'https://www.roblox.com/download',
+      ';винрар': 'https://www.win-rar.com',
+     /* Відео - уроки *
+       ':матеша': 'Силка',*/
+    };
+
+    const performSearch = () => {
+      const queryRaw = input.value.trim().toLowerCase();
+
+      if (queryRaw.startsWith('!') || queryRaw.startsWith(';')) {
+        for (const cmd in commands) {
+          if (queryRaw.startsWith(cmd)) {
+            window.location.href = commands[cmd];
+            return;
+          }
+        }
+        return;
+      }
+
+      if (queryRaw.length > 0) {
+        window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(input.value.trim()); 
+      }
+    };
+
+    input.addEventListener("keydown", e => {
+      if (e.key === "Enter") {
+        performSearch();
+      } else if (e.key === "Backspace" && e.shiftKey) {
+        input.value = "";
+        e.preventDefault();
+      }
+    });
+
+    input.addEventListener('input', () => {
+      let val = input.value;
+      if (val.length > 0) {
+        const start = input.selectionStart;
+        const newVal = val[0].toUpperCase() + val.slice(1);
+
+        if (newVal !== val) {
+          input.value = newVal;
+          const newPos = start === 0 ? 1 : start;
+          input.setSelectionRange(newPos, newPos);
+        }
+
+        const queryRaw = input.value.trim().toLowerCase();
+        let isInvalidCommand = (queryRaw.startsWith('!') || queryRaw.startsWith(';')) && !Object.keys(commands).some(cmd => queryRaw.startsWith(cmd));
+        if (isInvalidCommand) {
+          input.classList.add('invalid-command');
+        } else {
+          input.classList.remove('invalid-command');
+        }
+      } else {
+        input.classList.remove('invalid-command');
+      }
+    });
+
+    searchIcon.addEventListener("click", performSearch);
+    optionIcon.addEventListener("click", () => {
+      input.value = "";
+      input.classList.remove('invalid-command');
+    });
+  </script>
+</body>
+</html>
