@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QuaSeek</title>
-  <link rel="icon" type="image/png" href="Img/Qua_Ico.webp">
+  <link rel="icon" type="image/png" href="Img/Q-LOGO.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
@@ -92,18 +92,14 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    .search-container img:hover {
-      transform: scale(0.96);
-    }
-
     .icon-left {
-      width: 21px;
-      height: 21px;
+      width: 20px;
+      height: 20px;
     }
 
     .icon-right {
-      width: 20px;
-      height: 20px;
+      width: 19px;
+      height: 19px;
     }
 
     .search-container input {
@@ -138,16 +134,7 @@
         transform: scale(1);
       }
     }
-
-    @media (max-width: 300px) {
-      .main-container {
-        display: none;
-      }
-      body {
-        background-color: #282832;
-      }
-    }
-
+    
     @media (max-width: 580px) {
       .main-container {
         margin-top: 7px;
@@ -163,17 +150,7 @@
         border-radius: 24px;
         gap: 9px;
       }
-
-      .icon-left {
-        width: 20px;
-        height: 20px;
-      }
-
-      .icon-right {
-        width: 19px;
-        height: 19px;
-      }
-
+      
       .search-container input {
         font-size: 17px;
         padding: 0;
@@ -206,7 +183,7 @@
 
     @media (max-width: 380px) {
       .main-container {
-        margin-top: 15px;
+        margin-top: 17px;
       }
       
       .header-text-container .header-text {
@@ -219,6 +196,15 @@
         text-decoration-thickness: 1.5px;
       }
     }
+        @media (max-width: 300px) {
+      .main-container {
+        display: none;
+      }
+      body {
+        background-color: #282832;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -272,51 +258,52 @@
 
     const commands = {
      /* Швидкі посилання */
-      '!ютуб': 'https://www.youtube.com',
+      '!ютуб': 'https://youtube.com',
       '!презен': 'https://docs.google.com/presentation',
-      '!гпт': 'https://chat.fly.dev',
+      '!гпт': 'https://chatgpt.com',
       '!скрипт': 'https://codepen.io',
       '!клас': 'https://classroom.google.com',
       '!сайт': 'https://sites.google.com',
       '!есайт': 'https://sites.google.com/u/2/new/?authuser=2',
       '!егсайт': 'https://github.com/Otomje/QuaSeek',
       '!тривога': 'https://map.ukrainealarm.com',
-      '!гог': 'https://www.gog.com',
+      '!гог': 'https://gog.com',
       '!стім': 'https://store.steampowered.com/?l=ukrainian',
       '!нз': 'https://nz.ua',
-      '!іконки': 'https://www.flaticon.com',
+      '!іконки': 'https://flaticon.com',
       '!почта': 'https://mail.google.com',
+      '!епочта': 'https://mail.proton.me',
       '!дошка': 'https://miro.com/app/board',
       '!грок': 'https://grok.com',
       '!диск': 'https://drive.google.com/drive/my-drive?hl=ru',
       '!розетка': 'https://rozetka.com.ua',
-      '!інста': 'https://www.instagram.com',
+      '!інста': 'https://instagram.com',
       '!документи': 'https://docs.google.com/document',
       '!перекладач': 'https://translate.google.com',
       '!х': 'https://x.com',
       '!телеграм веб': 'https://web.telegram.org',
       '!дискорд': 'https://discord.com',
-      '!xbox': 'https://www.xbox.com',
+      '!xbox': 'https://xbox.com',
       '!спотифай': 'https://open.spotify.com',
-      '!гугл': 'https://www.google.com',
+      '!гугл': 'https://google.com',
       '!дак': 'https://duckduckgo.com',
       '!текстури': 'https://polyhaven.com/textures',
       '!фотошоп': 'https://online-photoshop.org/edit',
       '!ондрайв': 'https://onedrive.live.com',
       '!конвертер': 'https://convertio.co',
      /* Завантаження */
-      ';хром': 'https://www.google.com/intl/uk/chrome',
-      ';фирефокс': 'https://www.mozilla.org/uk',
+      ';хром': 'https://google.com/intl/uk/chrome',
+      ';фирефокс': 'https://mozilla.org/uk',
       ';телеграм': 'https://desktop.telegram.org/?setln=uk',
       ';дискорд': 'https://discord.com',
-      ';виндовс 10': 'https://www.microsoft.com/ru-ru/software-download/windows10',
-      ';виндовс 11': 'https://www.microsoft.com/ru-ru/software-download/windows11',
-      ';джефорс': 'https://www.nvidia.com/uk-ua/geforce-now',
+      ';виндовс 10': 'https://microsoft.com/ru-ru/software-download/windows10',
+      ';виндовс 11': 'https://microsoft.com/ru-ru/software-download/windows11',
+      ';джефорс': 'https://nvidia.com/uk-ua/geforce-now',
       ';стим': 'https://store.steampowered.com/about/Steam?l=uk',
-      ';вайбер': 'https://www.viber.com/ua/download',
-      ';ван драйв': 'https://www.microsoft.com/uk-ua/microsoft-365/onedrive/download',
-      ';роблокс': 'https://www.roblox.com/download',
-      ';винрар': 'https://www.win-rar.com',
+      ';вайбер': 'https://viber.com/ua/download',
+      ';ван драйв': 'https://microsoft.com/uk-ua/microsoft-365/onedrive/download',
+      ';роблокс': 'https://roblox.com/download',
+      ';винрар': 'https://win-rar.com',
      /* Відео - уроки *
        ':матеша': 'Силка',*/
     };
