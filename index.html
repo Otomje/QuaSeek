@@ -64,7 +64,7 @@
       background: #d2d2e6;
       padding: 14px 15px;
       border-radius: 30px;
-      max-width: 650px;
+      max-width: 600px;
       width: 100%;
       margin-top: 20px;
       opacity: 0;
@@ -118,12 +118,6 @@
       -webkit-appearance: none;
     }
 
-    .search-container input.invalid-command {
-      text-decoration: underline;
-      text-decoration-color: red;
-      text-decoration-thickness: 1.5px;
-    }
-
     @keyframes pulseIn {
       0% {
         opacity: 0;
@@ -134,15 +128,15 @@
         transform: scale(1);
       }
     }
-    
+
     @media (max-width: 580px) {
       .main-container {
-        margin-top: 7px;
+        margin-top: 6px;
         padding: 10px 15px;
       }
 
       .header-text-container .header-text {
-        font-size: 65px;
+        font-size: 68px;
       }
 
       .search-container {
@@ -150,7 +144,7 @@
         border-radius: 24px;
         gap: 9px;
       }
-      
+
       .search-container input {
         font-size: 17px;
         padding: 0;
@@ -158,45 +152,79 @@
         vertical-align: middle;
       }
 
-      .search-container input.invalid-command {
-        text-decoration: underline;
-        text-decoration-color: red;
-        text-decoration-thickness: 1.5px;
+      .icon-left {
+        width: 19.5px;
+        height: 19.5px;
+    }
+
+      .icon-right {
+        width: 18.5px;
+        height: 18.5px;
       }
     }
 
     @media (max-width: 480px) {
       .main-container {
-        margin-top: 11px;
-      }
-      
-      .header-text-container .header-text {
-        font-size: 58px;
+        margin-top: 12px;
       }
 
-      .search-container input.invalid-command {
-        text-decoration: underline;
-        text-decoration-color: red;
-        text-decoration-thickness: 1.5px;
+      .header-text-container .header-text {
+        font-size: 58px;
       }
     }
 
     @media (max-width: 380px) {
       .main-container {
-        margin-top: 17px;
+        margin-top: 18px;
       }
-      
+
       .header-text-container .header-text {
         font-size: 48px;
       }
 
-      .search-container input.invalid-command {
-        text-decoration: underline;
-        text-decoration-color: red;
-        text-decoration-thickness: 1.5px;
+      .search-container {
+        padding: 13px 15px;
+        border-radius: 24px;
+        gap: 9px;
+      }
+
+      .icon-left {
+        width: 19px;
+        height: 19px;
+    }
+
+      .icon-right {
+        width: 18px;
+        height: 18px;
       }
     }
-        @media (max-width: 300px) {
+
+    @media (max-width: 320px) {
+      .main-container {
+        margin-top: 24px;
+      }
+
+      .header-text-container .header-text {
+        font-size: 38px;
+      }
+
+      .search-container {
+        padding: 11px 15px;
+        border-radius: 24px;
+        gap: 9px;
+      }
+
+      .icon-left {
+        width: 18.5px;
+        height: 18.5px;
+    }
+
+      .icon-right {
+        width: 17.5px;
+        height: 17.5px;
+      }
+    }
+    @media (max-width: 250px) {
       .main-container {
         display: none;
       }
@@ -204,7 +232,6 @@
         background-color: #282832;
       }
     }
-
   </style>
 </head>
 <body>
@@ -231,7 +258,7 @@
     const searchContainer = document.querySelector(".search-container");
     const searchIcon = document.getElementById("searchIcon");
     const optionIcon = document.getElementById("optionIcon");
-    
+
     input.focus();
     input.value = "";
 
@@ -257,7 +284,7 @@
     });
 
     const commands = {
-     /* Швидкі посилання */
+      /* Швидкі посилання */
       '!ютуб': 'https://youtube.com',
       '!презен': 'https://docs.google.com/presentation',
       '!гпт': 'https://chatgpt.com',
@@ -291,7 +318,7 @@
       '!фотошоп': 'https://online-photoshop.org/edit',
       '!ондрайв': 'https://onedrive.live.com',
       '!конвертер': 'https://convertio.co',
-     /* Завантаження */
+      /* Завантаження */
       ';хром': 'https://google.com/intl/uk/chrome',
       ';фирефокс': 'https://mozilla.org/uk',
       ';телеграм': 'https://desktop.telegram.org/?setln=uk',
@@ -304,8 +331,6 @@
       ';ван драйв': 'https://microsoft.com/uk-ua/microsoft-365/onedrive/download',
       ';роблокс': 'https://roblox.com/download',
       ';винрар': 'https://win-rar.com',
-     /* Відео - уроки *
-       ':матеша': 'Силка',*/
     };
 
     const performSearch = () => {
@@ -346,23 +371,12 @@
           const newPos = start === 0 ? 1 : start;
           input.setSelectionRange(newPos, newPos);
         }
-
-        const queryRaw = input.value.trim().toLowerCase();
-        let isInvalidCommand = (queryRaw.startsWith('!') || queryRaw.startsWith(';')) && !Object.keys(commands).some(cmd => queryRaw.startsWith(cmd));
-        if (isInvalidCommand) {
-          input.classList.add('invalid-command');
-        } else {
-          input.classList.remove('invalid-command');
-        }
-      } else {
-        input.classList.remove('invalid-command');
       }
     });
 
     searchIcon.addEventListener("click", performSearch);
     optionIcon.addEventListener("click", () => {
       input.value = "";
-      input.classList.remove('invalid-command');
     });
   </script>
 </body>
