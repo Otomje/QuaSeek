@@ -10,11 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
   <style>
     :root {
-    --vdl-phn: #282832; /*var(--vdl-phn)*/
-    --tx-zgv: #e1e1f0; /*var(--tx-zgv)*/
-    --search-dnnvd: #d2d2e6; /*var(--search-dnnvd)*/
-    --search-nvd: #b4b4c8; /*var(--search-nvd)*/
-    --phn-nes: #23232d; /*var(--phn-nes)*/
+      --vdl-phn: #282832; /*var(--vdl-phn)*/
+      --tx-zgv: #e1e1f0; /*var(--tx-zgv)*/
+      --search-dnnvd: #d2d2e6; /*var(--search-dnnvd)*/
+      --search-nvd: #b4b4c8; /*var(--search-nvd)*/
+      --phn-nes: #23232d; /*var(--phn-nes)*/
     }
 
     *, *::before, *::after {
@@ -100,8 +100,8 @@
     }
 
     .icon-right {
-      width: 19px;
-      height: 19px;
+      width: 18.5px;
+      height: 18.5px;
     }
 
     .search-container input {
@@ -314,9 +314,9 @@
 
   <footer class="footer">
     <div class="footer-left">
-      <span>v4.3.9</span>
+      <span>v4.4.0</span>
       <a href="mailto:QuaSeek@proton.me" class="footer-link" title="Support" aria-label="Contact support">Support</a>
-      <a href="https://чототам" class="footer-link" title="Privacy" aria-label="Privacy policy">Privacy</a>
+      <a href="https://" class="footer-link" title="Privacy" aria-label="Privacy policy">Privacy</a>
     </div>
     <div class="footer-right">
       <a href="https://otomje.github.io/QuaSeek" class="footer-link" title="QuaSeek" aria-label="QuaSeek homepage">QuaSeek</a>
@@ -335,23 +335,23 @@
     [searchIcon, optionIcon, ...footerLinks].forEach(element => {
       element.addEventListener("contextmenu", (e) => {
         e.preventDefault();
-      });
+      }, { passive: false });
       element.addEventListener("click", (e) => {
         e.stopPropagation();
-      });
+      }, { passive: false });
     });
 
     searchContainer.addEventListener("click", () => {
       input.focus();
-    });
+    }, { passive: true });
 
     input.addEventListener("focus", () => {
       searchContainer.classList.add("focused");
-    });
+    }, { passive: true });
 
     input.addEventListener("blur", () => {
       searchContainer.classList.remove("focused");
-    });
+    }, { passive: true });
 
     const commands = {
       /* Швидкі посилання */
@@ -396,7 +396,7 @@
       ';виндовс 10': 'https://microsoft.com/ru-ru/software-download/windows10',
       ';виндовс 11': 'https://microsoft.com/ru-ru/software-download/windows11',
       ';джефорс': 'https://nvidia.com/uk-ua/geforce-now',
-      ';стим': 'https://store.steampowered.com/about/Steam?l=uk',
+      ';стім': 'https://store.steampowered.com/about/Steam?l=uk',
       ';вайбер': 'https://viber.com/ua/download',
       ';ван драйв': 'https://microsoft.com/uk-ua/microsoft-365/onedrive/download',
       ';роблокс': 'https://roblox.com/download',
@@ -428,7 +428,7 @@
         input.value = "";
         e.preventDefault();
       }
-    });
+    }, { passive: false });
 
     input.addEventListener('input', () => {
       let val = input.value;
@@ -442,13 +442,13 @@
           input.setSelectionRange(newPos, newPos);
         }
       }
-    });
+    }, { passive: true });
 
-    searchIcon.addEventListener("click", performSearch);
+    searchIcon.addEventListener("click", performSearch, { passive: true });
     optionIcon.addEventListener("click", () => {
       input.value = "";
       input.focus();
-    });
+    }, { passive: true });
   </script>
 </body>
 </html>
