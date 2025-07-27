@@ -193,7 +193,7 @@
 
       .icon-right {
         width: 18px;
-        height: 18px;
+        height: 17.4px;
       }
     }
 
@@ -237,7 +237,7 @@
 
       .icon-right {
         width: 17.5px;
-        height: 17.5px;
+        height: 16.9px;
       }
     }
 
@@ -263,7 +263,7 @@
 
       .icon-right {
         width: 16.5px;
-        height: 16.5px;
+        height: 15.9px;
       }
     }
 
@@ -303,7 +303,7 @@
 
   <footer class="footer">
     <div class="footer-left">
-      <span>v4.3.9</span>
+      <span>v4.4</span>
       <a href="mailto:QuaSeek@proton.me" class="footer-link" title="Support" aria-label="Contact support">Support</a>
       <a href="https://quaseek.pp.ua/privacy/privacy" class="footer-link" title="Privacy" aria-label="Privacy">Privacy</a>
     </div>
@@ -342,24 +342,10 @@
       searchContainer.classList.remove("focused");
     }, { passive: true });
 
-    const commands = {
-    };
-
     const performSearch = () => {
-      const queryRaw = input.value.trim().toLowerCase();
-
-      if (queryRaw.startsWith('!') || queryRaw.startsWith(';')) {
-        for (const cmd in commands) {
-          if (queryRaw.startsWith(cmd)) {
-            window.location.href = commands[cmd];
-            return;
-          }
-        }
-        return;
-      }
-
+      const queryRaw = input.value.trim();
       if (queryRaw.length > 0) {
-        window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(input.value.trim()); 
+        window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(queryRaw);
       }
     };
 
@@ -371,20 +357,6 @@
         e.preventDefault();
       }
     }, { passive: false });
-
-    input.addEventListener('input', () => {
-      let val = input.value;
-      if (val.length > 0) {
-        const start = input.selectionStart;
-        const newVal = val[0].toUpperCase() + val.slice(1);
-
-        if (newVal !== val) {
-          input.value = newVal;
-          const newPos = start === 0 ? 1 : start;
-          input.setSelectionRange(newPos, newPos);
-        }
-      }
-    }, { passive: true });
 
     searchIcon.addEventListener("click", performSearch, { passive: true });
     optionIcon.addEventListener("click", () => {
