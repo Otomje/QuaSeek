@@ -5,21 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QuaSeek Privacy</title>
   <link rel="icon" type="image/png" href="logo/p-log.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bcc: #f5f5f5; /*var(--bcc)*/
-      --tx: #1a1a1a; /*var(--tx)*/
-      --tx-two: #0077cc; /*var(--tx-two)*/
+      --bcc: #282832; /*var(--bcc)*/
+      --tx: #d2d2e6; /*var(--tx)*/
+      --tx-me: #0077cc; /*var(--tx-me)*/
+      --tx-zgv: #e1e1f0; /*var(--tx-zgv)*/
     }
 
     body {
-      margin: 0;
+      margin: 5;
       padding: 40px 20px;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
       background-color: var(--bcc);
-      color: var(--tx);
       line-height: 1.6;
+      user-select: none;
     }
 
     .container {
@@ -30,30 +32,40 @@
     h1 {
       font-size: 36px;
       margin-bottom: 20px;
+      font-weight: 600;
+      color: var(--tx-zgv);
+      line-height: 1.2;
     }
 
     p {
       font-size: 18px;
       margin-bottom: 15px;
+      color: var(--tx);
     }
 
     a {
-      color: var(--tx-two);
+      color: var(--tx-me);
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 385px) {
+      .container {
+        display: none;
+      }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Політика конфіденційності QuaSeek</h1>
-    <p>Ми поважаємо вашу приватність. QuaSeek не збирає, не зберігає і не передає ваші пошукові запити.</p>
-    <p>Усі запити обробляються локально у вашому браузері та перенаправляються безпосередньо до Google.</p>
-    <p>Ми не використовуємо cookies, аналітику або сторонні трекери.</p>
-    <p>Якщо у вас є питання — напишіть нам на <a href="mailto:QuaSeek@proton.me">QuaSeek@proton.me</a></p>
+    <h1>Політика конфіденційності</h1>
+    <p>Пошуковик не зберігає, не аналізує і не передає введені вами запити. Усі запити перенаправляються безпосередньо на Google через просте перенаправлення.</p>
+    <p>• Відсутність сторонніх бібліотек або трекерів.</p>
+    <p>• Всі дії обробляються локально в браузері.</p>
+    <p>• Сайт не використовує cookies або локальне збереження даних.</p>
+    <p>Дякую вам за довіру. Якщо у вас є питання: <a href="mailto:QuaSeek@proton.me">QuaSeek@proton.me</a></p>
   </div>
 </body>
 </html>
