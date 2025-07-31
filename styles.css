@@ -229,10 +229,6 @@ body {
     height: 18px;
   }
 
-  .site-version {
-    display: none
-}
-
 @media (max-width: 320px) {
   .main-container {
     margin-top: 24px;
