@@ -228,6 +228,9 @@ body {
     width: 18px;
     height: 18px;
   }
+
+  .site-version {
+    display: none
 }
 
 @media (max-width: 320px) {
