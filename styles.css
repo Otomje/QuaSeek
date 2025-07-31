@@ -154,7 +154,6 @@ body {
 
 @media (max-width: 580px) {
   .main-container {
-    margin-top: 6px;
     padding: 10px 15px;
   }
 
@@ -187,10 +186,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .main-container {
-    margin-top: 12px;
-  }
-
   .header-text-container .header-text {
     font-size: 58px;
   }
@@ -205,10 +200,6 @@ body {
 }
 
 @media (max-width: 380px) {
-  .main-container {
-    margin-top: 18px;
-  }
-
   .header-text-container .header-text {
     font-size: 48px;
   }
@@ -228,12 +219,9 @@ body {
     width: 18px;
     height: 18px;
   }
+}
 
 @media (max-width: 320px) {
-  .main-container {
-    margin-top: 24px;
-  }
-
   .header-text-container .header-text {
     font-size: 38px;
   }
