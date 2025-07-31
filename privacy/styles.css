@@ -1,0 +1,50 @@
+:root {
+  --bcc: #282832; /*var(--bcc)*/
+  --tx: #d2d2e6; /*var(--tx)*/
+  --tx-me: #0077cc; /*var(--tx-me)*/
+  --tx-zgv: #e1e1f0; /*var(--tx-zgv)*/
+}
+
+body {
+  margin: 5;
+  padding: 40px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  background-color: var(--bcc);
+  line-height: 1.6;
+  user-select: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--tx-zgv);
+  line-height: 1.2;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: var(--tx);
+}
+
+a {
+  color: var(--tx-me);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 330px) {
+  .container {
+    display: none;
+  }
+}
