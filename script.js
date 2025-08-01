@@ -4,6 +4,7 @@ const searchIcon = document.getElementById("searchIcon");
 const optionIcon = document.getElementById("optionIcon");
 const footerLinks = document.querySelectorAll(".footer-link");
 
+input.focus();
 input.value = "";
 
 [searchIcon, optionIcon, ...footerLinks].forEach(element => {
