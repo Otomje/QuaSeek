@@ -29,9 +29,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
+  height: 100vh;
   padding: 10px 20px;
   overflow: hidden;
+}
+
+@supports (height: 100dvh) {
+  .main-container {
+    height: 100dvh;
+  }
 }
 
 .header-text-container {
