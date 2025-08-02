@@ -1,7 +1,7 @@
 :root {
-  --vdl-phn: #282832; /*var(--vdl-phn)*/
-  --tx-zgv: #e1e1f0; /*var(--tx-zgv)*/
-  --search-dnnvd: #d2d2e6; /*var(--search-dnnvd)*/
-  --search-nvd: #b4b4c8; /*var(--search-nvd)*/
-  --phn-nes: #23232d; /*var(--phn-nes)*/
+  --vphn: #282832;
+  --qtxc: #e1e1f0;
+  --sean: #d2d2e6;
+  --sead: #b4b4c8;
+  --fohn: #23232d;
 }
