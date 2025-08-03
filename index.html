@@ -10,18 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
-  <script>
-  try {
-    const mode = localStorage.getItem("quaseek-mode");
-    if (mode === "light") {
-      document.write('<link rel="stylesheet" href="css/root/q/light/root.css">');
-    } else {
-      document.write('<link rel="stylesheet" href="css/root/q/night/root.css">');
-    }
-  } catch (e) {
-    document.write('<link rel="stylesheet" href="css/root/q/night/root.css">');
-  }
-</script>
+  <link rel="stylesheet" href="css/root/q/night/root.css">
   <link rel="stylesheet" href="css/styles/q/styles.css">
   <link rel="stylesheet" href="css/device/q/display.css">
 </head>
@@ -49,7 +38,6 @@
       <span>v4.4.7</span>
       <a href="mailto:QuaSeek@proton.me" class="footer-link" title="Support" aria-label="Contact support">Support</a>
       <a href="https://quaseek.pp.ua/privacy" class="footer-link" title="Privacy" aria-label="Privacy">Privacy</a>
-      <span>Mode</span>
     </div>
     <div class="footer-right">
       <a href="https://quaseek.pp.ua" class="footer-link" title="QuaSeek" aria-label="QuaSeek homepage">QuaSeek</a>
@@ -59,7 +47,3 @@
   <script src="js/q/script.js"></script>
 </body>
 </html>
-
-
-
-
