@@ -17,19 +17,13 @@ body {
 }
 
 .main-container {
-  height: 100vh;
+  height: 100dvh;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-}
-
-@supports (height: 100dvh) {
-  .main-container {
-    height: 100dvh;
-  }
 }
 
 .header-text-container {
