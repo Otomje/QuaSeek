@@ -11,18 +11,25 @@ body {
   margin: 0;
   padding: 0;
   font-weight: 700;
+  overflow: hidden;
   background-color: var(--vphn);
   font-family: 'Comfortaa', sans-serif;
 }
 
 .main-container {
-  min-height: 100vh;
-  max-height: 100dvh;
+  height: 100vh;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+@supports (height: 100dvh) {
+  .main-container {
+    height: 100dvh;
+  }
 }
 
 .header-text-container {
@@ -66,6 +73,7 @@ body {
 
 .search-container img {
   cursor: pointer;
+  user-drag: none;
   user-select: none;
   vertical-align: middle;
   transition: transform 0.2s ease;
@@ -73,7 +81,11 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.icon-left,
+.icon-left {
+  width: 20px;
+  height: 20px;
+}
+
 .icon-right {
   width: 20px;
   height: 20px;
@@ -86,8 +98,8 @@ body {
   background: none;
   font-size: 18px;
   min-width: 50px;
-  padding: 0;
-  font-weight: 600;
+  padding: 0px;
+  font-weight: 650;
   line-height: normal;
   vertical-align: middle;
   color: var(--vphn);
