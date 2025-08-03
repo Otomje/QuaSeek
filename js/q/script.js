@@ -3,6 +3,8 @@ const searchContainer = document.querySelector(".search-container");
 const searchIcon = document.getElementById("searchIcon");
 const optionIcon = document.getElementById("optionIcon");
 const footerLinks = document.querySelectorAll(".footer-link");
+const modeToggle = document.querySelector(".footer-left span:last-child");
+const rootLink = document.querySelector('link[href*="root/q/"]');
 
 input.focus();
 input.value = "";
@@ -49,3 +51,31 @@ optionIcon.addEventListener("click", () => {
   input.value = "";
   input.focus();
 }, { passive: true });
+
+// 🌗 Theme toggle logic
+const applyMode = (mode) => {
+  if (mode === "light") {
+    rootLink.href = "css/root/q/light/root.css";
+    searchIcon.src = "img/a/searicol.svg";
+    optionIcon.src = "img/a/deleicol.svg";
+  } else {
+    rootLink.href = "css/root/q/night/root.css";
+    searchIcon.src = "img/a/searico.svg";
+    optionIcon.src = "img/a/deleico.svg";
+  }
+};
+
+const toggleMode = () => {
+  const currentMode = localStorage.getItem("quaseek-mode") || "night";
+  const newMode = currentMode === "night" ? "light" : "night";
+  localStorage.setItem("quaseek-mode", newMode);
+  applyMode(newMode);
+  location.reload(); // можно убрать, если не нужна перезагрузка
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedMode = localStorage.getItem("quaseek-mode") || "night";
+  applyMode(savedMode);
+});
+
+modeToggle.addEventListener("click", toggleMode);
