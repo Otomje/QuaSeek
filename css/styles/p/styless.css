@@ -1,18 +1,10 @@
-:root {
-  --bcc: #282832; /*var(--bcc)*/
-  --tx: #d2d2e6; /*var(--tx)*/
-  --tx-me: #0077cc; /*var(--tx-me)*/
-  --tx-zgv: #e1e1f0; /*var(--tx-zgv)*/
-}
-
 body {
-  margin: 5;
+  margin: 5px;
   padding: 40px 20px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  background-color: var(--bcc);
+  background-color: var(--phn);
   line-height: 1.6;
-  user-select: none;
 }
 
 .container {
@@ -24,18 +16,18 @@ h1 {
   font-size: 30px;
   margin-bottom: 20px;
   font-weight: 600;
-  color: var(--tx-zgv);
+  color: var(--txzgv);
   line-height: 1.2;
 }
 
 p {
   font-size: 16px;
   margin-bottom: 15px;
-  color: var(--tx);
+  color: var(--txni);
 }
 
 a {
-  color: var(--tx-me);
+  color: var(--txgm);
   text-decoration: none;
 }
 
