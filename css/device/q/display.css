@@ -16,7 +16,6 @@
 
   .search-container input {
     font-size: 17px;
-    padding: 0;
     line-height: normal;
     vertical-align: middle;
   }
@@ -102,6 +101,6 @@
   }
 
   body {
-    background-color: var(--vphn);
+    background-color: var(--vdl-phn);
   }
 }
