@@ -70,7 +70,6 @@ const toggleMode = () => {
   const newMode = currentMode === "night" ? "light" : "night";
   localStorage.setItem("quaseek-mode", newMode);
   applyMode(newMode);
-  location.reload(); // можно убрать, если не нужна перезагрузка
 };
 
 document.addEventListener("DOMContentLoaded", () => {
