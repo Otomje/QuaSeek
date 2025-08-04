@@ -4,34 +4,7 @@ const searchIcon = document.getElementById("searchIcon");
 const optionIcon = document.getElementById("optionIcon");
 const footerLinks = document.querySelectorAll(".footer-link");
 
-input.focus();
-
-let lastHeight = window.innerHeight;
-
-window.addEventListener("resize", () => {
-  const currentHeight = window.innerHeight;
-  const searchContainer = document.querySelector(".search-container");
-
-  if (currentHeight < lastHeight) {
-    // Клавіатура з’явилася, піднімаємо пошуковик
-    searchContainer.style.transform = `translateY(-${lastHeight - currentHeight}px)`;
-    searchContainer.style.transition = "transform 0.3s ease";
-  } else {
-    // Клавіатура зникла, повертаємо на місце
-    searchContainer.style.transform = "translateY(0)";
-  }
-  lastHeight = currentHeight;
-});
-
-input.addEventListener("focus", () => {
-  lastHeight = window.innerHeight; // Оновлюємо базову висоту при фокусі
-  searchContainer.classList.add("focused");
-});
-
-input.addEventListener("blur", () => {
-  searchContainer.classList.remove("focused");
-  searchContainer.style.transform = "translateY(0)"; // Повертаємо на місце
-});
+input.value = "";
 
 [searchIcon, optionIcon, ...footerLinks].forEach(element => {
   element.addEventListener("contextmenu", (e) => {
@@ -52,6 +25,8 @@ input.addEventListener("focus", () => {
 
 input.addEventListener("blur", () => {
   searchContainer.classList.remove("focused");
+  searchContainer.style.transform = "translateY(0)";
+  headerTextContainer.style.transform = "translateY(0)"; // Повертаємо текст
 }, { passive: true });
 
 const performSearch = () => {
@@ -84,3 +59,30 @@ optionIcon.addEventListener("click", () => {
   input.value = "";
   input.focus();
 }, { passive: true });
+
+// Додаємо обробку клавіатури
+let lastHeight = window.innerHeight;
+const headerTextContainer = document.querySelector(".header-text-container");
+
+window.addEventListener("resize", () => {
+  const currentHeight = window.innerHeight;
+
+  if (currentHeight < lastHeight) {
+    // Клавіатура з’явилася, піднімаємо обидва елементи
+    const offset = lastHeight - currentHeight;
+    searchContainer.style.transform = `translateY(-${offset}px)`;
+    headerTextContainer.style.transform = `translateY(-${offset}px)`;
+    searchContainer.style.transition = "transform 0.3s ease";
+    headerTextContainer.style.transition = "transform 0.3s ease";
+  } else {
+    // Клавіатура зникла, повертаємо на місце
+    searchContainer.style.transform = "translateY(0)";
+    headerTextContainer.style.transform = "translateY(0)";
+  }
+  lastHeight = currentHeight;
+});
+
+input.addEventListener("focus", () => {
+  lastHeight = window.innerHeight; // Оновлюємо базову висоту при фокусі
+  searchContainer.classList.add("focused");
+});
