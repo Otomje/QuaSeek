@@ -18,14 +18,14 @@ body {
 }
 
 .main-container {
-  height: 100vh;
-  max-height: 100vh;
+  min-height: 100vh;
   padding: 10px 20px;
   display: flex;
   overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 40px; /* Додати для футера */
 }
 
 .header-text-container {
@@ -54,7 +54,6 @@ body {
   gap: 10px;
   width: 100%;
   max-width: 600px;
-  max-height: 50px;
   margin-top: 20px;
   padding: 14px 15px;
   border-radius: 30px;
