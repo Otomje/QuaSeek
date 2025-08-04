@@ -5,7 +5,33 @@ const optionIcon = document.getElementById("optionIcon");
 const footerLinks = document.querySelectorAll(".footer-link");
 
 input.focus();
-input.value = "";
+
+let lastHeight = window.innerHeight;
+
+window.addEventListener("resize", () => {
+  const currentHeight = window.innerHeight;
+  const searchContainer = document.querySelector(".search-container");
+
+  if (currentHeight < lastHeight) {
+    // Клавіатура з’явилася, піднімаємо пошуковик
+    searchContainer.style.transform = `translateY(-${lastHeight - currentHeight}px)`;
+    searchContainer.style.transition = "transform 0.3s ease";
+  } else {
+    // Клавіатура зникла, повертаємо на місце
+    searchContainer.style.transform = "translateY(0)";
+  }
+  lastHeight = currentHeight;
+});
+
+input.addEventListener("focus", () => {
+  lastHeight = window.innerHeight; // Оновлюємо базову висоту при фокусі
+  searchContainer.classList.add("focused");
+});
+
+input.addEventListener("blur", () => {
+  searchContainer.classList.remove("focused");
+  searchContainer.style.transform = "translateY(0)"; // Повертаємо на місце
+});
 
 [searchIcon, optionIcon, ...footerLinks].forEach(element => {
   element.addEventListener("contextmenu", (e) => {
