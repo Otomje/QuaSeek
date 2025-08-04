@@ -20,7 +20,7 @@ body {
 .main-container {
   height: 100vh;
   max-height: 100vh;
-  padding: 10px 20px 50px;
+  padding: 10px 20px;
   display: flex;
   overflow: hidden;
   flex-direction: column;
