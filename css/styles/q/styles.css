@@ -18,14 +18,14 @@ body {
 }
 
 .main-container {
-  min-height: 100vh;
+  height: 100vh;
   padding: 10px 20px;
   display: flex;
   overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 40px; /* Додати для футера */
+  padding-bottom: 40px;
 }
 
 .header-text-container {
@@ -34,6 +34,8 @@ body {
   display: block;
   user-select: none;
   text-align: center;
+  position: relative; /* Додаємо для transform */
+  transition: transform 0.3s ease; /* Додаємо перехід */
 }
 
 .header-text-container .header-text {
@@ -47,18 +49,20 @@ body {
 }
 
 .search-container {
+  position: relative; /* Додаємо, щоб transform працював коректно */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   gap: 10px;
   width: 100%;
   max-width: 600px;
+  max-height: 50px;
   margin-top: 20px;
   padding: 14px 15px;
   border-radius: 30px;
   background: var(--sean);
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.3s ease; /* Додаємо перехід для transform */
 }
 
 .search-container:hover:not(.focused) {
