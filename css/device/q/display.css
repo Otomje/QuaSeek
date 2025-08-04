@@ -1,8 +1,4 @@
 @media (max-width: 580px) {
-  .main-container {
-    padding: 10px 15px;
-  }
-
   .header-text-container .header-text {
     font-size: 68px;
   }
@@ -84,8 +80,10 @@
   .footer {
     display: none;
   }
+}
 
-  body {
-    background-color: var(--vphn);
+@media (max-height: 160px) {
+  .main-container {
+     display: none;
   }
 }
