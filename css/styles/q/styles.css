@@ -11,7 +11,6 @@ body {
   margin: 0;
   padding: 0;
   font-weight: 700;
-  overflow: hidden;
   background-color: var(--vphn);
   font-family: 'Comfortaa', sans-serif;
 }
@@ -23,7 +22,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 @supports (height: 100dvh) {
@@ -56,7 +54,6 @@ body {
   gap: 10px;
   width: 100%;
   max-width: 600px;
-  max-height: 50px;
   margin-top: 20px;
   padding: 14px 15px;
   border-radius: 30px;
@@ -82,11 +79,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.icon-left {
-  width: 20px;
-  height: 20px;
-}
-
+.icon-left,
 .icon-right {
   width: 20px;
   height: 20px;
@@ -98,9 +91,9 @@ body {
   outline: none;
   background: none;
   font-size: 18px;
-  min-width: 50px;
   padding: 0px;
-  font-weight: 650;
+   max-width: 50px;
+  font-weight: 600;
   line-height: normal;
   vertical-align: middle;
   color: var(--vphn);
