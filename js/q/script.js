@@ -43,7 +43,7 @@ const performSearchInNewTab = () => {
 };
 
 input.addEventListener("keydown", e => {
-  if (e.key === "Enter" && e.ctrlKey) {
+  if (e.key === "Enter" && e.shiftKey) {
     performSearchInNewTab();
   } else if (e.key === "Enter") {
     performSearch();
