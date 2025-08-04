@@ -36,10 +36,11 @@ body {
 }
 
 .header-text-container .header-text {
+  display: block; /*delete*/
   font-size: 78px;
   font-weight: 600;
   line-height: 1.2;
-  white-space: nowrap;
+  white-space: normal; /*nowrap*/
   color: var(--qtxc);
   font-family: 'Comfortaa', sans-serif;
 }
