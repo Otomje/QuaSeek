@@ -9,7 +9,6 @@
 
   .search-container {
     padding: 14px 15px;
-    max-height: 48px;
     border-radius: 24px;
     gap: 9px;
   }
@@ -48,7 +47,6 @@
 
   .search-container {
     padding: 13px 15px;
-    max-height: 46px;
     border-radius: 24px;
     gap: 9px;
   }
@@ -67,7 +65,6 @@
 
   .search-container {
     padding: 11px 13px;
-    max-height: 42px;
     border-radius: 24px;
     gap: 9px;
   }
