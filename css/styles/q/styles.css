@@ -79,7 +79,11 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.icon-left,
+.icon-left {
+  width: 20px;
+  height: 20px;
+}
+
 .icon-right {
   width: 20px;
   height: 20px;
