@@ -20,11 +20,7 @@
     vertical-align: middle;
   }
 
-  .icon-left {
-    width: 19px;
-    height: 19px;
-  }
-
+  .icon-left,
   .icon-right {
     width: 19px;
     height: 19px;
@@ -57,11 +53,7 @@
     gap: 9px;
   }
 
-  .icon-left {
-    width: 18px;
-    height: 18px;
-  }
-
+  .icon-left,
   .icon-right {
     width: 18px;
     height: 18px;
@@ -80,11 +72,7 @@
     gap: 9px;
   }
 
-  .icon-left {
-    width: 17px;
-    height: 17px;
-  }
-
+  .icon-left,
   .icon-right {
     width: 17px;
     height: 17px;
