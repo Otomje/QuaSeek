@@ -29,7 +29,6 @@ body {
 
 .header-text-container {
   width: 100%;
-  max-width: 600px;
   display: block;
   user-select: none;
   text-align: center;
@@ -54,6 +53,7 @@ body {
   gap: 10px;
   width: 100%;
   max-width: 600px;
+  max-height: 50px;
   margin-top: 28px;
   padding: 14px 15px;
   border-radius: 30px;
