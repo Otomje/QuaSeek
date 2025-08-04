@@ -10,7 +10,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-weight: 700;
+  font-weight: 600;
   background-color: var(--vphn);
   font-family: 'Comfortaa', sans-serif;
 }
@@ -39,7 +39,7 @@ body {
 
 .header-text-container .header-text {
   font-size: 78px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   white-space: nowrap;
   color: var(--qtxc);
@@ -54,6 +54,7 @@ body {
   gap: 10px;
   width: 100%;
   max-width: 600px;
+  max-height: 50px;
   margin-top: 20px;
   padding: 14px 15px;
   border-radius: 30px;
@@ -79,11 +80,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.icon-left {
-  width: 20px;
-  height: 20px;
-}
-
+.icon-left,
 .icon-right {
   width: 20px;
   height: 20px;
@@ -96,7 +93,6 @@ body {
   background: none;
   font-size: 18px;
   padding: 0px;
-   max-width: 50px;
   font-weight: 600;
   line-height: normal;
   vertical-align: middle;
@@ -113,7 +109,7 @@ body {
   width: 100%;
   height: 40px;
   padding: 0 15px;
-  font-weight: 700;
+  font-weight: 600;
   z-index: 1000;
   display: flex;
   user-select: none;
