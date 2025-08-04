@@ -31,16 +31,17 @@ body {
 .header-text-container {
   width: 100%;
   max-width: 600px;
+  display: block;
   user-select: none;
   text-align: center;
 }
 
 .header-text-container .header-text {
-  display: block; /*delete*/
+  margin: 0px;
   font-size: 78px;
   font-weight: 600;
   line-height: 1.2;
-  white-space: normal; /*nowrap*/
+  white-space: nowrap;
   color: var(--qtxc);
   font-family: 'Comfortaa', sans-serif;
 }
