@@ -10,7 +10,7 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden
+  overflow: hidden;
   font-weight: 600;
   background-color: var(--vphn);
   font-family: 'Comfortaa', sans-serif;
@@ -20,7 +20,7 @@ body {
   height: 100dvh;
   padding: 10px 20px;
   display: flex;
-  overflow: hidden
+  overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
