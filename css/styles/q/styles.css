@@ -10,14 +10,17 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  height: 100vh; /* Фіксує висоту body */
+  overflow: hidden; /* Запобігає скролу */
   font-weight: 600;
   background-color: var(--vphn);
   font-family: 'Comfortaa', sans-serif;
 }
 
 .main-container {
-  height: 100dvh;
+  height: 100vh; /* Спробуйте замість 100dvh для кращої сумісності */
+  max-height: 100vh; /* Обмежує максимальну висоту */
+  overflow: hidden; /* Запобігає скролу всередині контейнера */
   padding: 10px 20px;
   display: flex;
   overflow: hidden;
