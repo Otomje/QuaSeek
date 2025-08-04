@@ -12,14 +12,14 @@ body {
   padding: 0;
   height: 100vh;
   overflow: hidden;
-  font-weight: 600;
+  font-weight: 700;
   background-color: var(--vphn);
   font-family: 'Comfortaa', sans-serif;
 }
 
 .main-container {
   height: 100vh;
-  padding: 10px 20px;
+  padding: 0px 15px;
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -34,13 +34,12 @@ body {
   user-select: none;
   text-align: center;
   position: relative;
-  transition: transform 0.3s ease;
 }
 
 .header-text-container .header-text {
   margin: 0px;
   font-size: 78px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
   white-space: nowrap;
   color: var(--qtxc);
@@ -59,7 +58,6 @@ body {
   padding: 14px 15px;
   border-radius: 30px;
   background: var(--sean);
-  
 }
 
 .search-container:hover:not(.focused) {
@@ -75,7 +73,6 @@ body {
   user-drag: none;
   user-select: none;
   vertical-align: middle;
-  transition: transform 0.2s ease;
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -94,7 +91,7 @@ body {
   font-size: 18px;
   padding: 0px;
   font-weight: 600;
-  min-width: 50px;
+  min-width: 0px;
   line-height: normal;
   vertical-align: middle;
   color: var(--vphn);
@@ -110,8 +107,7 @@ body {
   width: 100%;
   height: 40px;
   padding: 0 15px;
-  font-weight: 600;
-  z-index: 1000;
+  font-weight: 700;
   display: flex;
   user-select: none;
   align-items: center;
