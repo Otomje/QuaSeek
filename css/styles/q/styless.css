@@ -10,24 +10,20 @@
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden
   font-weight: 600;
   background-color: var(--vphn);
   font-family: 'Comfortaa', sans-serif;
 }
 
 .main-container {
-  height: 100vh;
+  height: 100dvh;
   padding: 10px 20px;
   display: flex;
+  overflow: hidden
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-@supports (height: 100dvh) {
-  .main-container {
-    height: 100dvh;
-  }
 }
 
 .header-text-container {
@@ -94,6 +90,7 @@ body {
   font-size: 18px;
   padding: 0px;
   font-weight: 600;
+  min-width: 50px;
   line-height: normal;
   vertical-align: middle;
   color: var(--vphn);
