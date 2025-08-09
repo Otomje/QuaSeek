@@ -1,89 +1,63 @@
-@media (max-width: 580px) {
-  .header-text-container .header-text {
-    font-size: 68px;
-  }
+/* Базовые стили (ПК) */
+.main-container {
+  min-height: 100vh;
+  height: auto;
+  padding: 0px 15px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .search-container {
-    padding: 14px 15px;
-    border-radius: 24px;
-    gap: 9px;
-  }
-
-  .search-container input {
-    font-size: 17px;
-    line-height: normal;
-    vertical-align: middle;
-  }
-
-  .icon-left,
-  .icon-right {
-    width: 19px;
-    height: 19px;
+/* 📱 Фикс для мобильных браузеров */
+@supports (-webkit-touch-callout: none) {
+  .main-container {
+    min-height: -webkit-fill-available;
   }
 }
 
-@media (max-width: 480px) {
-  .header-text-container .header-text {
-    font-size: 58px;
-  }
-
-  .footer {
-    justify-content: center;
-  }
-
-  .footer-right {
-    display: none;
-  }
+/* Поиск с адаптивной высотой */
+.search-container {
+  height: clamp(45px, 6vh, 55px);
+  padding: 0 15px;
+  border-radius: 30px;
 }
 
-@media (max-width: 380px) {
-  .header-text-container .header-text {
-    font-size: 48px;
-  }
-
-  .search-container {
-    padding: 13px 15px;
-    border-radius: 24px;
-    gap: 9px;
-  }
-
-  .icon-left,
-  .icon-right {
-    width: 18px;
-    height: 18px;
-  }
+/* Иконки тоже гибкие */
+.icon-left,
+.icon-right {
+  width: clamp(17px, 2.5vh, 20px);
+  height: clamp(17px, 2.5vh, 20px);
 }
 
+/* Инпут в поиске */
+.search-container input {
+  font-size: clamp(16px, 2.3vh, 18px);
+}
+
+/* Заголовок */
+.header-text-container .header-text {
+  font-size: clamp(38px, 10vw, 78px);
+}
+
+/* Футер */
+.footer {
+  font-size: clamp(13px, 1.8vh, 15px);
+}
+
+/* Очень маленькие экраны */
 @media (max-width: 320px) {
-  .header-text-container .header-text {
-    font-size: 38px;
-  }
-
   .search-container {
-    padding: 11px 13px;
     border-radius: 24px;
-    gap: 9px;
-  }
-
-  .icon-left,
-  .icon-right {
-    width: 17px;
-    height: 17px;
   }
 }
 
-@media (max-width: 260px) {
-  .main-container {
-    display: none;
-  }
-
+/* Скрыть всё на сверхмалых устройствах */
+@media (max-width: 260px),
+       (max-height: 160px) {
+  .main-container,
   .footer {
     display: none;
-  }
-}
-
-@media (max-height: 160px) {
-  .main-container {
-     display: none;
   }
 }
