@@ -1,1 +1,42 @@
+body {
+  margin: 5px;
+  padding: 40px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  background-color: var(--phn);
+  line-height: 1.6;
+}
 
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--txzgv);
+  line-height: 1.2;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: var(--txni);
+}
+
+a {
+  color: var(--txgm);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 330px) {
+  .container {
+    display: none;
+  }
+}
