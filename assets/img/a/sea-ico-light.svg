@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
    version="1.1"
@@ -38,11 +37,11 @@
      transform="translate(0.09586559,-0.04512324)">
     <path
        id="path1"
-       style="fill:#282832;fill-opacity:1;stroke-width:1.25485;paint-order:markers stroke fill"
+       style="fill:#dcdce6;fill-opacity:1;stroke-width:1.25485;paint-order:markers stroke fill"
        d="M 67.128906,9.1074219 A 58.13343,58.13343 0 0 0 8.9960938,67.242188 58.13343,58.13343 0 0 0 67.128906,125.375 58.13343,58.13343 0 0 0 125.26172,67.242188 58.13343,58.13343 0 0 0 67.128906,9.1074219 Z m 0,18.6660161 A 39.467762,39.467762 0 0 1 106.59766,67.242188 39.467762,39.467762 0 0 1 67.128906,106.70898 39.467762,39.467762 0 0 1 27.662109,67.242188 39.467762,39.467762 0 0 1 67.128906,27.773438 Z"
        inkscape:label="Krug" />
     <rect
-       style="opacity:1;fill:#282832;fill-opacity:1;stroke-width:1.29811"
+       style="opacity:1;fill:#dcdce6;fill-opacity:1;stroke-width:1.29811"
        id="rect4"
        width="18.993273"
        height="54.785923"
