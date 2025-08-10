@@ -34,9 +34,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-@media (max-width: 330px) {
+/* @media (max-width: 330px) {
   .container {
     display: none;
   }
-}
+} */

@@ -81,6 +81,7 @@ body {
 .icon-right {
   width: 20px;
   height: 20px;
+   color: var(--vphn);
 }
 
 .search-container input {

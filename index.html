@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/root/root.css">
-  <link rel="stylesheet" href="assets/css/styles/q/styles.css">
-  <link rel="stylesheet" href="assets/css/display/q/displays.css">
+  <link rel="stylesheet" href="assets/css/styles/q/style.css">
+  <link rel="stylesheet" href="assets/css/display/q/display.css">
 </head>
 <body>
   <main class="main-container">
@@ -21,21 +21,33 @@
     </div>
 
     <div class="search-container">
-      <img src="assets/img/a/sea-ico.svg" alt=""
-           class="icon-left" id="searchIcon" role="button"
-           aria-label="Search" title="Search (Enter) (Ctrl + Enter)" draggable="false" />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" 
+      width="150" height="150"
+      class="icon-left" id="searchIcon" role="button"
+      aria-label="Search" title="Search (Enter) (Ctrl + Enter)" draggable="false">
+      <g transform="translate(0.096,-0.045)">
+      <path fill="currentColor" d="M67.129 9.107a58.133 58.133 0 0 0-58.133 58.135 58.133 58.133 0 0 0 58.133 58.133 58.133 58.133 0 0 0 58.133-58.133A58.133 58.133 0 0 0 67.129 9.107Zm0 18.666a39.468 39.468 0 0 1 39.469 39.469 39.468 39.468 0 0 1-39.469 39.467A39.468 39.468 0 0 1 27.662 67.242a39.468 39.468 0 0 1 39.467-39.469Z"/>
+      <rect fill="currentColor" width="19" height="55" x="-9.618" y="140.780" rx="10.400" transform="rotate(-45)"/>
+    </g>
+   </svg>
 
       <input type="text" id="searchQuery" autocomplete="off" spellcheck="true" />
 
-      <img src="assets/img/a/del-ico.svg" alt=""
-           class="icon-right" id="optionIcon" role="button"
-           aria-label="Clear" title="Clear (Shift + Backspace)" draggable="false" />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"
+      width="150" height="150"
+      class="icon-right" id="optionIcon" role="button"
+      aria-label="Clear" title="Clear (Shift + Backspace)" draggable="false">
+      <g transform="rotate(45,75,75)">
+      <rect fill="currentColor" width="19" height="123" x="-84.712" y="-136.647" rx="9.712" transform="scale(-1)"/>
+      <rect fill="currentColor" width="19" height="123" x="-84.712" y="13.353" rx="9.712" transform="rotate(-90)"/>
+    </g>
+   </svg>
     </div>
   </main>
 
   <footer class="footer">
     <div class="footer-left">
-      <span title="v4.5.0-Stable">v4.5.0</span>
+      <span title="v4.5.1-Beta">v4.5.1</span>
       <a href="mailto:QuaSeek@proton.me" class="footer-link" aria-label="Support">Support</a>
       <a href="https://quaseek.pp.ua/privacy" class="footer-link" aria-label="Privacy">Privacy</a>
     </div>
@@ -47,5 +59,3 @@
   <script src="assets/js/q/script.js"></script>
 </body>
 </html>
-
-

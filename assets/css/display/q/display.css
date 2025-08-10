@@ -1,3 +1,17 @@
+/* Animation display new */
+.header-text-container .header-text,
+.search-container,
+.search-container input,
+.icon-left,
+.icon-right {
+  transition:
+    font-size 0.05s ease,
+    width 0.05s ease,
+    height 0.05s ease,
+    padding 0.05s ease,
+    gap 0.05s ease;
+}
+
 @media (max-width: 580px) {
   .header-text-container .header-text {
     font-size: 68px;
