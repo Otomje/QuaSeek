@@ -1,0 +1,22 @@
+{
+  "name": "QuaSeek",
+  "short_name": "QuaSeek",
+  "version": "4.5",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#282832",
+  "theme_color": "#282832",
+  "icons": [
+    {
+      "src": "/assets/img/b/q_apps.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/b/q_loads.png",
+      "sizes": "500x500",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
