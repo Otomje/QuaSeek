@@ -8,8 +8,8 @@
   "theme_color": "#282832",
   "icons": [
     {
-      "src": "/assets/img/app/apps_icon.png",
-      "sizes": "512x512",
+      "src": "/assets/img/site/ico.png",
+      "sizes": "500x500",
       "type": "image/png",
       "purpose": "any maskable"
     }
