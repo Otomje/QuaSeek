@@ -8,16 +8,15 @@
   "theme_color": "#282832",
   "icons": [
     {
-      "src": "/assets/img/b/qapps-ico.png",
+      "src": "/assets/img/b/q_app.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/assets/img/b/qloads-ico.png",
+      "src": "/assets/img/b/q_app.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ]
 }
-<!-- 1 image = app-ico 2 image = sait-ico -->
