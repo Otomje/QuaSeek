@@ -1,6 +1,6 @@
 {
   "name": "QuaSeek",
-  "short_name": "QuaSeek",
+  "short_name": "QuaSeek App",
   "version": "4.5",
   "start_url": "/index.html",
   "display": "standalone",
