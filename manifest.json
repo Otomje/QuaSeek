@@ -1,22 +1,23 @@
 {
-  "name": "Pelmeni",
-  "short_name": "PWA App",
-  "version": "4.5.2",
+  "name": "QuaSeek",
+  "short_name": "QuaSeek",
+  "version": "4.5",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#282832",
   "theme_color": "#282832",
   "icons": [
     {
-      "src": "/assets/img/b/quasico.png",
+      "src": "/assets/img/b/qsait-ico.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/assets/img/b/quasico.png",
+      "src": "/assets/img/b/qapp-ico.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ]
 }
+<!-- 1 image = app-ico 2 image = sait-ico -->
