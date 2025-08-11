@@ -8,12 +8,12 @@
   "theme_color": "#282832",
   "icons": [
     {
-      "src": "/assets/img/b/qsait-ico.png",
+      "src": "/assets/img/b/qapp-ico.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/assets/img/b/qapp-ico.png",
+      "src": "/assets/img/b/qload-ico.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
