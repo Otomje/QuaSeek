@@ -1,0 +1,16 @@
+{
+  "name": "QuaSeek",
+  "short_name": "QuaSeek",
+  "version": "4.5.2",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "var(--vphn)",
+  "theme_color": "var(--vphn)",
+  "icons": [
+    {
+      "src": "assets/img/b/quasico.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    }
+  ]
+}
