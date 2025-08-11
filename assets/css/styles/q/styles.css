@@ -81,7 +81,10 @@ body {
 .icon-right {
   width: 20px;
   height: 20px;
-   color: var(--vphn);
+  cursor: pointer;
+  color: var(--vphn);
+   -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
 }
 
 .search-container input {
