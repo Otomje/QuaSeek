@@ -8,13 +8,13 @@
   "theme_color": "#282832",
   "icons": [
     {
-      "src": "/assets/img/b/q_load.png",
-      "sizes": "192x192",
+      "src": "/assets/img/b/q_apps.png",
+      "sizes": "200x200",
       "type": "image/png"
     },
     {
-      "src": "/assets/img/b/q_load.png",
-      "sizes": "512x512",
+      "src": "/assets/img/b/q_loads.png",
+      "sizes": "500x500",
       "type": "image/png",
       "purpose": "any maskable"
     }
