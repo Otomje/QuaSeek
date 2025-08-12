@@ -56,5 +56,4 @@ input.addEventListener("keydown", e => {
 searchIcon.addEventListener("click", performSearch, { passive: true });
 optionIcon.addEventListener("click", () => {
   input.value = "";
-  input.focus();
 }, { passive: true });
