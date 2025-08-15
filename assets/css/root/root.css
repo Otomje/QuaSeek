@@ -16,3 +16,32 @@
   --htxt: #e6e6fa;
   --ptxt: #e6e6fa;
 }
+
+/* fonts */
+/* fonts 1 */
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/assets/fonts/Comfortaa-Bold.woff2') format('woff2'),
+       url('/assets/fonts/Comfortaa-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+font-display: block;
+}
+/* fonts 2 */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+       url('/assets/fonts/Montserrat-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+font-display: block;
+}
+/* fonts 3 */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat-Medium.woff2') format('woff2'),
+       url('/assets/fonts/Montserrat-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+font-display: block;
+}

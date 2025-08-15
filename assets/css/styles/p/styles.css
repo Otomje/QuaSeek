@@ -1,7 +1,7 @@
 body {
   margin: 5px;
   padding: 40px 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
   font-weight: 500;
   background-color: var(--phn);
   line-height: 1.6;
