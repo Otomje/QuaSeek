@@ -1,4 +1,4 @@
-const maintenanceMode = true; // false r true
+const maintenanceMode = false; // false r true
 
 const protectedPages = ["update.html"];
 const currentPage = window.location.pathname.split("/").pop();
