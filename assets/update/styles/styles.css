@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0px 15px;
+  height: 100vh;
+  line-height: 1;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #282832, #3a2f4f);
+  font-family: 'Comfortaa', sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--htxt);
+}
+
+p {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--ptxt);
+}
