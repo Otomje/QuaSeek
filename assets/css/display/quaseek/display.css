@@ -82,8 +82,8 @@
   .search-container {
     padding: 11px 13px;
     border-radius: 24px;
-    margin-top: 20px;
-      height: 42px;
+    margin-top: 0px; /*20*/
+    height: 42px;
     gap: 9px;
   }
 
