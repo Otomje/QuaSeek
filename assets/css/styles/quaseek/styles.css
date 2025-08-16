@@ -86,16 +86,6 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.icon-left,
-.icon-right {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  color: var(--vphn);
-  -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
-}
-
 .footer {
   position: fixed;
   bottom: 0;
@@ -124,6 +114,16 @@ body {
   display: flex;
   font-size: 18px;
   line-height: 40px;
+}
+
+.icon-left,
+.icon-right {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: var(--vphn);
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
 }
 
 .footer-link {

@@ -24,7 +24,7 @@
        url('/assets/fonts/Comfortaa-Bold/Comfortaa-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
-font-display: block;
+  font-display: block;
 }
 /* fonts 2 */
 @font-face {
@@ -33,7 +33,7 @@ font-display: block;
        url('/assets/fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
-font-display: block;
+  font-display: block;
 }
 /* fonts 3 */
 @font-face {
@@ -42,5 +42,5 @@ font-display: block;
        url('/assets/fonts/Montserrat-Medium/Montserrat-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
-font-display: block;
+  font-display: block;
 }
