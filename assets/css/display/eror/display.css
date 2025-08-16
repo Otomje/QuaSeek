@@ -1,4 +1,23 @@
-@media (max-width: 140px) {
+@media (max-width: 240px) {
+  body {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 200px) {
+  body {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 160px) {
+  body {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 130px) {
   h1 {
     display: none;
   }
+}
