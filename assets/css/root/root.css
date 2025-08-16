@@ -12,7 +12,7 @@
   --txni: #dcdcf0;
   --txgm: #0077cc;
     /* update */
-  --zphn: #282832;
+  --zphn: linear-gradient(150deg, #282832 30%, #5A1E1E 200%);
   --htxt: #e6e6fa;
 }
 

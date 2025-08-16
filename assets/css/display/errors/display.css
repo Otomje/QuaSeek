@@ -18,3 +18,9 @@
     display: none;
   }
 }
+
+@media (max-height: 80px) {
+  h1 {
+    display: none;
+  }
+}
