@@ -1,0 +1,14 @@
+body {
+  height: 100vh;
+  font-weight: 700;
+  font-size: 40px;
+  display: flex;
+  overflow: hidden;
+   user-select: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--htxt);
+  background: var(--zphn);
+  font-family: 'Comfortaa';
+}

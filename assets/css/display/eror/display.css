@@ -1,0 +1,4 @@
+@media (max-width: 140px) {
+  h1 {
+    display: none;
+  }
