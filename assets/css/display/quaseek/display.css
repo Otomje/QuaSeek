@@ -42,7 +42,7 @@
   }
 
   .search-container {
-     margin-top: 26px;
+     margin-top: 0px; /*26*/
   }
 
   .footer {
@@ -62,8 +62,8 @@
   .search-container {
     padding: 13px 15px;
     border-radius: 24px;
-    margin-top: 22px;
-      height: 46px;
+    margin-top: 0px; /*22*/
+    height: 46px;
     gap: 9px;
   }
 
