@@ -1,11 +1,15 @@
+::selection {
+  color: var(--vphn);
+  background-color: var(--sean);
+}
+
 body {
   margin: 0px;
+   line-height: 0.5;
   height: 100vh;
-  font-size: 40px;
   font-weight: 700;
   display: flex;
   overflow: hidden;
-  user-select: none;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -13,3 +17,11 @@ body {
   background: var(--zphn);
   font-family: 'Comfortaa';
 }
+
+h1 {
+  font-size: 80px;
+}
+
+p {
+ font-size: 35px;
+ }
