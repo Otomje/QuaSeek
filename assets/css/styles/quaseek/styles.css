@@ -11,7 +11,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow: hidden;
   font-weight: 700;
   background-color: var(--vphn);
   font-family: 'Comfortaa';
@@ -21,7 +20,6 @@ body {
   height: 100%;
   padding: 0px 15px;
   display: flex;
-  overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
