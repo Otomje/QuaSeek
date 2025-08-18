@@ -1,0 +1,11 @@
+< v4.5.3 >
+15:05/15/08 < Test Update > | Add local font <"fonts/Comfortaa, Montserrat"> / Update file <"index.html">
+17:05/15/08 < Mini Update > | Update file <"root/root.css">
+20:00/16/08 < Mini Update > | Update file <"quaseek/display.css">
+22:00/17/08 < Mini Update > | Update page "404" <"404.html">
+14:00/18/08 < Mini Update > | Delete overflow: hidden <"quaseek/styles.css">
+19:40/18/08 < Mini Update > | Add maxlength="2000" <"index.html">
+20:15/18/08 < Mini Update > | Update file <"quaseek/display.css"> / <"quaseek/styles.css">
+
+## ("Update Information File.txt") ##
+####

@@ -37,7 +37,6 @@ body {
   margin: 0px;
   font-size: 78px;
   font-weight: 700;
-  line-height: 1;
   white-space: nowrap;
   color: var(--qtxc);
   font-family: 'Comfortaa';
@@ -52,7 +51,7 @@ body {
   width: 100%;
   max-width: 600px;
   height: 50px;
-  margin-top: 28px;
+  margin-top: 23px;
   padding: 14px 15px;
   border-radius: 30px;
   background: var(--sean);
