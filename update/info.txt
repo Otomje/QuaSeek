@@ -1,4 +1,5 @@
 < v4.5.3 >
+("Update Information File")
 15:05/15/08 < Test Update > | Add local font <"fonts/Comfortaa, Montserrat"> / Update file <"index.html">
 17:05/15/08 < Mini Update > | Update file <"root/root.css">
 20:00/16/08 < Mini Update > | Update file <"quaseek/display.css">
@@ -7,6 +8,4 @@
 14:00/18/08 < Mini Update > | Delete overflow: hidden <"quaseek/styles.css">
 19:40/18/08 < Mini Update > | Add maxlength="2000" <"index.html">
 20:15/18/08 < Mini Update > | Update file <"quaseek/display.css"> / <"quaseek/styles.css">
-
-## ("Update Information File.txt") ##
-####
+21:25/21/08 < Mini Update > | Update svg icon and mini fix <"index.html">
