@@ -9,3 +9,4 @@
 19:40/18/08 < Mini Update > | Add maxlength="2000" <"index.html">
 20:15/18/08 < Mini Update > | Update file <"quaseek/display.css"> / <"quaseek/styles.css">
 21:25/21/08 < Mini Update > | Update svg icon and mini fix <"index.html">
+15:00/23/08 < Mini Update > | Update file <"quaseek/display.html">

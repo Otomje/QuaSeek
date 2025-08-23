@@ -56,6 +56,10 @@
     font-size: 48px;
   }
 
+  .search-container input {
+     font-size: 17px;
+   }
+
   .search-container {
     padding: 13px 15px;
     margin-top: 20px;
@@ -92,6 +96,10 @@
 @media (max-width: 260px) {
   .header-text-container .header-text {
     font-size: 28px;
+  }
+
+  .search-container input {
+    font-size: 16px;
   }
 
   .search-container {
