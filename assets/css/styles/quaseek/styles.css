@@ -33,14 +33,28 @@ body {
   position: relative;
 }
 
+ /* День Незалежності */
 .header-text-container .header-text {
+  margin: 0px;
+  font-size: 78px;
+  font-weight: 700;
+  white-space: nowrap;
+  font-family: 'Comfortaa';
+  background: linear-gradient(to right, #4a86e8, #ffff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+/* Потім повернеш це */
+/* .header-text-container .header-text {
   margin: 0px;
   font-size: 78px;
   font-weight: 700;
   white-space: nowrap;
   color: var(--qtxc);
   font-family: 'Comfortaa';
-}
+} */
 
 .search-container {
   display: flex;
