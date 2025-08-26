@@ -1,11 +1,11 @@
 ::selection {
-  color: var(--vphn);
-  background-color: var(--sean);
+  color: var(--background-txt-color-1);
+  background-color: var(--background-txt-color-3);
 }
 
 body {
   margin: 0px;
-   line-height: 0.5;
+  line-height: 0.5;
   height: 100vh;
   font-weight: 700;
   display: flex;
@@ -13,8 +13,8 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: var(--htxt);
-  background: var(--zphn);
+  color: var(--txt);
+  background: var(--background);
   font-family: 'Comfortaa';
 }
 
@@ -24,4 +24,4 @@ h1 {
 
 p {
  font-size: 35px;
- }
+}

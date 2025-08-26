@@ -9,9 +9,9 @@
 20:15/18/08 < Mini Update > | Update file <"quaseek/display.css"> / <"quaseek/styles.css">
 21:25/21/08 < Mini Update > | Update svg icon and mini fix <"index.html">
 15:00/23/08 < Mini Update > | Update file <"quaseek/display.html">
-12:50/24/08 < З Днем Незалежності! > Update file <quaseek/styles.css> / <index.html>
+12:50/24/08 < З Днем Незалежності! > | Update file <quaseek/styles.css> / <index.html>
 < v4.5.4 >
-...
+14:00/26/08 < Big Update >
 
 
 // Update Information File

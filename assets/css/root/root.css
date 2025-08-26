@@ -1,23 +1,27 @@
-/* Color */
 :root {
+    /* selection */
+  --background-txt-color-1: #282832;
+  --background-txt-color-2: #dcdcf0;
+  --background-txt-color-3: #e6e6fa;
     /* quaseek */
-  --vphn: #282832;
-  --qtxc: #e6e6fa;
-  --sean: #dcdcf0;
-  --sead: #d2d2e6;
-  --fohn: #23232d;
+  --background-search-txt-color-st: #dcdcf0;
+  --background-search-color-hv: #d2d2e6;
+  --background-footer-color: #23232d;
+  --background-txt-color: #282832;
+   --placeholder-color: #282832;
+  --txt-span-q: #e6e6fa;
+  --none: transparent;
     /* privacy */
-  --phn: #282832;
-  --txzgv: #e1e1f0;
-  --txni: #dcdcf0;
-  --txgm: #0077cc;
-    /* update */
-  --zphn: #282832;
-  --htxt: #e6e6fa;
+  --background-color: #282832;
+  --txt-color-mail: #0077cc;
+   --txt-color-back: #d2d2e6;
+  --txt-color-zg: #e6e6fa;
+  --txt-color-gl: #dcdcf0;
+    /* error */
+  --background: #282832;
+  --txt: #e6e6fa;
 }
-
-/* fonts */
-/* fonts 1 */
+/* fonts_сomfortaa-700 */
 @font-face {
   font-family: 'Comfortaa';
   src: url('/assets/fonts/Comfortaa-Bold/Comfortaa-Bold.woff2') format('woff2'),
@@ -26,7 +30,7 @@
   font-style: normal;
   font-display: block;
 }
-/* fonts 2 */
+/* fonts_montserrat-600 */
 @font-face {
   font-family: 'Montserrat';
   src: url('/assets/fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff2') format('woff2'),
@@ -35,7 +39,7 @@
   font-style: normal;
   font-display: block;
 }
-/* fonts 3 */
+/* fonts_montserrat-500 */
 @font-face {
   font-family: 'Montserrat';
   src: url('/assets/fonts/Montserrat-Medium/Montserrat-Medium.woff2') format('woff2'),

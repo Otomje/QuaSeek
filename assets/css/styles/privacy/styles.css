@@ -1,9 +1,14 @@
+::selection {
+  color: var(--background-txt-color-1);
+  background-color: var(--background-txt-color-3);
+}
+
 body {
   margin: 5px;
   padding: 40px 20px;
   font-family: 'Montserrat';
   font-weight: 500;
-  background-color: var(--phn);
+  background-color: var(--background-color);
   line-height: 1.6;
 }
 
@@ -16,21 +21,26 @@ h1 {
   font-size: 30px;
   margin-bottom: 20px;
   font-weight: 600;
-  color: var(--txzgv);
+  color: var(--txt-color-zg);
   line-height: 1.2;
 }
 
 p {
   font-size: 16px;
   margin-bottom: 15px;
-  color: var(--txni);
+  color: var(--txt-color-gl);
 }
 
-a {
-  color: var(--txgm);
+a.mail {
+  color: var(--txt-color-mail);
   text-decoration: none;
 }
 
-a:hover {
+a.back {
+  color: var(--txt-color-back);
+   text-decoration: none;
+}
+
+a.mail:hover {
   text-decoration: underline;
 }

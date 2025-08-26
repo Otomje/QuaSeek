@@ -57,3 +57,13 @@ searchIcon.addEventListener("click", performSearch, { passive: true });
 optionIcon.addEventListener("click", () => {
   input.value = "";
 }, { passive: true });
+
+document.addEventListener("keydown", function (e) {
+  const isSlash = e.key === "/" || e.key === "\\";
+  const isInputFocused = document.activeElement === input;
+
+  if (isSlash && !isInputFocused) {
+    e.preventDefault();
+    input.focus();
+  }
+});

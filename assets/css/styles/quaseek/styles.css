@@ -3,8 +3,8 @@
 }
 
 ::selection {
-  color: var(--sean);
-  background-color: var(--vphn);
+  background-color: var(--background-txt-color-1);
+  color: var(--background-txt-color-2);
 }
 
 body {
@@ -12,7 +12,7 @@ body {
   padding: 0;
   height: 100vh;
   font-weight: 700;
-  background-color: var(--vphn);
+  background-color: var(--background-txt-color);
   font-family: 'Comfortaa';
 }
 
@@ -38,7 +38,7 @@ body {
   font-size: 78px;
   font-weight: 700;
   white-space: nowrap;
-  color: var(--qtxc);
+  color: var(--txt-span-q);
   font-family: 'Comfortaa';
 }
 
@@ -54,7 +54,7 @@ body {
   margin-top: 23px;
   padding: 14px 15px;
   border-radius: 30px;
-  background: var(--sean);
+  background: var(--background-search-txt-color-st);
 }
 
 .search-container input {
@@ -68,10 +68,10 @@ body {
   min-width: 0px;
   line-height: normal;
   vertical-align: middle;
-  color: var(--vphn);
+  color: var(--background-txt-color);
   font-family: 'Montserrat';
   -webkit-appearance: none;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: var(--none);
 }
 
 .search-container img {
@@ -80,7 +80,7 @@ body {
   user-select: none;
   vertical-align: middle;
   -webkit-user-drag: none;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: var(--none);
 }
 
 .footer {
@@ -95,8 +95,8 @@ body {
   user-select: none;
   align-items: center;
   justify-content: space-between;
-  color: var(--sean);
-  background-color: var(--fohn);і
+  color: var(--background-search-txt-color-st);
+  background-color: var(--background-footer-color);
   font-family: 'Comfortaa';
 }
 
@@ -118,16 +118,23 @@ body {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  color: var(--vphn);
-  -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
+  color: var(--background-txt-color);
+  tap-highlight-color: var(--none);
+  -webkit-tap-highlight-color: var(--none);
+}
+
+input::placeholder {
+ color: var(--placeholder-color);
+ opacity: 0.9;
+ font-weight: 600;
+ font-family: 'Motserrat';
 }
 
 .footer-link {
   cursor: pointer;
   text-decoration: none;
-  color: var(--sean);
-  -webkit-tap-highlight-color: transparent;
+  color: var(--background-search-txt-color-st);
+  -webkit-tap-highlight-color: var(--none);
 }
 
 .footer-link:hover {
@@ -135,9 +142,9 @@ body {
 }
 
 .search-container:hover:not(.focused) {
-  background: var(--sead);
+  background: var(--background-search-color-hv);
 }
 
 .search-container.focused {
-  background: var(--sean);
+  background: var(--background-search-txt-color-st);
 }
