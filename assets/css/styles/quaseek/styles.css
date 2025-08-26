@@ -127,7 +127,7 @@ input::placeholder {
  color: var(--placeholder-color);
  opacity: 0.9;
  font-weight: 600;
- font-family: 'Motserrat';
+ font-family: 'Montserrat';
 }
 
 .footer-link {
