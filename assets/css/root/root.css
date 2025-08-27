@@ -8,13 +8,13 @@
   --background-search-color-hv: #d2d2e6;
   --background-footer-color: #23232d;
   --background-txt-color: #282832;
-   --placeholder-color: #282832;
+  --placeholder-color: #282832;
   --txt-span-q: #e6e6fa;
   --none: transparent;
     /* privacy */
   --background-color: #282832;
   --txt-color-mail: #0077cc;
-   --txt-color-back: #d2d2e6;
+  --txt-color-back: #d2d2e6;
   --txt-color-zg: #e6e6fa;
   --txt-color-gl: #dcdcf0;
     /* error */

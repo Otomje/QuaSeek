@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuaSeek</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background-search-txt-color-st: #dcdcf0;
+      --background-search-color-hv: #d2d2e6;
+      --background-footer-color: #23232d;
+      --background-txt-color: #282832;
+      --placeholder-color: #282832;
+      --txt-span-q: #e6e6fa;
+      --none: transparent;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: "Comfortaa", sans-serif;
+      font-weight: 700;
+      background: #282832;
+      display: flex;
+    }
+
+    .leftbar {
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+      background: #23232d;
+    }
+
+    .quaseek {
+      font-size: 24px;
+      padding-left: 20px;
+      padding-top: 15px;
+      display: block;
+      text-decoration: none;
+      color: #e6e6fa;
+    }
+
+    .buttons {
+      font-size: 18px;
+      color: #d2d2e6;
+      text-decoration: none;
+      padding: 12px 20px;
+      display: block;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+    }
+
+    .buttons:hover,
+    .buttons.active {
+      color: #dcdcf0;
+      background: #282832;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+      color: #e6e6fa;
+      display: none;
+    }
+
+    .content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav class="leftbar">
+    <a href="/" class="quaseek">QuaSeek</a>
+    <div class="buttons-container">
+      <a href="#" class="buttons active" data-target="about">About</a>
+      <a href="#" class="buttons" data-target="news">News</a>
+      <a href="#" class="buttons" data-target="privacy">Privacy</a>
+      <a href="#" class="buttons" data-target="contact">Contact</a>
+    </div>
+  </nav>
+  <div class="content active" id="about">
+    <h1>About QuaSeek</h1>
+    <p>Welcome to QuaSeek! This is the about page content.</p>
+  </div>
+  <div class="content" id="news">
+    <h1>News</h1>
+    <p>Latest updates and news about QuaSeek.</p>
+  </div>
+  <div class="content" id="privacy">
+    <h1>Privacy Policy</h1>
+    <p>Information about our privacy practices.</p>
+  </div>
+  <div class="content" id="contact">
+    <h1>Contact Us</h1>
+    <p>Get in touch with the QuaSeek team.</p>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.buttons');
+      const contents = document.querySelectorAll('.content');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = button.getAttribute('data-target');
+
+          buttons.forEach(btn => btn.classList.remove('active'));
+          contents.forEach(content => content.classList.remove('active'));
+
+          button.classList.add('active');
+          document.getElementById(targetId).classList.add('active');
+        });
+      });
+
+      // Показати "About" за замовчуванням
+      document.getElementById('about').classList.add('active');
+      document.querySelector('.buttons[data-target="about"]').classList.add('active');
+    });
+  </script>
+</body>
+</html>
