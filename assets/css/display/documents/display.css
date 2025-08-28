@@ -1,0 +1,49 @@
+@media (max-width: 500px) {
+.leftbar {
+ position: fixed;
+ width: 100%;
+ transition: transform 0.3s ease;
+}
+
+.leftbar.active {
+ transform: translateX(0);
+}
+
+.leftbar.hidden {
+ transform: translateX(-100%);
+ }
+}
+
+@media (min-width: 501px) {
+.leftbar {
+ flex-shrink: 0;
+}
+
+.leftbar.hidden {
+ display: none;
+}
+
+.content {
+ flex: 1;
+ }
+}
+
+@media (max-width: 230px) {
+html {
+ background-color: var(--background-color-hover);
+}
+
+body {
+ display: none;
+ }
+}
+
+@media (max-height: 190px) {
+html {
+ background-color: var(--background-color-hover);
+}
+
+body {
+ display: none;
+ }
+}

@@ -1,25 +1,25 @@
 ::selection {
-  color: var(--background-txt-color-1);
-  background-color: var(--background-txt-color-3);
+ color: var(--background-txt-color-1);
+ background-color: var(--background-txt-color-3);
 }
 
 body {
-  margin: 0px;
-  line-height: 0.5;
-  height: 100vh;
-  font-weight: 700;
-  display: flex;
-  overflow: hidden;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  color: var(--txt);
-  background: var(--background);
-  font-family: 'Comfortaa';
+ margin: 0px;
+ line-height: 0.5;
+ height: 100vh;
+ font-weight: 700;
+ display: flex;
+ overflow: hidden;
+ text-align: center;
+ align-items: center;
+ justify-content: center;
+ color: var(--txt);
+ background: var(--background);
+ font-family: 'Comfortaa';
 }
 
 h1 {
-  font-size: 80px;
+ font-size: 80px;
 }
 
 p {

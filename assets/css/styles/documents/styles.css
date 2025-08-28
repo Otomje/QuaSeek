@@ -1,0 +1,110 @@
+::selection {
+ color: var(--background-txt-color-1);
+ background-color: var(--background-txt-color-2);
+}
+
+body {
+ margin: 0;
+ padding: 0;
+ height: 100vh;
+ font-weight: 700;
+ display: flex;
+ font-family: "Comfortaa";
+ background: var(--background-color-hover);
+}
+
+.leftbar {
+ top: 0;
+ left: 0;
+ width: 220px;
+ height: 100vh;
+ display: flex;
+ user-select: none;
+ flex-direction: column;
+ background: var(--background-leftbar);
+ z-index: 1000;
+}
+
+.qs {
+ font-size: 24px;
+ padding-left: 20px;
+ padding-top: 15px;
+ display: block;
+ text-decoration: none;
+ color: var(--txt-color-qs);
+ -webkit-tap-highlight-color: var(--none);
+}
+
+.toggle-button {
+ bottom: 20px;
+ right: 20px;
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ z-index: 1000;
+ position: fixed;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+ background: var(--button-color);
+ -webkit-tap-highlight-color: var(--none);
+}
+
+.toggle-button svg {
+ width: 30px;
+ height: 30px;
+ fill: var(--txt-color-qs);
+}
+
+.buttons {
+ font-size: 18px;
+ padding: 12px 20px;
+ display: block;
+ text-decoration: none;
+ color: var(--txt-color-bt);
+ -webkit-tap-highlight-color: var(--none);
+ transition: color 0.5s ease, background 0.5s ease;
+}
+
+.buttons-container {
+ margin-top: 15px;
+ display: flex;
+ flex-direction: column;
+}
+
+.buttons:hover {
+ color: var(--txt-color-bt-hover);
+ border-left: 2px solid var(--none);
+}
+
+.buttons.active {
+ color: var(--txt-color-bt-hover);
+ border-left: 2px solid var(--txt-color-bt);
+ background: var(--background-color-hover);
+}
+
+.content {
+ padding-top: 20px;
+ padding-left: 40px;
+ padding-right: 40px;
+ display: none;
+ color: var(--txt-color-qs);
+}
+
+.content.active {
+ display: block;
+}
+
+p {
+ font-size: 16px;
+}
+
+h1 {
+ font-size: 30px;
+}
+
+a.mail {
+ text-decoration: none;
+ color: var(--txt-color-mail);
+}
