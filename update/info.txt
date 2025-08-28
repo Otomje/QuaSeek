@@ -10,4 +10,5 @@
 15:00/23/08 < Mini Update > | Update file <"quaseek/display.html">
 12:50/24/08 < З Днем Незалежності! > | Update file <quaseek/styles.css> / <index.html>
 13:40/28/08 < Big Update > | Add < QuaSeek Documents >, and update files
+17:50/28/08 < Mini Update > | Update file <"Documents.html">
 // Update Information File

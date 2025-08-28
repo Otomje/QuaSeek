@@ -18,11 +18,12 @@ body {
  left: 0;
  width: 220px;
  height: 100vh;
+ z-index: 1000;
  display: flex;
  user-select: none;
  flex-direction: column;
+ border-right: 2px solid var(--button-color);
  background: var(--background-leftbar);
- z-index: 1000;
 }
 
 .qs {
@@ -38,15 +39,15 @@ body {
 .toggle-button {
  bottom: 20px;
  right: 20px;
- width: 50px;
+ width: 60px;
  height: 50px;
- border-radius: 50%;
+ border-radius: 50px;
  z-index: 1000;
  position: fixed;
  display: flex;
+ cursor: pointer;
  align-items: center;
  justify-content: center;
- cursor: pointer;
  background: var(--button-color);
  -webkit-tap-highlight-color: var(--none);
 }
@@ -57,6 +58,10 @@ body {
  fill: var(--txt-color-qs);
 }
 
+.toggle-button:hover {
+ background: var(--button-color-hv);
+}
+
 .buttons {
  font-size: 18px;
  padding: 12px 20px;
@@ -64,7 +69,7 @@ body {
  text-decoration: none;
  color: var(--txt-color-bt);
  -webkit-tap-highlight-color: var(--none);
- transition: color 0.5s ease, background 0.5s ease;
+ transition: background 0.5s ease;
 }
 
 .buttons-container {
@@ -75,12 +80,12 @@ body {
 
 .buttons:hover {
  color: var(--txt-color-bt-hover);
- border-left: 2px solid var(--none);
+ border-left: 1px solid var(--none);
 }
 
 .buttons.active {
  color: var(--txt-color-bt-hover);
- border-left: 2px solid var(--txt-color-bt);
+ border-left: 1px solid var(--none);
  background: var(--background-color-hover);
 }
 
