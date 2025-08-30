@@ -1,4 +1,4 @@
-   document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.buttons');
   const contents = document.querySelectorAll('.content');
   const leftbar = document.querySelector('.leftbar');
@@ -15,7 +15,7 @@
   }
 
   function updateContentFromHash() {
-    const hash = location.hash.slice(1) || 'about';
+    const hash = location.hash.slice(1); // del || 'about'
 
     buttons.forEach(btn => {
       const target = btn.getAttribute('data-target');
