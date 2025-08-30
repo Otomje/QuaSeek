@@ -137,6 +137,13 @@ input::placeholder {
  -webkit-tap-highlight-color: var(--none);
 }
 
+.footer-link-qs {
+ cursor: pointer;
+ text-decoration: none;
+ color: var(--txt-span-q);
+ -webkit-tap-highlight-color: var(--none);
+}
+
 .footer-link:hover {
  text-decoration: underline;
 }

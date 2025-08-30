@@ -12,4 +12,5 @@
 13:40/28/08 < Big Update > | Add < QuaSeek Documents >, and update files
 17:50/28/08 < Mini Update > | Update file <"Documents.html">
 13:40/30/08 < Mini Update > | Update file <"Documents.html">, <"root/root.css">, <"documents/styles.css">, <"index.html">
+13:50/30/08 < Mini Update > | Update file <"index.html">, <"quaseek/styles.css">
 // Update Information File
