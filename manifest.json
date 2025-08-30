@@ -1,19 +1,19 @@
 {
   "name": "QuaSeek",
   "short_name": "QuaSeek",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#282832",
   "theme_color": "#282832",
   "icons": [
     {
-      "src": "assets/img/site/app.png",
+      "src": "assets/img/site/favicon.png",
       "sizes": "200x200",
       "type": "image/png"
     },
     {
-      "src": "assets/img/site/app.png",
-      "sizes": "500x500",
+      "src": "assets/img/site/favicon.png",
+      "sizes": "400x400",
       "type": "image/png"
     }
   ]
