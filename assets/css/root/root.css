@@ -18,8 +18,9 @@
  --txt-color-mail: #0077cc;
  --txt-color-bt: #d2d2e6;
  --txt-color-qs: #e6e6fa;
- --button-color: #32323c;
- --button-color-hv: #373741;
+ --border-color: #32323c;
+ --button-color: #a0a0dc;
+ --button-color-hv: #a5a5e1;
     /* error */
  --background: #282832;
  --txt: #e6e6fa;

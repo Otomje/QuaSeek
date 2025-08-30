@@ -22,7 +22,7 @@ body {
  display: flex;
  user-select: none;
  flex-direction: column;
- border-right: 2px solid var(--button-color);
+ border-right: 2px solid var(--border-color);
  background: var(--background-leftbar);
 }
 
@@ -39,8 +39,8 @@ body {
 .toggle-button {
  bottom: 20px;
  right: 20px;
- width: 60px;
- height: 50px;
+ width: 55px;
+ height: 45px;
  border-radius: 50px;
  z-index: 1000;
  position: fixed;
@@ -53,9 +53,9 @@ body {
 }
 
 .toggle-button svg {
- width: 30px;
- height: 30px;
- fill: var(--txt-color-qs);
+ width: 28px;
+ height: 28px;
+ fill: var( --background-color-hover);
 }
 
 .toggle-button:hover {
