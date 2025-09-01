@@ -14,4 +14,5 @@
 13:40/30/08 < Mini Update > | Update file <"Documents.html">, <"root/root.css">, <"documents/styles.css">, <"index.html">
 13:50/30/08 < Mini Update > | Update file <"index.html">, <"quaseek/styles.css">
 17:15/30/08 < Mini Update > | Update img, update file <"documents/script.js">, <"documents.html">, <"root/root.css">
+18:50/01/09 < Mini Update > | Update file <"index.html">, <"documents.html">, <"documets/style.css">, <"root/root.css">
 // Update Information File

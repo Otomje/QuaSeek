@@ -39,9 +39,9 @@ body {
 .toggle-button {
  bottom: 20px;
  right: 20px;
- width: 55px;
+ width: 50px;
  height: 45px;
- border-radius: 50px;
+ border-radius: 15px;
  z-index: 1000;
  position: fixed;
  display: flex;
@@ -53,8 +53,8 @@ body {
 }
 
 .toggle-button svg {
- width: 28px;
- height: 28px;
+ width: 27px;
+ height: 27px;
  fill: var( --background-color-hover);
 }
 
@@ -81,12 +81,13 @@ body {
 .buttons:hover {
  color: var(--txt-color-bt-hover);
  border-left: 1px solid var(--none);
+ background: var(--background-color-hover);
 }
 
 .buttons.active {
  color: var(--txt-color-bt-hover);
  border-left: 1px solid var(--none);
- background: var(--background-color-hover);
+ background: var(--button-active);
 }
 
 .content {
@@ -99,6 +100,10 @@ body {
 
 .content.active {
  display: block;
+}
+
+button {
+ border: none;
 }
 
 p {
