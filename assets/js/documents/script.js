@@ -4,55 +4,56 @@ document.addEventListener('DOMContentLoaded', () => {
   const leftbar = document.querySelector('.leftbar');
   const toggleButton = document.querySelector('#toggleButton');
 
-  function updateSidebarState() {
-    if (window.innerWidth <= 500 && location.hash) {
-      leftbar.classList.remove('active');
-      leftbar.classList.add('hidden');
-    } else {
-      leftbar.classList.add('active');
-      leftbar.classList.remove('hidden');
-    }
-  }
+  const MOBILE_WIDTH = 500;
 
-  function updateContentFromHash() {
-    const hash = location.hash.slice(1); // del || 'about'
+  const updateSidebarState = () => {
+    const isMobile = window.innerWidth <= MOBILE_WIDTH;
+    const hasHash = !!location.hash;
+
+    leftbar.classList.toggle('active', !isMobile || !hasHash);
+    leftbar.classList.toggle('hidden', isMobile && hasHash);
+  };
+
+  const updateContentFromHash = () => {
+    const hash = location.hash.slice(1);
 
     buttons.forEach(btn => {
-      const target = btn.getAttribute('data-target');
-      btn.classList.toggle('active', target === hash);
-      btn.setAttribute('aria-current', target === hash ? 'page' : null);
+      const target = btn.dataset.target;
+      const isActive = target === hash;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-current', isActive ? 'page' : '');
     });
 
     contents.forEach(content => {
       content.classList.toggle('active', content.id === hash);
     });
-  }
+  };
 
-  function handleRouteChange() {
+  const handleRouteChange = () => {
     updateContentFromHash();
     updateSidebarState();
-  }
+  };
 
-  function toggleSidebar() {
+  const toggleSidebar = () => {
     leftbar.classList.toggle('active');
     leftbar.classList.toggle('hidden');
-  }
+  };
 
+  // Инициализация
   handleRouteChange();
 
+  // Слушатели
   window.addEventListener('hashchange', handleRouteChange);
   window.addEventListener('resize', handleRouteChange);
 
-  if (toggleButton) {
-    toggleButton.addEventListener('click', toggleSidebar);
-  }
+  toggleButton?.addEventListener('click', toggleSidebar);
 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
-      const target = btn.getAttribute('data-target');
+      const target = btn.dataset.target;
       location.hash = target;
 
-      if (window.innerWidth <= 500) {
+      if (window.innerWidth <= MOBILE_WIDTH) {
         leftbar.classList.remove('active');
         leftbar.classList.add('hidden');
       }

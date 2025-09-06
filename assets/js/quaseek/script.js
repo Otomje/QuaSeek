@@ -7,62 +7,48 @@ const footerLinks = document.querySelectorAll(".footer-link");
 input.focus();
 input.value = "";
 
-[searchIcon, optionIcon, ...footerLinks].forEach(element => {
-  element.addEventListener("contextmenu", (e) => {
-    e.preventDefault();
-  }, { passive: false });
-  element.addEventListener("click", (e) => {
-    e.stopPropagation();
-  }, { passive: false });
-});
+// Фокус при натисненні на контейнер
+searchContainer.addEventListener("click", () => input.focus(), { passive: true });
 
-searchContainer.addEventListener("click", () => {
-  input.focus();
-}, { passive: true });
+// Стилі при фокусі
+input.addEventListener("focus", () => searchContainer.classList.add("focused"), { passive: true });
+input.addEventListener("blur", () => searchContainer.classList.remove("focused"), { passive: true });
 
-input.addEventListener("focus", () => {
-  searchContainer.classList.add("focused");
-}, { passive: true });
+// Функція пошуку
+const search = (inNewTab = false) => {
+  const query = input.value.trim();
+  if (!query) return;
 
-input.addEventListener("blur", () => {
-  searchContainer.classList.remove("focused");
-}, { passive: true });
-
-const performSearch = () => {
-  const queryRaw = input.value.trim();
-  if (queryRaw.length > 0) {
-    window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(queryRaw);
-  }
+  const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+  inNewTab ? window.open(url, "_blank") : (window.location.href = url);
 };
 
-const performSearchInNewTab = () => {
-  const queryRaw = input.value.trim();
-  if (queryRaw.length > 0) {
-    window.open("https://www.google.com/search?q=" + encodeURIComponent(queryRaw), "_blank");
-  }
-};
-
+// Обробка клавіш
 input.addEventListener("keydown", e => {
-  if (e.key === "Enter" && e.ctrlKey) {
-    performSearchInNewTab();
-  } else if (e.key === "Enter") {
-    performSearch();
+  if (e.key === "Enter") {
+    e.ctrlKey ? search(true) : search();
   } else if (e.key === "Backspace" && e.shiftKey) {
     input.value = "";
     e.preventDefault();
+  } else if (e.key === "Escape") {
+    input.blur();
   }
 }, { passive: false });
 
-searchIcon.addEventListener("click", performSearch, { passive: true });
-optionIcon.addEventListener("click", () => {
+// Кнопки
+searchIcon.addEventListener("click", (e) => {
+  e.stopPropagation(); // теперь клик не даст фокус контейнеру
+  search();
+}, { passive: true });
+
+optionIcon.addEventListener("click", (e) => {
+  e.stopPropagation(); // теперь клик не даст фокус контейнеру
   input.value = "";
 }, { passive: true });
 
-document.addEventListener("keydown", function (e) {
-  const isSlash = e.key === "/" || e.key === "\\";
-  const isInputFocused = document.activeElement === input;
-
-  if (isSlash && !isInputFocused) {
+// Швидкий фокус на поле
+document.addEventListener("keydown", e => {
+  if ((e.key === "/" || e.key === "\\") && document.activeElement !== input) {
     e.preventDefault();
     input.focus();
   }
