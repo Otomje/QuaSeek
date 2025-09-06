@@ -27,15 +27,6 @@
  --txt: #e6e6fa;
 }
 
-/* scroll */
-::-webkit-scrollbar {
-  background: var(--none);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--none);
-}
-
 /* fonts_сomfortaa-700 */
 @font-face {
  font-family: 'Comfortaa';
