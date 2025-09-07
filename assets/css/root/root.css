@@ -3,14 +3,24 @@
  --background-txt-color-1: #282832;
  --background-txt-color-2: #dcdcf0;
  --background-txt-color-3: #e6e6fa;
+ --background-txt-color-4: #f0f0fa;
     /* quaseek */
  --background-search-txt-color-st: #dcdcf0;
  --background-search-color-hv: #d2d2e6;
  --background-footer-color: #23232d;
  --background-txt-color: #282832;
- --placeholder-color: #282832;
+ --placeholder-color: transparent;
+ --footer-txt-color: #dcdcf0;
+ --txt-img-color: #282832;
  --txt-span-q: #e6e6fa;
  --none: transparent;
+    /* light */
+ --background-search-txt-color-st-light: #f0f0fa;
+ --background-search-color-hv-light: #f0f0fa;
+ --background-footer-color-light: #e6e6f0;
+ --background-txt-color-light: #f0f0fa;
+ --footer-txt-color-light: #282832;
+ --txt-span-q-light: #282832;
     /* documents */
  --background-color-hover: #282832;
  --background-leftbar: #23232d;

@@ -13,7 +13,7 @@ transition:
 }
 
 @media (max-width: 580px) {
- .header-text-container .header-text {
+.header-text-container .header-text {
  font-size: 68px;
 }
 
@@ -57,7 +57,7 @@ transition:
 }
 
 .search-container {
- padding: 13px 15px;
+ padding: 0px 15px;
  margin-top: 20px;
  height: 46px;
  gap: 9px;
@@ -76,7 +76,7 @@ transition:
 }
 
 .search-container {
- padding: 11px 13px;
+ padding: 0px 13px;
  margin-top: 18px;
  height: 42px;
  gap: 9px;
@@ -99,7 +99,7 @@ transition:
 }
 
 .search-container {
- padding: 9px 11px;
+ padding: 0px 11px;
  margin-top: 16px;
  height: 38px;
  gap: 9px;
