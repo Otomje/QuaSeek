@@ -2,14 +2,9 @@
   "name": "QuaSeek", 
   "short_name": "QuaSeek", 
   "description": "QuaSeek — fast search without distractions.",
-  "start_url": "/", 
-  "scope": "/",
-  "display": "standalone",
-  "display_override": ["standalone", "fullscreen"],
-  "orientation": "any", 
+  "display": "minimal-ui",
   "background_color": "#282832",
   "theme_color": "#282832",
-
   "icons": [
     {
       "src": "assets/img/site/appico.png",
@@ -21,10 +16,5 @@
       "sizes": "396x396", 
       "type": "image/png"
     }
-  ],
-
-  "lang": "en",
-  "dir": "ltr",
-  "categories": ["productivity", "search"]
+  ]
 }
-<link rel="manifest" href="manifest.json"/>
