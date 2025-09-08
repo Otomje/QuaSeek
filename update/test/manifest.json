@@ -27,3 +27,4 @@
   "dir": "ltr",
   "categories": ["productivity", "search"]
 }
+<link rel="manifest" href="manifest.json"/>
