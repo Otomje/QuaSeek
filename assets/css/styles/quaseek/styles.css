@@ -18,7 +18,7 @@ body {
 }
   
 .main-container {
- height: 100%;
+ min-height: 100%;
  padding: 0px 15px;
  display: flex;
  flex-direction: column;
@@ -52,7 +52,7 @@ body {
  width: 100%;
  max-width: var(--search-container-width);
  height: 50px;
- margin-top: 23px;
+ margin-top: 0px; /* 23px */
  padding: 0px 15px;
  border-radius: 30px;
  background: var(--background-search-txt-color-st);
