@@ -10,8 +10,8 @@ html, *, *::before, *::after {
 body {
  margin: 0;
  padding: 0;
- height: 100dvh;
  height: 100vh;
+ height: 100dvh;
  font-weight: 700;
  font-family: 'Comfortaa';
  background-color: var(--background-txt-color);
