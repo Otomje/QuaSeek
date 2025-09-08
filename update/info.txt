@@ -17,4 +17,5 @@
 18:50/01/09 < Mini Update > | Update files <"index.html">, <"documents.html">, <"documets/style.css">, <"root/root.css">
 18:50/06/09 < Update > | Update files <"index.html">, <"documents.html">, <"documets/script.js">, <"quaseek/script.js">, <"root/root.css">, <"manifest.json">
 16:00/07/09 < Update > | Update files <"index.html">, <"quaseek/style.html">, <"root/root.html">. Add file <"quaseek/light/style.css">
+16:00/08/09 < Update and Test >
 // Update Information File

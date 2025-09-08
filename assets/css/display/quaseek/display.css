@@ -112,18 +112,18 @@ transition:
 }
 
 .footer {
- height: 38px;
+ height: var(--footer-height-mobile);
 }
 
 .footer-left {
  font-size: 14px;
- line-height: 38px;
+ line-height: var(--footer-height-mobile);
  gap: 15px;
 }
 
 .footer-right {
  font-size: 17px;
- line-height: 38px;
+ line-height: var(--footer-height-mobile);
  }
 }
 

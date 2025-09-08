@@ -16,9 +16,9 @@ body {
 .leftbar {
  top: 0;
  left: 0;
- width: 220px;
- height: 100vh;
- z-index: 1000;
+ width: var(--leftbar-width);
+ overflow-y: auto;
+ z-index: var(--z);
  display: flex;
  user-select: none;
  flex-direction: column;
@@ -26,10 +26,9 @@ body {
  background: var(--background-leftbar);
 }
 
-.qs {
- font-size: 24px;
- padding-left: 20px;
- padding-top: 15px;
+.header-text {
+ font-size: var(--header-txt-size);
+ padding: 17px 17px 0px 17px;
  display: block;
  text-decoration: none;
  color: var(--txt-color-qs);
@@ -41,10 +40,10 @@ body {
  right: 20px;
  width: 50px;
  height: 45px;
+ z-index: var(--z);
  border-radius: 15px;
- z-index: 1000;
- position: fixed;
  display: flex;
+ position: fixed;
  cursor: pointer;
  align-items: center;
  justify-content: center;
@@ -64,7 +63,7 @@ body {
 
 .buttons {
  font-size: 18px;
- padding: 12px 20px;
+ padding: 12px 18px;
  display: block;
  text-decoration: none;
  color: var(--txt-color-bt);
@@ -73,7 +72,7 @@ body {
 }
 
 .buttons-container {
- margin-top: 15px;
+ margin-top: 12px;
  display: flex;
  flex-direction: column;
 }
@@ -86,15 +85,14 @@ body {
 
 .buttons.active {
  color: var(--txt-color-bt-hover);
- border-left: 1px solid var(--none);
+ border-left: 2px solid var(--border-color);
  background: var(--button-active);
 }
 
 .content {
- padding-top: 20px;
- padding-left: 40px;
- padding-right: 40px;
+ padding: 30px 40px 10px 40px;
  display: none;
+ overflow-y: auto;
  color: var(--txt-color-qs);
 }
 
@@ -107,14 +105,18 @@ button {
 }
 
 p {
- font-size: 16px;
+ font-size: var(--p-txt-size);
+ line-height: 1.4;
 }
 
 h1 {
- font-size: 30px;
+ font-size: var(--h1-txt-size);
+ line-height: normal;
+ margin-top: 0;
 }
 
 a.mail {
  text-decoration: none;
+ font-size: var(--a-txt-size);
  color: var(--txt-color-mail);
 }

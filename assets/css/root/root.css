@@ -9,7 +9,7 @@
  --background-search-color-hv: #d2d2e6;
  --background-footer-color: #23232d;
  --background-txt-color: #282832;
- --placeholder-color: transparent;
+ --placeholder-color: #282832;
  --footer-txt-color: #dcdcf0;
  --txt-img-color: #282832;
  --txt-span-q: #e6e6fa;
@@ -35,6 +35,18 @@
     /* error */
  --background: #282832;
  --txt: #e6e6fa;
+   /* px | rem */
+ --search-container-width: 37.5rem; /* 600px */ /* qs */
+ --footer-height-normal: 40px;
+ --footer-height-mobile: 38px;
+ --foter-left-txt-size: 15px;
+ --foter-right-txt-size: 18px;
+ --leftbar-width: 13.75rem; /* 220px */ /* dc */
+ --header-txt-size: 23px;
+ --p-txt-size: 16px;
+ --h1-txt-size: 29px;
+ --a-txt-size: 16px;
+ --z: 1000;
 }
 
 /* fonts_сomfortaa-700 */
