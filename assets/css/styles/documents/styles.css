@@ -6,6 +6,7 @@
 body {
  margin: 0;
  padding: 0;
+ height: 100dh;
  height: 100vh;
  font-weight: 700;
  display: flex;

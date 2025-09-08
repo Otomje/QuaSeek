@@ -10,8 +10,8 @@ html, *, *::before, *::after {
 body {
  margin: 0;
  padding: 0;
- height: 100vh;
  height: 100dvh;
+ height: 100vh;
  font-weight: 700;
  font-family: 'Comfortaa';
  background-color: var(--background-txt-color);
@@ -52,7 +52,7 @@ body {
  width: 100%;
  max-width: var(--search-container-width);
  height: 50px;
- margin-top: 23px; /* 23px */
+ margin-top: 23px;
  padding: 0px 15px;
  border-radius: 30px;
  background: var(--background-search-txt-color-st);
