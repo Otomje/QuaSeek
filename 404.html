@@ -1,21 +1,119 @@
 <!DOCTYPE html>
 <html lang="en" translate="no">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google" content="notranslate" />
   <meta name="description" content="QuaSeek 404">
   <title>404</title>
-  <link rel="icon" type="image/png" href="assets/img/site/favicon.png">
-  <link rel="preload" href="/assets/fonts/Comfortaa-Bold/Comfortaa-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/root/root.css">
-  <link rel="stylesheet" href="assets/css/styles/errors/styles.css">
-  <link rel="stylesheet" href="assets/css/display/errors/display.css">
 </head>
+<style>
+  :root {
+    --background-txt-color-1: #282832;
+    --background-txt-color-3: #e6e6fa;
+    --background-color-2: #282832;
+    --txt-color-2: #e6e6fa;
+  }
+
+  ::selection {
+    color: var(--background-txt-color-1);
+    background-color: var(--background-txt-color-3);
+  }
+
+  @font-face {
+    font-family: 'Comfortaa';
+    src: url('/assets/fonts/Comfortaa-Bold/Comfortaa-Bold.woff2') format('woff2'),
+      url('/assets/fonts/Comfortaa-Bold/Comfortaa-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+  }
+
+  body {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    height: 100dvh;
+    font-weight: 700;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--txt-color-2);
+    background: var(--background-color-2);
+    font-family: 'Comfortaa';
+  }
+
+  h1 {
+    margin: 0;
+    padding-bottom: 6px;
+    font-size: 80px;
+  }
+
+  p {
+    margin: 0;
+    padding-top: 6px;
+    font-size: 35px;
+  }
+
+  h1,
+  p {
+    transition: font-size 0.1s ease;
+  }
+
+  @media (max-width: 250px) {
+    h1 {
+      font-size: 70px;
+    }
+
+    p {
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 220px) {
+    h1 {
+      font-size: 60px;
+    }
+
+    p {
+      font-size: 25px;
+    }
+  }
+
+  @media (max-width: 190px) {
+    h1 {
+      font-size: 50px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 160px) {
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 130px) {
+    body {
+      opacity: 0;
+    }
+  }
+</style>
+
 <body>
-<div>
-  <h1>404</h1>
-  <p>NOT FOUND</p>
-</div>
+  <div>
+    <h1>404</h1>
+    <p>NOT FOUND</p>
+  </div>
 </body>
+
 </html>
