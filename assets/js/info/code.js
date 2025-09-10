@@ -39,10 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
     leftbar.classList.toggle('hidden');
   };
 
-  // Инициализация
   handleRouteChange();
 
-  // Слушатели
   window.addEventListener('hashchange', handleRouteChange);
   window.addEventListener('resize', handleRouteChange);
 

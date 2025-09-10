@@ -2,28 +2,37 @@ const input = document.getElementById("searchQuery");
 const searchContainer = document.querySelector(".search-container");
 const searchIcon = document.getElementById("searchIcon");
 const optionIcon = document.getElementById("optionIcon");
-const footerLinks = document.querySelectorAll(".footer-link");
+
+const footerLinks = document.querySelectorAll(".footer-left-link, .footer-right-link");
 
 input.focus();
 input.value = "";
 
-// Фокус при натисненні на контейнер
-searchContainer.addEventListener("click", () => input.focus(), { passive: true });
+const setFocused = state => {
+  searchContainer.classList.toggle("focused", state);
+  if (state) searchContainer.classList.remove("hovered");
+};
 
-// Стилі при фокусі
-input.addEventListener("focus", () => searchContainer.classList.add("focused"), { passive: true });
-input.addEventListener("blur", () => searchContainer.classList.remove("focused"), { passive: true });
+input.addEventListener("focus", () => setFocused(true), { passive: true });
+input.addEventListener("blur", () => setFocused(false), { passive: true });
 
-// Функція пошуку
+searchContainer.addEventListener("click", e => {
+  if (e.target !== input) input.focus();
+}, { passive: true });
+
+searchContainer.addEventListener("mouseenter", () => {
+  if (!input.matches(":focus")) searchContainer.classList.add("hovered");
+}, { passive: true });
+
+searchContainer.addEventListener("mouseleave", () => searchContainer.classList.remove("hovered"), { passive: true });
+
 const search = (inNewTab = false) => {
   const query = input.value.trim();
   if (!query) return;
-
   const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
   inNewTab ? window.open(url, "_blank") : (window.location.href = url);
 };
 
-// Обробка клавіш
 input.addEventListener("keydown", e => {
   if (e.key === "Enter") {
     e.ctrlKey ? search(true) : search();
@@ -35,18 +44,16 @@ input.addEventListener("keydown", e => {
   }
 }, { passive: false });
 
-// Кнопки
-searchIcon.addEventListener("click", (e) => {
-  e.stopPropagation(); // теперь клик не даст фокус контейнеру
+searchIcon.addEventListener("click", e => {
+  e.stopPropagation();
   search();
 }, { passive: true });
 
-optionIcon.addEventListener("click", (e) => {
-  e.stopPropagation(); // теперь клик не даст фокус контейнеру
+optionIcon.addEventListener("click", e => {
+  e.stopPropagation();
   input.value = "";
 }, { passive: true });
 
-// Швидкий фокус на поле
 document.addEventListener("keydown", e => {
   if ((e.key === "/" || e.key === "\\") && document.activeElement !== input) {
     e.preventDefault();

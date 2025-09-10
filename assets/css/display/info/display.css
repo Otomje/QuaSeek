@@ -1,0 +1,40 @@
+@media (min-width: 501px) {
+    .leftbar {
+        flex-shrink: 0;
+    }
+
+    .leftbar.hidden {
+        display: none;
+    }
+
+    .content {
+        flex: 1;
+    }
+}
+
+@media (max-width: 500px) {
+    .leftbar {
+        position: fixed;
+        width: 100%;
+        border: none;
+        transition: transform 0.2s ease;
+    }
+
+    .content {
+        padding: 30px 30px 0px 30px;
+    }
+
+    .leftbar.active {
+        transform: translateX(0);
+    }
+
+    .leftbar.hidden {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 230px) {
+    body {
+        opacity: 0;
+    }
+}

@@ -1,78 +1,68 @@
 :root {
-    /* selection */
- --background-txt-color-1: #282832;
- --background-txt-color-2: #dcdcf0;
- --background-txt-color-3: #e6e6fa;
- --background-txt-color-4: #f0f0fa;
-    /* quaseek */
- --background-search-txt-color-st: #dcdcf0;
- --background-search-color-hv: #d2d2e6;
- --background-footer-color: #23232d;
- --background-txt-color: #282832;
- --placeholder-color: #282832;
- --footer-txt-color: #dcdcf0;
- --txt-img-color: #282832;
- --txt-span-q: #e6e6fa;
- --none: transparent;
-    /* light */
- --background-search-txt-color-st-light: #f0f0fa;
- --background-search-color-hv-light: #f0f0fa;
- --background-footer-color-light: #e6e6f0;
- --background-txt-color-light: #f0f0fa;
- --footer-txt-color-light: #282832;
- --txt-span-q-light: #282832;
-    /* documents */
- --background-color-hover: #282832;
- --background-leftbar: #23232d;
- --txt-color-bt-hover: #dcdcf0;
- --txt-color-mail: #0077cc;
- --txt-color-bt: #d2d2e6;
- --txt-color-qs: #e6e6fa;
- --border-color: #32323c;
- --button-color: #bebefa;
- --button-active: #2d2d37;
- --button-color-hv: #c3c3ff;
-    /* error */
- --background: #282832;
- --txt: #e6e6fa;
-   /* px | rem */
- --search-container-width: 37.5rem; /* 600px */ /* qs */
- --footer-height-normal: 40px;
- --footer-height-mobile: 38px;
- --foter-left-txt-size: 15px;
- --foter-right-txt-size: 18px;
- --leftbar-width: 13.75rem; /* 220px */ /* dc */
- --header-txt-size: 23px;
- --p-txt-size: 16px;
- --h1-txt-size: 29px;
- --a-txt-size: 16px;
- --z: 1000;
+   /* selection */
+   --background-txt-color-1: #282832;
+   --background-txt-color-2: #dcdcf0;
+   --background-txt-color-3: #e6e6fa;
+   --background-txt-color-4: #f0f0fa;
+   --none: transparent;
+   /* quaseek */
+   --background-color: #282832;
+   --header-background-color: transparent;
+   --header-txt-color: #dcdcf0;
+   --apps-button-color: none;
+   --apps-button-color-hover: none;
+   --heading-txt-color: #e6e6fa;
+   --background-search-container-color: #dcdcf0;
+   --background-search-container-color-hover: #d2d2e6;
+   --txt-search-container-color: #282832;
+   --img-icon-color: #282832;
+   --footer-background-color: #23232d;
+   --footer-txt-color: #dcdcf0;
+   /* info */
+   --background-color-1: #282832;
+   --leftbar-background: #262630;
+   --content-txt-color: #dcdcf0;
+   --button-background-color: #bebefa;
+   --button-background-color-hover: #2d2d37;
+   --button-background-color-active: #32323c;
+   --toggle-background-color: #32323c;
+   --border-color: #32323c;
+   --heading-txt-color-1: #e6e6fa;
+   --button-txt-color: #d2d2e6;
+   --button-txt-color-hover: #dcdcf0;
+   --img-fill-color: #d2d2e6;
+   --mail-txt-color: #0077cc;
+   /* error */
+   --background-color-2: #282832;
+   --txt-color-2: #e6e6fa;
 }
 
 /* fonts_сomfortaa-700 */
 @font-face {
- font-family: 'Comfortaa';
- src: url('/assets/fonts/Comfortaa-Bold/Comfortaa-Bold.woff2') format('woff2'),
+   font-family: 'Comfortaa';
+   src: url('/assets/fonts/Comfortaa-Bold/Comfortaa-Bold.woff2') format('woff2'),
       url('/assets/fonts/Comfortaa-Bold/Comfortaa-Bold.woff') format('woff');
- font-weight: 700;
- font-style: normal;
- font-display: block;
+   font-weight: 700;
+   font-style: normal;
+   font-display: block;
 }
+
 /* fonts_montserrat-600 */
 @font-face {
- font-family: 'Montserrat';
- src: url('/assets/fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff2') format('woff2'),
+   font-family: 'Montserrat';
+   src: url('/assets/fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff2') format('woff2'),
       url('/assets/fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff') format('woff');
- font-weight: 600;
- font-style: normal;
- font-display: block;
+   font-weight: 600;
+   font-style: normal;
+   font-display: block;
 }
+
 /* fonts_montserrat-500 */
 @font-face {
- font-family: 'Montserrat';
- src: url('/assets/fonts/Montserrat-Medium/Montserrat-Medium.woff2') format('woff2'),
+   font-family: 'Montserrat';
+   src: url('/assets/fonts/Montserrat-Medium/Montserrat-Medium.woff2') format('woff2'),
       url('/assets/fonts/Montserrat-Medium/Montserrat-Medium.woff') format('woff');
- font-weight: 500;
- font-style: normal;
- font-display: block;
+   font-weight: 500;
+   font-style: normal;
+   font-display: block;
 }
