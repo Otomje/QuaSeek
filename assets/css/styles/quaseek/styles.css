@@ -38,7 +38,8 @@ footer {
   opacity: 1;
   height: 40px;
   width: 100%;
-  padding: 0px 15px;
+  border-radius: 10px 10px 0px 0px;
+  padding: 0px 15px 0px 4px;
   user-select: none;
   display: flex;
   align-items: center;
@@ -48,29 +49,40 @@ footer {
 
 .footer-left {
   opacity: 1;
-  display: flex;
+  gap: 5px;
   font-size: 15px;
-  line-height: 40px;
-  gap: 25px;
+  line-height: 30px;
+  display: flex;
 }
 
 .footer-right {
   opacity: 1;
-  display: flex;
   font-size: 18px;
   line-height: 40px;
+  display: flex;
 }
 
-.footer-left-link,
+.footer-left-link {
+  border-radius: 10px;
+  padding: 0px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--footer-txt-color);
+  background: var(--none);
+  transition: background 0.2s ease;
+  -webkit-tap-highlight-color: var(--none);
+}
+
 .footer-right-link {
   cursor: pointer;
   text-decoration: none;
   color: var(--footer-txt-color);
+  background: var(--none);
   -webkit-tap-highlight-color: var(--none);
 }
 
 .footer-left-link:hover {
-  text-decoration: underline;
+  background: #282832;
 }
 
 .block-up {

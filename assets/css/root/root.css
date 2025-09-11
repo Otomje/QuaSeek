@@ -17,16 +17,17 @@
    --txt-search-container-color: #282832;
    --img-icon-color: #282832;
    --footer-background-color: #23232d;
+   --footer-button-color-hover: #32323c;
    --footer-txt-color: #dcdcf0;
    /* info */
    --background-color-1: #282832;
-   --leftbar-background: #262630;
+   --leftbar-background: #282832;
    --content-txt-color: #dcdcf0;
    --button-background-color: #bebefa;
    --button-background-color-hover: #2d2d37;
    --button-background-color-active: #32323c;
    --toggle-background-color: #32323c;
-   --border-color: #32323c;
+   --border-color: transparent;
    --heading-txt-color-1: #e6e6fa;
    --button-txt-color: #d2d2e6;
    --button-txt-color-hover: #dcdcf0;

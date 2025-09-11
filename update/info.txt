@@ -19,4 +19,5 @@
 16:00/07/09 < Update > | Update files <"index.html">, <"quaseek/style.html">, <"root/root.html">. Add file <"quaseek/light/style.css">
 16:00/08/09 < Update and Test >
 19:40/10/09 < Mega Update >
+14:55/11/09 < Mini Update > | Update <"index.html">, <"info.html">, <"styles">, <"display">, <"img/site">
 // Update Information File
