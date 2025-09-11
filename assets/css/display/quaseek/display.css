@@ -86,7 +86,6 @@ footer,
     .search-container {
         height: 40px;
         padding: 0px 13px;
-        gap: 7px;
     }
 
     .search-container input {
@@ -100,7 +99,6 @@ footer,
     .footer-left {
         font-size: 14px;
         line-height: 28px;
-        gap: 4px;
     }
 
     .icon-left,
