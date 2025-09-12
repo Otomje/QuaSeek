@@ -9,6 +9,8 @@
    --background-color: #282832;
    --header-background-color: transparent;
    --header-txt-color: #dcdcf0;
+   --header-button-color-hover: #32323c;
+   --apps-background-color: #32323c;
    --apps-button-color: none;
    --apps-button-color-hover: none;
    --heading-txt-color: #e6e6fa;
@@ -17,8 +19,9 @@
    --txt-search-container-color: #282832;
    --img-icon-color: #282832;
    --footer-background-color: #23232d;
-   --footer-button-color-hover: #32323c;
+   --footer-button-color-hover: #282832;
    --footer-txt-color: #dcdcf0;
+   --img-app-button-color: #dcdcf0;
    /* info */
    --background-color-1: #282832;
    --leftbar-background: #282832;
