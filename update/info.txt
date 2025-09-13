@@ -20,5 +20,6 @@
 16:00/08/09 < Update and Test >
 19:40/10/09 < Mega Update >
 14:55/11/09 < Mini Update > | Update <"index.html">, <"info.html">, <"styles">, <"display">, <"img/site">
-11/09 < Mini Update > | Update <"index.html">, <"info.html">, <"styles">, <"display">
+11/09 < Mini Update > | Update files <"index.html">, <"info.html">, <"styles">, <"display">
+13/09 < Mini Update > | Update files <"index.html">, <"quaseek/style.css">, <"info/style.css">, <"root/root.css">
 // Update Information File

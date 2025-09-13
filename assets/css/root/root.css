@@ -10,9 +10,6 @@
    --header-background-color: transparent;
    --header-txt-color: #dcdcf0;
    --header-button-color-hover: #32323c;
-   --apps-background-color: #32323c;
-   --apps-button-color: none;
-   --apps-button-color-hover: none;
    --heading-txt-color: #e6e6fa;
    --background-search-container-color: #dcdcf0;
    --background-search-container-color-hover: #d2d2e6;
@@ -34,7 +31,7 @@
    --heading-txt-color-1: #e6e6fa;
    --button-txt-color: #d2d2e6;
    --button-txt-color-hover: #dcdcf0;
-   --img-fill-color: #d2d2e6;
+   --toggle-img-color: #d2d2e6;
    --mail-txt-color: #0077cc;
 }
 

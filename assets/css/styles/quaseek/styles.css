@@ -34,71 +34,12 @@ header {
   background: var(--none);
 }
 
-/* .header-app-button-container {
-  height: 100%;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header-app-button {
-  height: 38px;
-  width: 38px;
-  border-radius: 30px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--none);
-  transition: background 0.2s ease;
-}
-
-.header-app-button-img {
-  height: 20px;
-  width: 20px;
-  display: flex;
-  color: var(--img-app-button-color);
-}
-
-.header-app-container {
-  height: 255px;
-  width: 270px;
-  top: 40px;
-  right: 30px;
-  padding: 15px;
-  gap: 15px;
-  border-radius: 25px;
-  position: absolute;
-  display: flex;
-  background: var(--apps-background-color);
-}
-
-.header-app {
-  height: 70px;
-  width: 70px;
-  border-radius: 15px;
-  background: #282832;
-}
-
-.header-app:hover {
-  background: #282832;
-}
-
-.header-app-button:hover {
-  background: var(--header-button-color-hover);
-}
-
-.header-app-button:active {
-  background: var(--header-button-color-hover);
-} */
-
 footer {
   opacity: 1;
   height: 40px;
   width: 100%;
-  padding: 0px 13px 0px 5px;
-  border-radius: 10px 10px 0px 0px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 12px 12px 0px 0px;
   user-select: none;
   display: flex;
   align-items: center;
@@ -108,6 +49,7 @@ footer {
 
 .footer-left {
   height: 100%;
+  width: auto;
   opacity: 1;
   gap: 8px;
   font-size: 15px;
@@ -117,6 +59,7 @@ footer {
 
 .footer-right {
   height: 100%;
+  width: auto;
   opacity: 1;
   font-size: 18px;
   display: flex;
@@ -125,6 +68,7 @@ footer {
 
 .footer-left-link {
   height: 70%;
+  width: auto;
   border-radius: 10px;
   padding: 0px 8px;
   cursor: pointer;
@@ -139,6 +83,8 @@ footer {
 
 .footer-right-link {
   height: 100%;
+  width: auto;
+  padding: 0px 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -153,9 +99,9 @@ footer {
 }
 
 .block-up {
+  width: 100%;
   flex: 1;
   opacity: 1;
-  width: 100%;
   padding: 10px 0px 11px 0px;
   display: flex;
   align-items: flex-end;
@@ -164,9 +110,9 @@ footer {
 }
 
 .block-down {
+  width: 100%;
   flex: 1;
   opacity: 1;
-  width: 100%;
   padding: 12px 15px 10px 15px;
   display: flex;
   align-items: flex-start;
@@ -183,11 +129,11 @@ footer {
 
 .search-container {
   height: 50px;
-  max-width: 600px;
   width: 100%;
+  max-width: 600px;
   padding: 0px 15px;
-  border-radius: 30px;
   gap: 10px;
+  border-radius: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -196,8 +142,8 @@ footer {
 }
 
 .search-container input {
-  flex: 1;
   min-width: 0px;
+  flex: 1;
   font-size: 18px;
   padding: 0px;
   font-weight: 600;
@@ -208,6 +154,7 @@ footer {
   vertical-align: middle;
   font-family: 'Montserrat';
   color: var(--txt-search-container-color);
+  appearance: none;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: var(--none);
 }
