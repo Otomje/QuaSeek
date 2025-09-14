@@ -55,7 +55,7 @@ header {
   align-items: center;
   justify-content: center;
   color: var(--footer-txt-color);
-  background: var(--none);
+  background: var(--header-background-button-color);
   transition: background 0.2s ease;
   -webkit-tap-highlight-color: var(--none);
 }
@@ -80,7 +80,7 @@ header {
   align-items: center;
   justify-content: center;
   color: var(--header-txt-color);
-  background: var(--none);
+  background: var(--header-background-button-color);
   transition: background 0.2s ease;
   -webkit-tap-highlight-color: var(--none);
 }
