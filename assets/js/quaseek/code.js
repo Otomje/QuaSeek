@@ -2,6 +2,9 @@ const input = document.getElementById("searchQuery");
 const searchContainer = document.querySelector(".search-container");
 const searchIcon = document.getElementById("searchIcon");
 const optionIcon = document.getElementById("optionIcon");
+const headerButton = document.querySelector(".header-button");
+const searchSystemContainer = document.querySelector(".search-system-container");
+const searchSystemButtons = document.querySelectorAll(".search-system-button");
 
 const footerLinks = document.querySelectorAll(".footer-left-link, .footer-right-link");
 
@@ -26,10 +29,24 @@ searchContainer.addEventListener("mouseenter", () => {
 
 searchContainer.addEventListener("mouseleave", () => searchContainer.classList.remove("hovered"), { passive: true });
 
+const searchEngines = {
+  Google: "https://www.google.com/search?q=",
+  Yahoo: "https://search.yahoo.com/search?p=",
+  Bing: "https://www.bing.com/search?q="
+};
+
+let currentSearchEngine = localStorage.getItem("searchEngine") || "Google";
+
+searchSystemButtons.forEach(button => {
+  if (button.textContent === currentSearchEngine) {
+    button.classList.add("active");
+  }
+});
+
 const search = (inNewTab = false) => {
   const query = input.value.trim();
   if (!query) return;
-  const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+  const url = `${searchEngines[currentSearchEngine]}${encodeURIComponent(query)}`;
   inNewTab ? window.open(url, "_blank") : (window.location.href = url);
 };
 
@@ -58,5 +75,31 @@ document.addEventListener("keydown", e => {
   if ((e.key === "/" || e.key === "\\") && document.activeElement !== input) {
     e.preventDefault();
     input.focus();
+  }
+});
+
+headerButton.addEventListener("click", e => {
+  e.stopPropagation();
+  const isMenuVisible = searchSystemContainer.classList.contains("visible");
+  searchSystemContainer.classList.toggle("visible", !isMenuVisible);
+  headerButton.classList.toggle("active", !isMenuVisible);
+});
+
+searchSystemButtons.forEach(button => {
+  button.addEventListener("click", e => {
+    e.stopPropagation();
+    searchSystemButtons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+    currentSearchEngine = button.textContent;
+    localStorage.setItem("searchEngine", currentSearchEngine);
+    searchSystemContainer.classList.remove("visible");
+    headerButton.classList.remove("active");
+  });
+});
+
+document.addEventListener("click", e => {
+  if (!headerButton.contains(e.target) && !searchSystemContainer.contains(e.target)) {
+    searchSystemContainer.classList.remove("visible");
+    headerButton.classList.remove("active");
   }
 });

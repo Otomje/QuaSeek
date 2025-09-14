@@ -24,9 +24,11 @@ body {
 }
 
 header {
-  opacity: 0;
+  opacity: 1;
   height: 40px;
   width: 100%;
+  padding: 0px 4px;
+  gap: 5px;
   user-select: none;
   display: flex;
   align-items: center;
@@ -34,11 +36,71 @@ header {
   background: var(--none);
 }
 
+.header-button-container {
+  height: 100%;
+  width: auto;
+  opacity: 1;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.header-button {
+  height: 80%;
+  width: auto;
+  border-radius: 10px;
+  padding: 0px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--footer-txt-color);
+  background: var(--none);
+  transition: background 0.2s ease;
+  -webkit-tap-highlight-color: var(--none);
+}
+
+.search-system-container {
+  height: 100%;
+  width: auto;
+  opacity: 1;
+  gap: 5px;
+  font-size: 14px;
+  display: none;
+  align-items: center;
+}
+
+.search-system-button {
+  height: 80%;
+  width: auto;
+  border-radius: 10px;
+  padding: 0px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--header-txt-color);
+  background: var(--none);
+  transition: background 0.2s ease;
+  -webkit-tap-highlight-color: var(--none);
+}
+
+.search-system-container.visible {
+  display: flex;
+}
+
+.search-system-button:hover,
+.search-system-button.active,
+.header-button:hover,
+.header-button.active {
+  background: var(--header-button-color-hover-active);
+}
+
 footer {
   opacity: 1;
   height: 40px;
   width: 100%;
-  padding: 0px 5px 0px 5px;
+  padding: 0px 5px;
   border-radius: 12px 12px 0px 0px;
   user-select: none;
   display: flex;
