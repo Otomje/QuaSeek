@@ -40,7 +40,7 @@ header {
   height: 100%;
   width: auto;
   opacity: 1;
-  font-size: 14px;
+  font-size: 15px;
   display: flex;
   align-items: center;
 }
@@ -65,7 +65,7 @@ header {
   width: auto;
   opacity: 1;
   gap: 5px;
-  font-size: 14px;
+  font-size: 15px;
   display: none;
   align-items: center;
 }

@@ -74,6 +74,14 @@ footer,
     }
 }
 
+@media (max-width: 345px) {
+
+    .header-button-container,
+    .search-system-container {
+        font-size: 13px;
+    }
+}
+
 @media (max-width: 325px) {
 
     .header-button-container,
