@@ -38,6 +38,10 @@
         left: 0;
         margin: 0 auto;
     }
+
+    .footer-left {
+        gap: 12px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -51,6 +55,10 @@
 
     .search-container {
         height: 46px;
+    }
+
+    .footer-left {
+        gap: 10px;
     }
 
     .icon-left,
