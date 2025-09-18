@@ -20,15 +20,26 @@ body {
     display: flex;
     font-family: "Comfortaa";
     background: var(--background-color-1);
+    -webkit-tap-highlight-color: var(--none);
+}
+
+.heading-text {
+    font-size: 23px;
+    padding: 5px 17px;
+    border-radius: 20px;
+    display: block;
+    text-decoration: none;
+    color: var(--heading-txt-color-1);
 }
 
 .leftbar {
     top: 0;
     left: 0;
     height: 100%;
-    width: 220px;
+    width: 13.75rem;
     z-index: 10;
-    padding: 0px 5px 0px 5px;
+    padding: 12px 5px 0 5px;
+    border-radius: 0px 20px 20px 0;
     display: flex;
     overflow-y: auto;
     user-select: none;
@@ -37,13 +48,42 @@ body {
     background: var(--leftbar-background);
 }
 
-.heading-text {
-    font-size: 23px;
-    padding: 17px 17px 0px 17px;
+.leftbar-button-container {
+    gap: 3px;
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.leftbar-button {
+    font-size: 18px;
+    padding: 12px 18px;
+    border-radius: 30px;
     display: block;
     text-decoration: none;
-    color: var(--heading-txt-color-1);
-    -webkit-tap-highlight-color: var(--none);
+    color: var(--button-txt-color);
+    transition: background 0.2s ease;
+}
+
+.leftbar-button:hover {
+    color: var(--button-txt-color-hover);
+    background: var(--button-background-color-hover);
+}
+
+.leftbar-button.active {
+    color: var(--button-txt-color-hover);
+    background: var(--button-background-color-active);
+}
+
+.content {
+    padding: 30px 40px 10px 40px;
+    display: none;
+    overflow-y: auto;
+    color: var(--content-txt-color);
+}
+
+.content.active {
+    display: block;
 }
 
 .toggle-button {
@@ -60,56 +100,12 @@ body {
     align-items: center;
     justify-content: center;
     background: var(--toggle-background-color);
-    -webkit-tap-highlight-color: var(--none);
 }
 
 .toggle-button svg {
     height: 27px;
     width: 27px;
     color: var(--toggle-img-color);
-}
-
-.buttons {
-    font-size: 18px;
-    padding: 11px 18px;
-    border-radius: 30px;
-    display: block;
-    text-decoration: none;
-    color: var(--button-txt-color);
-    transition: background 0.2s ease;
-    -webkit-tap-highlight-color: var(--none);
-}
-
-.buttons-container {
-    gap: 3px;
-    margin-top: 12px;
-    display: flex;
-    flex-direction: column;
-}
-
-.buttons:hover {
-    color: var(--button-txt-color-hover);
-    background: var(--button-background-color-hover);
-}
-
-.buttons.active {
-    color: var(--button-txt-color-hover);
-    background: var(--button-background-color-active);
-}
-
-.content {
-    padding: 30px 40px 10px 40px;
-    display: none;
-    overflow-y: auto;
-    color: var(--content-txt-color);
-}
-
-.content.active {
-    display: block;
-}
-
-button {
-    border: none;
 }
 
 p {

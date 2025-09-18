@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const buttons = document.querySelectorAll('.buttons');
+  const button = document.querySelectorAll('.leftbar-button');
   const contents = document.querySelectorAll('.content');
   const leftbar = document.querySelector('.leftbar');
   const toggleButton = document.querySelector('#toggleButton');
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateContentFromHash = () => {
     const hash = location.hash.slice(1);
 
-    buttons.forEach(btn => {
+    button.forEach(btn => {
       const target = btn.dataset.target;
       const isActive = target === hash;
       btn.classList.toggle('active', isActive);
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   toggleButton?.addEventListener('click', toggleSidebar);
 
-  buttons.forEach(btn => {
+  button.forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.dataset.target;
       location.hash = target;

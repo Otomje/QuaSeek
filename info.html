@@ -18,21 +18,34 @@
 <body>
   <nav class="leftbar active" role="navigation">
     <a href="/" class="heading-text" translate="no">QuaSeek</a>
-    <div class="buttons-container">
-      <a href="#a" class="buttons" data-target="a" translate="no" draggable="false">About</a>
-      <a href="#p" class="buttons" data-target="p" translate="no" draggable="false">Privacy</a>
-      <a href="#c" class="buttons" data-target="c" translate="no" draggable="false">Contact</a>
+    <div class="leftbar-button-container">
+      <a href="#about" class="leftbar-button" data-target="about" translate="no" draggable="false">About</a>
+      <a href="#News" class="leftbar-button" data-target="News" translate="no" draggable="false">News</a>
+      <a href="#privacy" class="leftbar-button" data-target="privacy" translate="no" draggable="false">Privacy</a>
+      <a href="#contacts" class="leftbar-button" data-target="contacts" translate="no" draggable="false">Contacts</a>
     </div>
   </nav>
 
-  <div class="content" id="a">
+  <div class="content" id="about">
     <h1>About Us</h1>
     <p>QuaSeek is a Ukrainian search site powered by Google, designed for fast and simple searching.</p>
     <p>It’s constantly evolving — new features are added regularly to enhance usability.</p>
     <p>Developed and maintained by a solo creator passionate about building QuaSeek.</p>
   </div>
 
-  <div class="content" id="p">
+  <div class="content" id="News">
+    <h1>News</h1>
+    <p>18/09 Mega Update</p>
+    <p>• Add News</p>
+    <p>• Add Settings</p>
+    <p>• Add Search System</p>
+    <p>• Update Index.html</p>
+    <p>• Update Info.html</p>
+    <p>• Update Styles</p>
+    <p>• Update root</p>
+  </div>
+
+  <div class="content" id="privacy">
     <h1>Privacy Policy</h1>
     <p>The search engine does not store, analyze, or share your queries.</p>
     <p>Your queries are encrypted and processed locally in your browser, ensuring they cannot be intercepted or hacked.</p>
@@ -42,20 +55,20 @@
     <p>Thank you for your trust.</p>
   </div>
 
-  <div class="content" id="c">
+  <div class="content" id="contacts">
     <h1>Contacts</h1>
     <p>Have a question, suggestion, or feedback? Get in touch:</p>
     <p>Email: <a href="mailto:QuaSeek@proton.me" target="_blank" rel="noopener" class="mail">QuaSeek@proton.me</a></p>
     <p>Telegram: <a href="https://t.me/Otomje" target="_blank" rel="noopener" class="mail">@Otomje</a></p>
   </div>
 
-  <button class="toggle-button" id="toggleButton" aria-label="Toggle sidebar visibility" title="Show/Hide Sidebar">
+  <div class="toggle-button" role="button" tabindex="0" id="toggleButton" aria-label="Toggle sidebar visibility" title="Show/Hide Sidebar">
     <svg viewBox="0 0 24 24">
       <rect fill="currentColor" x="3" y="4" width="18" height="2" rx="1" />
       <rect fill="currentColor" x="3" y="11" width="18" height="2" rx="1" />
       <rect fill="currentColor" x="3" y="18" width="18" height="2" rx="1" />
     </svg>
-  </button>
+  </div>
 
   <script src="assets/js/info/code.js"></script>
 </body>

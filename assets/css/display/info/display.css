@@ -14,9 +14,10 @@
 
 @media (max-width: 500px) {
     .leftbar {
-        position: fixed;
         width: 100%;
-        /* border: none; */
+        border-radius: 0;
+        position: fixed;
+        border: none;
         transition: transform 0.2s ease;
     }
 
