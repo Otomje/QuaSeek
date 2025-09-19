@@ -96,12 +96,12 @@
     }
 
     .settings-container {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .footer-left {
-        font-size: 14px;
-        gap: 5px;
+        font-size: 13px;
+        gap: 8px;
     }
 
     .icon-left,
@@ -136,10 +136,11 @@
 
     .settings-container {
         bottom: 42px;
+        font-size: 12px;
     }
 
-    .settings-container {
-        font-size: 12px;
+    .settings-menu-container {
+        gap: 5px;
     }
 
     .footer-left {

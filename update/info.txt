@@ -24,4 +24,5 @@
 13/09 < Mini Update > | Update files <"index.html">, <"quaseek/style.css">, <"info/style.css">, <"root/root.css">
 14/09 < Mini Update/Add Search System > | Add Search System
 18/09 < Mega Update >
+19/09 < Mini Update >
 // Update Information File
