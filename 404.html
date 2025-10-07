@@ -16,6 +16,15 @@
 
     body {
         height: 100svh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .main {
+        height: 100%;
+        padding: 10px;
         gap: 15px;
         display: flex;
         align-items: center;
@@ -26,7 +35,7 @@
     a {
         height: 30px;
         width: 60px;
-        font-size: 17px;
+        font-size: 18px;
         border-radius: 10px;
         border: 1px solid black;
         display: flex;
@@ -38,11 +47,11 @@
 
     a:hover,
     a:active {
-        width: 62px;
+        width: 61px;
     }
 
     h1 {
-        font-size: 35px;
+        font-size: 36px;
     }
 
     p {
@@ -51,10 +60,11 @@
 </style>
 
 <body>
-
-    <h1>#404 - Not Found</h1>
-    <p>It’s possible the page was deleted or not found.</p>
-    <a href="/">Back</a>
+    <div class="main">
+        <h1>#404 - Not Found</h1>
+        <p>It’s possible the page was deleted or not found.</p>
+        <a href="/">Back</a>
+    </div>
 
 </body>
 
