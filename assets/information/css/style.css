@@ -97,7 +97,6 @@ nav .block-bottom {
     background: var(--nav-button-2);
 }
 
-.button:active,
 .button.active {
     background: var(--nav-button-active-2);
 }

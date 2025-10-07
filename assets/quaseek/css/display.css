@@ -1,4 +1,4 @@
-@media (max-width: 550px) {
+@media (max-width: 520px) {
     .block-top {
         padding: 8px 10px 12px 10px;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 460px) {
     .block-top {
         padding: 8px 10px 10px 10px;
     }
@@ -88,7 +88,7 @@
     }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 340px) {
     .heading {
         font-size: 40px;
     }
@@ -161,12 +161,6 @@
     }
 }
 
-@media (max-height: 140px) {
-    .settings-container {
-        bottom: 0;
-    }
-}
-
 @media (max-width: 250px) {
     html {
         background: var(--background);
@@ -174,5 +168,11 @@
 
     body {
         display: none;
+    }
+}
+
+@media (max-height: 140px) {
+    .settings-container {
+        bottom: 0;
     }
 }
