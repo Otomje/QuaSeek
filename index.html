@@ -2,69 +2,70 @@
 <html lang="en" translate="no">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="google" content="notranslate" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="QuaSeek — fast search without distractions.">
-  <meta property="og:title" content="QuaSeek — fast search without distractions.">
-  <meta property="og:image" content="https://quaseek.pp.ua/assets/img/site/preview.png">
-  <title>QuaSeek</title>
-  <link rel="icon" type="image/png" href="assets/img/site/favicon.png">
-  <link rel="preload" href="/assets/fonts/Comfortaa-Bold/Comfortaa-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/assets/fonts/Montserrat-SemiBold/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/root/root.css">
-  <link rel="stylesheet" href="assets/css/styles/quaseek/styles.css">
-  <link rel="manifest" href="manifest.json" />
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuaSeek — fast search without distractions.">
+    <title>QuaSeek</title>
+    <link rel="preload" href="assets/fonts/Comfortaa/Comfortaa-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/root/root.css">
+    <link rel="stylesheet" href="assets/quaseek/css/style.css">
+    <link rel="manifest" href="mobile.json">
 </head>
 
 <body>
-  <header>
-  </header>
-  <div class="block-up">
-    <div class="heading-text">QuaSeek</div>
-  </div>
-  <div class="block-down">
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150" class="icon-left" id="searchIcon" role="button" aria-label="Search" draggable="false">
-        <title>Search (Enter) (Ctrl + Enter)</title>
-        <circle cx="68" cy="68" r="48" fill="none" stroke="currentColor" stroke-width="19" />
-        <rect fill="currentColor" width="19" height="55" x="86" y="88" rx="10" transform="rotate(-45 110 90)" />
-      </svg>
-      <input type="text" id="searchQuery" autocomplete="off" spellcheck="true" maxlength="2000" inputmode="search" enterkeyhint="search" placeholder="Press / to start typing" title="Press / to start typing" />
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150" class="icon-right" id="optionIcon" role="button" aria-label="Clear" draggable="false">
-        <title>Clear (Shift + Backspace)</title>
-        <rect fill="currentColor" width="19" height="120" x="66.5" y="15" rx="10" transform="rotate(45, 75, 75)" />
-        <rect fill="currentColor" width="19" height="120" x="66.5" y="15" rx="10" transform="rotate(135, 75, 75)" />
-      </svg>
+    <header></header>
+    <div class="block-top">
+        <div class="heading" draggable="false">QuaSeek</div>
     </div>
-  </div>
-  <footer>
-    <div class="footer-left">
-      <a href="info#about" class="footer-left-link" aria-label="About Us" draggable="false">About</a>
-      <div class="footer-left-link" aria-label="Settings" role="button" tabindex="0">Settings</div>
-      <a href="info#privacy" class="footer-left-link" aria-label="Privacy Policy" draggable="false">Privacy</a>
-      <a href="info#news" class="footer-left-link" aria-label="News" draggable="false">News</a>
-      <!--<a href="info#contacts" class="footer-left-link" aria-label="Contacts" draggable="false">Contacts</a> -->
-    </div>
-    <div class="footer-right">
-      <a href="/" class="footer-right-link" aria-label="QuaSeek">QuaSeek</a>
-    </div>
-    <div class="settings-container">
-      <div class="settings-menu-container" aria-label="Search System Panel">
-        <div class="settings-button-menu" role="button" tabindex="0" aria-label="Google Search">Google</div>
-        <div class="settings-button-menu" role="button" tabindex="0" aria-label="Yahoo Search">Yahoo</div>
-        <div class="settings-button-menu" role="button" tabindex="0" aria-label="Bing Search">Bing</div>
-      </div>
-      <div class="settings-menu-container" aria-label="Menu Panel">
-        <!-- <div class="settings-button-menu" role="button" tabindex="0" aria-label="Theme Menu">Theme</div>
-        <div class="settings-button-menu" role="button" tabindex="0" aria-label="Text Direction Menu">Text Direction</div> -->
-        <div class="settings-button-menu" role="button" tabindex="0" aria-label="Search System Menu">Search System</div>
-      </div>
-    </div>
-  </footer>
+    <div class="block-bottom">
+        <div class="search-container">
 
-  <link rel="stylesheet" href="assets/css/display/quaseek/display.css">
-  <script src="assets/js/quaseek/code.js"></script>
+            <div class="search-icon-container" title="Search (Enter) (Ctrl + Enter)" id="search" role="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150" class="search-icon" role="img">
+                    <circle cx="68" cy="68" r="48" fill="none" stroke-width="20" stroke="currentColor" />
+                    <rect height="55" width="20" y="88" x="86" rx="10" fill="currentColor" transform="rotate(-45 110 90)" />
+                </svg>
+            </div>
+
+            <input type="text" id="search-text" autocomplete="off" spellcheck="true" maxlength="2000" enterkeyhint="search" placeholder="Start Typing" />
+
+            <div class="search-icon-container" title="Clear (Shift + Backspace)" id="clear" role="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150" class="clear-icon" role="img">
+                    <rect height="120" width="19" y="15" x="66.5" rx="10" fill="currentColor" transform="rotate(45, 75, 75)" />
+                    <rect height="120" width="19" y="15" x="66.5" rx="10" fill="currentColor" transform="rotate(135, 75, 75)" />
+                </svg>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer-left-container">
+            <a href="information#about" class="footer-text">About</a>
+            <a href="information#news" class="footer-text">News</a>
+            <a href="information#privacy" class="footer-text">Privacy</a>
+            <a href="information#contacts" class="footer-text">Contacts</a>
+        </div>
+        <div class="footer-right-container">
+            <div class="footer-text" role="button" tabindex="0" id="settings-button">Settings</div>
+        </div>
+    </footer>
+    <div class="settings-container">
+        <div class="menu-container" id="menu">
+            <div class="button" role="button" tabindex="0" id="search-system">Search System</div>
+        </div>
+        <div class="open-container" id="search-system-open">
+            <div class="button" role="button" tabindex="0" id="google">Google</div>
+            <div class="button" role="button" tabindex="0" id="yahoo">Yahoo</div>
+            <div class="button" role="button" tabindex="0" id="bing">Bing</div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="assets/quaseek/css/display.css">
+    <script src="assets/quaseek/js/code.js"></script>
+
 </body>
 
 </html>

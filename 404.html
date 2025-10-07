@@ -1,123 +1,61 @@
 <!DOCTYPE html>
-<html lang="en" translate="no">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="google" content="notranslate" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="QuaSeek 404">
-  <title>404</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuaSeek — fast search without distractions.">
+    <title>Error</title>
 </head>
 <style>
-  :root {
-    --background-txt-color-1: #282832;
-    --background-txt-color-3: #e6e6fa;
-    --background-color-2: #282832;
-    --txt-color-2: #e6e6fa;
-  }
-
-  ::selection {
-    color: var(--background-txt-color-1);
-    background-color: var(--background-txt-color-3);
-  }
-
-  @font-face {
-    font-family: 'Comfortaa';
-    src: url('/assets/fonts/Comfortaa-Bold/Comfortaa-Bold.woff2') format('woff2'),
-      url('/assets/fonts/Comfortaa-Bold/Comfortaa-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: block;
-  }
-
-  body {
-    padding: 0px;
-    margin: 0px;
-    height: 100vh;
-    height: 100dvh;
-    font-weight: 700;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: var(--txt-color-2);
-    background: var(--background-color-2);
-    font-family: 'Comfortaa';
-  }
-
-  h1 {
-    margin: 0;
-    padding-bottom: 6px;
-    font-size: 80px;
-  }
-
-  p {
-    margin: 0;
-    padding-top: 6px;
-    font-size: 35px;
-  }
-
-  h1,
-  p {
-    transition: font-size 0.1s ease;
-  }
-
-  @media (max-width: 250px) {
-    h1 {
-      font-size: 70px;
-    }
-
-    p {
-      font-size: 30px;
-    }
-  }
-
-  @media (max-width: 220px) {
-    h1 {
-      font-size: 60px;
-    }
-
-    p {
-      font-size: 25px;
-    }
-  }
-
-  @media (max-width: 190px) {
-    h1 {
-      font-size: 50px;
-    }
-
-    p {
-      font-size: 20px;
-    }
-  }
-
-  @media (max-width: 160px) {
-    h1 {
-      font-size: 40px;
-    }
-
-    p {
-      font-size: 15px;
-    }
-  }
-
-  @media (max-width: 130px) {
-    html {
-      background: var(--background-txt-color-3);
+    html,
+    * {
+        margin: 0;
+        padding: 0;
     }
 
     body {
-      display: none;
+        height: 100svh;
+        gap: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
-  }
+
+    a {
+        height: 30px;
+        width: 60px;
+        font-size: 17px;
+        border-radius: 10px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover,
+    a:active {
+        width: 62px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 20px;
+    }
 </style>
 
 <body>
-  <div>
-    <h1>404</h1>
-    <p>NOT FOUND</p>
-  </div>
+
+    <h1>#404 - Not Found</h1>
+    <p>It’s possible the page was deleted or not found.</p>
+    <a href="/">Back</a>
+
 </body>
 
 </html>
