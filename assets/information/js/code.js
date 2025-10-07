@@ -16,8 +16,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // функция для управления меню по ширине окна
+    function handleMenuDisplay() {
+        if (window.innerWidth < 480) {
+            nav.classList.add("close");
+        } else {
+            nav.classList.remove("close");
+        }
+    }
+
     // при завантаженні сторінки
     showPage(window.location.hash || "#about");
+    handleMenuDisplay();
 
     // при зміні хешу
     window.addEventListener("hashchange", () => {
@@ -43,4 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButton.addEventListener("click", () => {
         nav.classList.toggle("close");
     });
+
+    // слідкуємо за зміною розміру вікна
+    window.addEventListener("resize", handleMenuDisplay);
 });

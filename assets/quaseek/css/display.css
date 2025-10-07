@@ -1,4 +1,4 @@
-@media (max-width: 520px) {
+@media (max-width: 550px) {
     .block-top {
         padding: 8px 10px 12px 10px;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
     .block-top {
         padding: 8px 10px 10px 10px;
     }
@@ -54,7 +54,7 @@
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 420px) {
     .block-top {
         padding: 8px 10px 8px 10px;
     }
@@ -84,11 +84,11 @@
     .footer-right-container,
     .footer-left-container,
     footer {
-        gap: 16px;
+        gap: 20px;
     }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 350px) {
     .heading {
         font-size: 40px;
     }
@@ -111,7 +111,7 @@
     .footer-right-container,
     .footer-left-container,
     footer {
-        gap: 12px;
+        gap: 15px;
     }
 
     .button,
@@ -120,7 +120,7 @@
     }
 }
 
-@media (max-width: 280px) {
+@media (max-width: 300px) {
     .block-top {
         padding: 8px 10px 6px 10px;
     }
