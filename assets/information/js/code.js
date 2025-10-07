@@ -5,20 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector("nav");
 
     function showPage(hash) {
-        // показати потрібну секцію
         containers.forEach(container => {
             container.classList.toggle("active", "#" + container.id === hash);
         });
 
-        // підсвітка активної кнопки
         navLinks.forEach(link => {
             link.classList.toggle("active", link.getAttribute("href") === hash);
         });
     }
 
-    // функция для управления меню по ширине окна
     function handleMenuDisplay() {
-        if (window.innerWidth < 480) {
+        if (window.innerWidth <= 480) {
             nav.classList.add("close");
         } else {
             nav.classList.remove("close");
@@ -29,12 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
     showPage(window.location.hash || "#about");
     handleMenuDisplay();
 
-    // при зміні хешу
     window.addEventListener("hashchange", () => {
         showPage(window.location.hash);
     });
 
-    // клік по пунктам меню
     navLinks.forEach(link => {
         link.addEventListener("click", e => {
             e.preventDefault();
@@ -42,18 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
             history.pushState(null, "", target);
             showPage(target);
 
-            // автоматично закривати меню на мобільних
-            if (window.innerWidth < 480) {
+            if (window.innerWidth <= 480) {
                 nav.classList.add("close");
             }
         });
     });
 
-    // кнопка меню — відкриває/закриває нав
     menuButton.addEventListener("click", () => {
         nav.classList.toggle("close");
     });
 
-    // слідкуємо за зміною розміру вікна
     window.addEventListener("resize", handleMenuDisplay);
 });
