@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             showPage(target);
 
             // автоматично закривати меню на мобільних
-            if (window.innerWidth < 450) {
+            if (window.innerWidth < 480) {
                 nav.classList.add("close");
             }
         });

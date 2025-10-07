@@ -103,10 +103,10 @@ nav .block-bottom {
 }
 
 .button-menu {
-    height: 40px;
-    width: 40px;
-    bottom: 10px;
-    right: 10px;
+    height: 42px;
+    width: 42px;
+    bottom: 15px;
+    right: 15px;
     border: 0;
     border-radius: 14px;
     cursor: pointer;
@@ -118,8 +118,8 @@ nav .block-bottom {
 }
 
 .menu-icon {
-    height: 98%;
-    width: 98%;
+    height: 100%;
+    width: 100%;
     color: var(--menu-icon-2);
 }
 

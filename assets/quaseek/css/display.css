@@ -1,4 +1,4 @@
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .block-top {
         padding: 8px 10px 12px 10px;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 450px) {
     .block-top {
         padding: 8px 10px 10px 10px;
     }
@@ -54,7 +54,7 @@
     }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 390px) {
     .block-top {
         padding: 8px 10px 8px 10px;
     }
@@ -88,7 +88,7 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 330px) {
     .heading {
         font-size: 40px;
     }
