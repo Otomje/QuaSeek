@@ -16,10 +16,10 @@
     --menu: rgb(30, 30, 35);
     --menu-button: rgb(38, 38, 43);
     --menu-text: rgb(240, 240, 250);
-    --connection: rgb(80, 45, 45);
-    --display: rgb(45, 45, 80);
-    --errors-text: rgb(240, 240, 250);
-    /* information */
+    --notification-connection: rgb(80, 45, 45);
+    --notification-display: rgb(45, 45, 80);
+    --notification-text: rgb(240, 240, 250);
+    /* quaseek information */
     --selection-2: rgb(80, 80, 85);
     --background-2: rgb(35, 35, 40);
     --nav-2: rgb(32, 32, 37);
