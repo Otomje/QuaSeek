@@ -1,4 +1,4 @@
-@media (max-width: 550px) {
+@media (max-width: 530px) {
     .block-top {
         padding: 8px 10px 12px 10px;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 480px) {
     .block-top {
         padding: 8px 10px 10px 10px;
     }
@@ -46,11 +46,6 @@
     footer {
         justify-content: center;
         padding: 0;
-    }
-
-    .button,
-    .footer-text {
-        font-size: 13px;
     }
 }
 
@@ -85,6 +80,16 @@
     .footer-left-container,
     footer {
         gap: 20px;
+    }
+
+    header,
+    footer {
+        height: 38px;
+    }
+
+    .button,
+    .footer-text {
+        font-size: 13px;
     }
 }
 
@@ -154,6 +159,10 @@
         gap: 10px;
     }
 
+    header,
+    footer {
+        height: 36px;
+    }
 
     .button,
     .footer-text {
