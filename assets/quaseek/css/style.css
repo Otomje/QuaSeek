@@ -22,7 +22,12 @@ body {
 header {
     height: 40px;
     flex-shrink: 0;
+    gap: 10px;
+    padding-top: 10px;
     overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     background: var(--header);
 }
 

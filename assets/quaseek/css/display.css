@@ -91,6 +91,11 @@
     .footer-text {
         font-size: 13px;
     }
+
+    .display,
+    .connection {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 350px) {
@@ -122,6 +127,11 @@
     .button,
     .footer-text {
         font-size: 12px;
+    }
+
+    .display,
+    .connection {
+        font-size: 13px;
     }
 }
 
@@ -168,14 +178,18 @@
     .footer-text {
         font-size: 11px;
     }
+
+    .display,
+    .connection {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 250px) {
-    html {
-        background: var(--background);
-    }
 
-    body {
+    footer,
+    .block-top,
+    .block-bottom {
         display: none;
     }
 }
