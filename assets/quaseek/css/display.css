@@ -87,6 +87,10 @@
         height: 38px;
     }
 
+    .settings-container {
+        bottom: 38px;
+    }
+
     .button,
     .footer-text {
         font-size: 13px;
@@ -174,6 +178,10 @@
         height: 36px;
     }
 
+    .settings-container {
+        bottom: 36px;
+    }
+
     .button,
     .footer-text {
         font-size: 11px;
@@ -189,7 +197,8 @@
 
     footer,
     .block-top,
-    .block-bottom {
+    .block-bottom,
+    .settings-container.active {
         display: none;
     }
 }

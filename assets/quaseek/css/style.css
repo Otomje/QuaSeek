@@ -154,18 +154,21 @@ footer {
     flex-direction: row-reverse;
 }
 
+.settings-container.active {
+    display: flex;
+}
+
 .open-container,
 .menu-container {
-    gap: 2px;
     padding: 8px 0;
-    border-radius: 10px 0 0 0;
+    border-radius: 8px 0 0 0;
     display: flex;
     flex-direction: column;
     background: var(--menu);
 }
 
 .open-container {
-    border-radius: 10px 10px 0 0;
+    border-radius: 8px 8px 0 0;
     display: none;
 }
 
@@ -182,11 +185,11 @@ footer {
     transition: all 200ms ease;
 }
 
-.settings-container.active {
-    display: flex;
+.button:active,
+.button.active {
+    background: var(--menu-button-active);
 }
 
-.button.active,
 .button:hover {
-    background: var(--menu-button);
+    background: var(--menu-button-hover);
 }
