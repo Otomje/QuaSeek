@@ -102,15 +102,15 @@ nav .block-bottom {
 }
 
 .button-menu {
-    height: 42px;
-    width: 42px;
+    height: 40px;
+    width: 40px;
     bottom: 15px;
     right: 15px;
     border: 0;
-    border-radius: 14px;
+    border-radius: 12px;
     cursor: pointer;
     position: fixed;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     background: var(--menu-button-2);

@@ -8,6 +8,10 @@
         transition: all 200ms ease-in-out;
     }
 
+    .button-menu {
+        display: flex;
+    }
+
     .close {
         transform: translateX(-100%);
         display: flex;
