@@ -1,0 +1,52 @@
+/* --- Message ---*/
+
+.message-container {
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 0 5px;
+    margin: 0 auto;
+    position: fixed;
+    user-select: none;
+    display: none;
+    justify-content: center;
+}
+
+.display-status,
+.connection-status {
+    height: 100%;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    display: none;
+    color: var(--status-text);
+    background: var(--status);
+}
+
+.display-status.active,
+.connection-status.active,
+.message-container.active {
+    display: flex;
+}
+
+/* --- Halloween ---*/
+
+.feast-day {
+    right: 0;
+    top: 20px;
+    z-index: 1;
+    padding: 5px 8px;
+    border-radius: 999px 0 0 999px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: var(--orange);
+}
+
+.feast-day .text {
+    font-size: 15px;
+    color: var(--feast-day-text);
+}

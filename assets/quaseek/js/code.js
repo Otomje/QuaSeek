@@ -1,16 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Получаем элементы с проверками
     const input = document.getElementById("search-text");
     const searchBtn = document.getElementById("search");
     const clearBtn = document.getElementById("clear");
     const settingsBtn = document.getElementById("settings-button");
     const settingsContainer = document.querySelector(".settings-container");
-    const menu = document.getElementById("menu");
-    const searchSysOpen = document.getElementById("search-system-open");
-    const searchContainer = document.querySelector(".search-container");
-    const searchSysBtn = document.getElementById("search-system");
 
-    // --- default значение поисковой системы ---
-    let currentSearchSystem = localStorage.getItem("searchSystem") || "Google";
+    const searchSystemButton = document.getElementById("search-system");
+    const searchSystemSettings = document.getElementById("search-system-settings");
+    const mainSettings = document.getElementById("settings"); // <div id="settings">
+
+    // Проверяем наличие ключевых элементов
+    if (!input || !searchBtn || !clearBtn || !settingsBtn || !settingsContainer ||
+        !searchSystemButton || !searchSystemSettings || !mainSettings) {
+        console.warn("Некоторые элементы не найдены. Скрипт может работать некорректно.");
+        return;
+    }
+
+    // --- default поисковая система ---
+    let currentSearchSystem = localStorage.getItem("searchSystem") || "google";
+
+    // --- Конфигурация поисковых систем (легко расширяемо) ---
+    const searchSystems = {
+        google: query => `https://www.google.com/search?q=${encodeURIComponent(query)}`,
+        yahoo: query => `https://search.yahoo.com/search?p=${encodeURIComponent(query)}`,
+        bing: query => `https://www.bing.com/search?q=${encodeURIComponent(query)}`
+    };
 
     // --- функция поиска ---
     const search = (inNewTab = false) => {
@@ -20,26 +35,24 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => input.classList.remove("error"), 1000);
             return;
         }
-        const urls = {
-            Google: `https://www.google.com/search?q=${encodeURIComponent(query)}`,
-            Yahoo: `https://search.yahoo.com/search?p=${encodeURIComponent(query)}`,
-            Bing: `https://www.bing.com/search?q=${encodeURIComponent(query)}`
-        };
-        const url = urls[currentSearchSystem] || urls.Google;
+        const buildUrl = searchSystems[currentSearchSystem] || searchSystems.google;
+        const url = buildUrl(query);
         inNewTab ? window.open(url, "_blank") : (window.location.href = url);
     };
 
-    // --- фокус по клику на контейнер ---
-    searchContainer.addEventListener("click", () => input.focus());
+    // --- фокус на input по клику на контейнер ---
+    const searchContainer = document.querySelector(".search-container");
+    if (searchContainer) {
+        searchContainer.addEventListener("click", () => input.focus());
+    }
 
-    // --- кнопки поиска ---
+    // --- кнопки поиска и очистки ---
     searchBtn.addEventListener("click", () => search());
     clearBtn.addEventListener("click", () => (input.value = ""));
     input.addEventListener("keydown", e => {
-        if (e.key === "Enter") e.ctrlKey ? search(true) : search();
-        if (e.key === "Backspace" && e.shiftKey) {
-            input.value = "";
-            e.preventDefault();
+        if (e.key === "Enter") {
+            e.preventDefault(); // Добавлено для предотвращения отправки формы, если input в form
+            e.ctrlKey ? search(true) : search();
         }
         if (e.key === "Escape") input.blur();
     });
@@ -52,51 +65,70 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // --- Утилита для toggle-класса с ARIA ---
+    const toggleElement = (element, className, isActive) => {
+        element.classList.toggle(className, isActive);
+        if (element.hasAttribute("aria-expanded")) {
+            element.setAttribute("aria-expanded", isActive.toString());
+        }
+        if (element.hasAttribute("aria-hidden")) {
+            element.setAttribute("aria-hidden", (!isActive).toString());
+        }
+    };
+
     // --- кнопка Settings ---
     settingsBtn.addEventListener("click", e => {
         e.stopPropagation();
         const isActive = settingsContainer.classList.toggle("active");
-        settingsBtn.classList.toggle("active", isActive);
-        searchSysOpen.classList.remove("active");
-        searchSysBtn.classList.remove("active");
+        toggleElement(settingsBtn, "active", isActive);
+        // по дефолту открываем mainSettings
+        toggleElement(mainSettings, "active", isActive);
+        // закрываем выбор поисковой системы, если открыт
+        toggleElement(searchSystemSettings, "active", false);
     });
 
-    // --- меню: открытие Search System ---
-    menu.addEventListener("click", e => {
-        if (e.target.id === "search-system") {
-            e.stopPropagation();
-            const isOpen = searchSysOpen.classList.toggle("active");
-            searchSysBtn.classList.toggle("active", isOpen);
+    // --- открытие панели выбора поисковой системы ---
+    searchSystemButton.addEventListener("click", e => {
+        e.stopPropagation();
+        const isOpen = searchSystemSettings.classList.toggle("active");
+        // Закрываем mainSettings при открытии подменю
+        toggleElement(mainSettings, "active", !isOpen);
+        // Обновляем ARIA без class active для кнопки меню
+        if (searchSystemButton.hasAttribute("aria-expanded")) {
+            searchSystemButton.setAttribute("aria-expanded", isOpen.toString());
         }
     });
 
     // --- выбор поисковой системы ---
-    searchSysOpen.addEventListener("click", e => {
-        if (["google", "yahoo", "bing"].includes(e.target.id)) {
-            currentSearchSystem = e.target.textContent;
-            localStorage.setItem("searchSystem", currentSearchSystem);
+    searchSystemSettings.addEventListener("click", e => {
+        const target = e.target.closest(".button"); // Более robust: ищем ближайшую кнопку
+        if (!target || !["google", "yahoo", "bing"].includes(target.id)) {
+            return; // Игнорируем клики не по кнопкам
+        }
 
-            // выделяем выбранный поисковик
-            searchSysOpen.querySelectorAll(".button").forEach(btn => {
-                btn.classList.toggle("active", btn.id === e.target.id);
-            });
+        // снимаем актив у всех
+        searchSystemSettings.querySelectorAll(".button").forEach(btn => {
+            toggleElement(btn, "active", false);
+        });
+        // ставим актив на выбранную
+        toggleElement(target, "active", true);
 
-            // закрываем все панели и снимаем актив
-            searchSysOpen.classList.remove("active");
-            settingsContainer.classList.remove("active");
-            settingsBtn.classList.remove("active");
-            searchSysBtn.classList.remove("active");
+        // сохраняем выбор
+        currentSearchSystem = target.id;
+        localStorage.setItem("searchSystem", currentSearchSystem);
+
+        // закрываем меню
+        toggleElement(searchSystemSettings, "active", false);
+        toggleElement(settingsContainer, "active", false);
+        toggleElement(settingsBtn, "active", false);
+        toggleElement(mainSettings, "active", true); // Возвращаем к mainSettings
+        // Обновляем ARIA для кнопки меню (закрыто)
+        if (searchSystemButton.hasAttribute("aria-expanded")) {
+            searchSystemButton.setAttribute("aria-expanded", "false");
         }
     });
 
-    // --- универсальная функция активации кнопок (если понадобится) ---
-    const setActive = (container, id) => {
-        container.querySelectorAll(".button").forEach(btn => {
-            btn.classList.toggle("active", btn.id.toLowerCase() === id.toLowerCase());
-        });
-    };
-
-    // --- role="button" + tabindex --- Enter/Space клик
+    // --- role="button" + Enter/Space ---
     document.querySelectorAll('[role="button"]').forEach(btn => {
         btn.addEventListener("keydown", e => {
             if (e.key === "Enter" || e.key === " ") {
@@ -106,16 +138,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // --- клик вне меню/Settings ---
+    // --- клик вне Settings закрывает все ---
     document.addEventListener("click", e => {
         if (!settingsContainer.contains(e.target) && !settingsBtn.contains(e.target)) {
-            settingsContainer.classList.remove("active");
-            settingsBtn.classList.remove("active");
-            searchSysOpen.classList.remove("active");
-            searchSysBtn.classList.remove("active");
+            toggleElement(settingsContainer, "active", false);
+            toggleElement(settingsBtn, "active", false);
+            toggleElement(searchSystemSettings, "active", false);
+            toggleElement(mainSettings, "active", false);
+            // Обновляем ARIA для кнопки меню (закрыто)
+            if (searchSystemButton.hasAttribute("aria-expanded")) {
+                searchSystemButton.setAttribute("aria-expanded", "false");
+            }
         }
     });
 
-    // --- инициализация при загрузке ---
-    setActive(searchSysOpen, currentSearchSystem.toLowerCase());
+    // --- инициализация выбранной поисковой системы ---
+    const initActiveSearchSystem = () => {
+        searchSystemSettings.querySelectorAll(".button").forEach(btn => {
+            toggleElement(btn, "active", btn.id === currentSearchSystem);
+        });
+    };
+    initActiveSearchSystem();
+
+    // Инициализация ARIA (если нужно добавить в HTML)
+    settingsBtn.setAttribute("aria-expanded", "false");
+    settingsBtn.setAttribute("aria-controls", "settings");
+    mainSettings.setAttribute("aria-hidden", "true");
+    searchSystemButton.setAttribute("aria-expanded", "false");
+    searchSystemSettings.setAttribute("aria-hidden", "true");
 });
