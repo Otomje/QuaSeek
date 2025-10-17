@@ -1,3 +1,9 @@
+@media (max-width: 660px) {
+    .feast-day {
+        display: none;
+    }
+}
+
 @media (max-width: 480px) {
     nav {
         width: 100%;

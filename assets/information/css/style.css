@@ -5,6 +5,10 @@ html,
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     height: 100dvh;
     font-weight: 600;
@@ -33,7 +37,7 @@ nav {
     background: var(--nav-in);
 }
 
-.close {
+nav .close {
     display: none;
 }
 
@@ -44,44 +48,25 @@ nav .block-bottom {
 
 .logo-container {
     padding: 15px 10px 10px 10px;
+    display: flex;
 }
 
 .logo {
+    width: 100%;
     font-size: 26px;
     font-weight: 700;
     font-family: 'Comfortaa';
     color: var(--logo-in);
 }
 
-nav .text-container {
-    margin: 5px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-nav .info-text {
-    opacity: .7;
-    line-height: 1.2;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--info-text-in);
-    font-family: 'Comfortaa';
-}
-
-nav .info-text:hover {
-    text-decoration: underline;
-}
-
 nav .button-container {
-    gap: 2px;
+    gap: 4px;
     padding: 0 2px;
     display: flex;
     flex-direction: column;
 }
 
-nav .button {
+.button-container .button {
     width: 100%;
     font-size: 17px;
     padding: 10px 15px;
@@ -90,12 +75,33 @@ nav .button {
     color: var(--nav-button-text-in);
 }
 
-nav .button:hover {
+.button-container .button:hover {
     background: var(--nav-button-in);
 }
 
-nav .button.active {
+.button-container .button.active {
     background: var(--nav-button-active-in);
+}
+
+.block-bottom .text-container {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container .info-text {
+    opacity: .7;
+    line-height: 1.2;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--info-text-in);
+    font-family: 'Comfortaa';
+}
+
+.text-container .info-text:hover {
+    text-decoration: underline;
 }
 
 .button-menu {
@@ -114,7 +120,7 @@ nav .button.active {
     background: var(--menu-button-in);
 }
 
-.menu-icon {
+.button-menu .icon {
     height: 100%;
     width: 100%;
     color: var(--menu-icon-in);
@@ -133,29 +139,24 @@ nav .button.active {
     display: flex;
 }
 
-.mail {
+.content-container a {
     font-size: 17px;
     line-height: 2;
-    user-select: none;
     color: var(--mail-text-in);
 }
 
-.mail:hover {
+.content-container a:hover {
     text-decoration: underline;
 }
 
-h1 {
+.content-container h1 {
     font-size: 32px;
     line-height: 1.5;
     color: var(--content-container-text-in);
 }
 
-p {
+.content-container p {
     font-size: 17px;
     line-height: 2;
     color: var(--content-container-text-in);
-}
-
-a {
-    text-decoration: none;
 }

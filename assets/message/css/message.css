@@ -30,13 +30,13 @@
     display: flex;
 }
 
-/* --- Halloween ---*/
+/* --- Halloween message ---*/
 
 .feast-day {
     right: 0;
     top: 20px;
     z-index: 1;
-    padding: 5px 8px;
+    padding: 6px 5px 6px 10px;
     border-radius: 999px 0 0 999px;
     user-select: none;
     display: flex;

@@ -2,9 +2,10 @@
     "name": "QuaSeek",
     "short_name": "QuaSeek",
     "description": "QuaSeek — fast search without distractions.",
-    "display": "minimal-ui",
     "background_color": "#232328",
     "theme_color": "#1e1e23",
+    "display": "minimal-ui",
+    "start_url": "/",
     "icons": [
         {
             "src": "assets/img/appico.png",
