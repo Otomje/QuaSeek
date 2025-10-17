@@ -9,7 +9,7 @@ body {
     height: 100dvh;
     font-weight: 600;
     font-family: 'Montserrat';
-    background: var(--background-2);
+    background: var(--background-in);
     -webkit-tap-highlight-color: var(--none);
 }
 
@@ -30,7 +30,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: var(--nav-2);
+    background: var(--nav-in);
 }
 
 .close {
@@ -50,7 +50,7 @@ nav .block-bottom {
     font-size: 26px;
     font-weight: 700;
     font-family: 'Comfortaa';
-    color: var(--logo-2);
+    color: var(--logo-in);
 }
 
 nav .text-container {
@@ -66,7 +66,7 @@ nav .info-text {
     line-height: 1.2;
     font-size: 14px;
     font-weight: 700;
-    color: var(--info-text-2);
+    color: var(--info-text-in);
     font-family: 'Comfortaa';
 }
 
@@ -86,16 +86,16 @@ nav .button {
     font-size: 17px;
     padding: 10px 15px;
     border-radius: 999px;
-    transition: all 200ms ease;
-    color: var(--nav-button-text-2);
+    transition: all 80ms linear;
+    color: var(--nav-button-text-in);
 }
 
 nav .button:hover {
-    background: var(--nav-button-2);
+    background: var(--nav-button-in);
 }
 
 nav .button.active {
-    background: var(--nav-button-active-2);
+    background: var(--nav-button-active-in);
 }
 
 .button-menu {
@@ -104,23 +104,20 @@ nav .button.active {
     bottom: 15px;
     right: 15px;
     border: 0;
+    z-index: 3;
     border-radius: 12px;
     cursor: pointer;
     position: fixed;
     display: none;
     align-items: center;
     justify-content: center;
-    background: var(--menu-button-2);
+    background: var(--menu-button-in);
 }
 
 .menu-icon {
     height: 100%;
     width: 100%;
-    color: var(--menu-icon-2);
-}
-
-.button-menu:hover {
-    background: var(--menu-button-hover-2);
+    color: var(--menu-icon-in);
 }
 
 .content-container {
@@ -129,7 +126,7 @@ nav .button.active {
     overflow: auto;
     display: none;
     flex-direction: column;
-    background: var(--background-2);
+    background: var(--background-in);
 }
 
 .content-container.active {
@@ -140,7 +137,7 @@ nav .button.active {
     font-size: 17px;
     line-height: 2;
     user-select: none;
-    color: var(--mail-text-2);
+    color: var(--mail-text-in);
 }
 
 .mail:hover {
@@ -150,13 +147,13 @@ nav .button.active {
 h1 {
     font-size: 32px;
     line-height: 1.5;
-    color: var(--content-container-text-2);
+    color: var(--content-container-text-in);
 }
 
 p {
     font-size: 17px;
     line-height: 2;
-    color: var(--content-container-text-2);
+    color: var(--content-container-text-in);
 }
 
 a {

@@ -22,18 +22,18 @@
     --orange: rgb(200, 80, 0);
     --feast-day-text: rgb(240, 240, 250);
     /* quaseek information */
-    --background-2: rgb(35, 35, 40);
-    --nav-2: rgb(33, 33, 38);
-    --logo-2: rgb(245, 245, 255);
-    --nav-button-2: rgb(40, 40, 45);
-    --nav-button-active-2: rgb(45, 45, 75);
-    --nav-button-text-2: rgb(240, 240, 250);
-    --menu-button-2: rgb(45, 45, 50);
-    --menu-button-hover-2: rgb(47, 47, 52);
-    --menu-icon-2: rgb(240, 240, 250);
-    --info-text-2: rgb(240, 240, 250);
-    --content-container-text-2: rgb(240, 240, 250);
-    --mail-text-2: rgb(180, 180, 250);
+    --background-in: rgb(35, 35, 40);
+    --nav-in: rgb(33, 33, 38);
+    --logo-in: rgb(245, 245, 255);
+    --nav-button-in: rgb(40, 40, 45);
+    --nav-button-active-in: rgb(45, 45, 75);
+    --nav-button-text-in: rgb(240, 240, 250);
+    --menu-button-in: rgb(45, 45, 50);
+    /* --menu-button-hover-in: rgb(47, 47, 52); */
+    --menu-icon-in: rgb(240, 240, 250);
+    --info-text-in: rgb(240, 240, 250);
+    --content-container-text-in: rgb(240, 240, 250);
+    --mail-text-in: rgb(180, 180, 250);
 }
 
 @font-face {
