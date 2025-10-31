@@ -1,4 +1,3 @@
-html,
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,7 @@ html,
 }
 
 body {
-    height: 100dvh;
+    height: 100svh;
     font-weight: 600;
     font-family: 'Montserrat';
     background: var(--background);
@@ -39,7 +38,8 @@ header {
     flex: 1;
     padding: 0 10px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .logo {
@@ -57,12 +57,13 @@ header {
 
 .search-container {
     height: 50px;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     gap: 10px;
     padding: 0 15px;
     margin-top: 20px;
     margin-bottom: 10px;
-    border-radius: 999px;
+    border-radius: var(--max-radius);
     cursor: text;
     display: flex;
     align-items: center;
@@ -84,7 +85,7 @@ header {
     background: var(--none);
 }
 
-.search-icon-container {
+.search-container .icon-container {
     height: 100%;
     flex-shrink: 0;
     display: flex;
@@ -96,7 +97,7 @@ header {
 .search-icon {
     height: 20px;
     width: 20px;
-    color: var(--search-icon);
+    color: var(--search-container-icon);
 }
 
 .search-container input::placeholder {

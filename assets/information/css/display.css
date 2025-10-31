@@ -5,6 +5,14 @@
 }
 
 @media (max-width: 480px) {
+    .text-container .info-text:hover {
+        text-decoration: none;
+    }
+
+    .button-container .button:hover {
+        background: none;
+    }
+
     nav {
         width: 100%;
         left: 0;

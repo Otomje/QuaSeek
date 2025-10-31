@@ -1,6 +1,9 @@
 :root {
-    --text-non-working: rgb(160, 160, 170);
+    /* all */
+    --orange: rgb(200, 80, 0);
+    --blue: rgb(50, 50, 100);
     --none: transparent;
+    --max-radius: 999px;
     /* quaseek */
     --background: rgb(35, 35, 40);
     --header: transparent;
@@ -9,7 +12,7 @@
     --search-container-hover: rgb(67, 67, 77);
     --search-text: rgb(240, 240, 250);
     --search-placeholder: rgb(180, 180, 190);
-    --search-icon: rgb(240, 240, 250);
+    --search-container-icon: rgb(240, 240, 250);
     --footer: rgb(30, 30, 35);
     --footer-text: rgb(240, 240, 250);
     --settings: rgb(30, 30, 35);
@@ -19,27 +22,29 @@
     --settings-button-active: rgb(40, 40, 70);
     --status: rgb(45, 45, 50);
     --status-text: rgb(240, 240, 250);
-    --orange: rgb(200, 80, 0);
     --feast-day-text: rgb(240, 240, 250);
+    --text-non-working: rgb(160, 160, 170);
     /* quaseek information */
     --background-in: rgb(35, 35, 40);
     --nav-in: rgb(33, 33, 38);
     --logo-in: rgb(245, 245, 255);
-    --nav-button-in: rgb(40, 40, 45);
+    --nav-button-hover-in: rgb(40, 40, 45);
+    --nav-button-click-in: rgb(40, 40, 45);
     --nav-button-active-in: rgb(45, 45, 75);
     --nav-button-text-in: rgb(240, 240, 250);
     --menu-button-in: rgb(45, 45, 50);
-    /* --menu-button-hover-in: rgb(47, 47, 52); */
-    --menu-icon-in: rgb(240, 240, 250);
+    --menu-button-active-in: rgb(47, 47, 52);
+    --menu-button-icon-in: rgb(240, 240, 250);
     --info-text-in: rgb(240, 240, 250);
     --content-container-text-in: rgb(240, 240, 250);
     --mail-text-in: rgb(180, 180, 250);
+    --radius-button-in: 0 999px 999px 0;
 }
 
 @font-face {
     font-family: 'Comfortaa';
-    src: url('../fonts/Comfortaa/Comfortaa-700.woff') format('woff'),
-        url('../fonts/Comfortaa/Comfortaa-700.woff2') format('woff2');
+    src: url('../fonts/comfortaa/comfortaa-700.woff') format('woff'),
+        url('../fonts/comfortaa/comfortaa-700.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: block;
@@ -47,8 +52,8 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../fonts/Montserrat/Montserrat-600.woff') format('woff'),
-        url('../fonts/Montserrat/Montserrat-600.woff2') format('woff2');
+    src: url('../fonts/montserrat/montserrat-600.woff') format('woff'),
+        url('../fonts/montserrat/montserrat-600.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: block;

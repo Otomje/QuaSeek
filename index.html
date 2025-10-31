@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="QuaSeek — fast search without distractions.">
     <title>QuaSeek</title>
-    <link rel="preload" href="assets/fonts/Comfortaa/Comfortaa-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="assets/fonts/comfortaa/comfortaa-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="assets/fonts/montserrat/montserrat-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/root/root.css">
     <link rel="stylesheet" href="assets/quaseek/css/style.css">
@@ -24,16 +24,16 @@
         </div>
         <div class="block-bottom">
             <div class="search-container">
-                <div class="search-icon-container" title="Search (Enter) (Ctrl + Enter)" id="search" role="button">
+                <div class="icon-container" title="Search (Enter) (Ctrl + Enter)" id="search" role="button">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150" class="search-icon" role="img">
                         <circle cx="68" cy="68" r="48" fill="none" stroke-width="18" stroke="currentColor" />
                         <rect height="55" width="18" y="88" x="86" rx="0" fill="currentColor" transform="rotate(-45 110 90)" />
                     </svg>
                 </div>
 
-                <input type="text" id="search-text" autocomplete="off" spellcheck="true" maxlength="2000" enterkeyhint="search" placeholder="Start Typing" />
+                <input type="text" id="search-text" autocomplete="off" autocorrect="off" spellcheck="true" maxlength="2000" enterkeyhint="search" placeholder="Start Typing" />
 
-                <div class="search-icon-container" title="Clear (Shift + Backspace)" id="clear" role="button">
+                <div class="icon-container" title="Clear (Shift + Backspace)" id="clear" role="button">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150" class="clear-icon" role="img">
                         <rect height="120" width="18" y="15" x="66.5" rx="0" fill="currentColor" transform="rotate(45, 75, 75)" />
                         <rect height="120" width="18" y="15" x="66.5" rx="0" fill="currentColor" transform="rotate(135, 75, 75)" />
@@ -53,30 +53,30 @@
             </div>
         </footer>
         <!-- Settings -->
-        <div class="settings-container">
-            <div class="settings" id="settings">
-                <div class="button" id="theme" role="button" tabindex="0">Theme</div>
+        <div class="settings-container" role="menubar">
+            <div class="settings" id="settings" role="menuitem">
+                <div class="button" id="theme">Theme</div>
                 <div class="button" id="search-system" role="button" tabindex="0">Search system</div>
             </div>
-            <div class="settings" id="search-system-settings">
+            <div class="settings" id="search-system-settings" role="menuitem">
                 <div class="button" id="google" role="button" tabindex="0">Google</div>
                 <div class="button" id="yahoo" role="button" tabindex="0">Yahoo</div>
                 <div class="button" id="bing" role="button" tabindex="0">Bing</div>
             </div>
-            <div class="settings" id="theme-settings">
+            <div class="settings" id="theme-settings" role="menuitem">
                 <div class="button" id="dark" role="button" tabindex="0">Dark</div>
                 <div class="button" id="light" role="button" tabindex="0">Light</div>
             </div>
         </div>
         <!-- Message -->
-        <div class="message-container">
+        <div class="message-container" role="toolbar">
             <div class="display-status">Screen too small</div>
             <div class="connection-status">No internet connection</div>
         </div>
-        <!-- Feast_day -->
+        <!-- Feast_day
         <div class="feast-day">
-            <div class="text">Happy Halloween :D</div>
-        </div>
+            <div class="text">⛄ Happy New Year ❄</div>
+        </div> -->
     </div>
 
     <link rel="stylesheet" href="assets/quaseek/css/display.css">
