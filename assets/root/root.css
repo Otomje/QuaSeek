@@ -43,8 +43,8 @@
 
 @font-face {
     font-family: 'Comfortaa';
-    src: url('/assets/fonts/comfortaa/comfortaa-700.woff2') format('woff2'),
-        url('/assets/fonts/comfortaa/comfortaa-700.woff') format('woff');
+    src: url('../fonts/Comfortaa/Comfortaa-700.woff') format('woff'),
+        url('../fonts/Comfortaa/Comfortaa-700.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: block;
@@ -52,8 +52,8 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('/assets/fonts/montserrat/montserrat-600.woff2') format('woff2'),
-        url('/assets/fonts/montserrat/montserrat-600.woff') format('woff');
+    src: url('../fonts/Montserrat/Montserrat-600.woff') format('woff'),
+        url('../fonts/Montserrat/Montserrat-600.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: block;
